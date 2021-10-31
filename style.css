@@ -1,0 +1,153 @@
+body {
+    text-overflow: ellipsis;
+    /* Required for text-overflow to do anything */
+    white-space: nowrap;
+    /* overflow: hidden; */
+    size: 7in 9.25in;
+    margin: 27mm 16mm 27mm 16mm;
+    border: 1px solid black;
+    height:297mm;
+    width:210mm;
+    margin: 30px auto;
+    padding: 10px 20px;
+}
+
+h6{
+    margin-top: 0px;
+}
+
+.subhead {
+    position: relative;
+    bottom: 10px;
+}
+.text-center {
+    text-align: center;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1.5fr 3fr;
+}
+
+
+.left-list-head {
+    font-size: 16px;
+}
+.left-list-body {
+    position: relative;
+    bottom: 8px;
+    font-size: 12px;
+}
+
+ul {
+    list-style: none;
+    list-style-position: outside;
+    padding-left: 0px;
+}
+
+ol {
+    list-style: disc;
+    list-style-position: inside;
+    padding-left: 5px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 10px;
+}
+
+.capital {
+    text-transform: uppercase;
+}
+li {
+    text-transform: capitalize;
+    margin: 5px;
+}
+
+.fa-circle{
+    font-size: 5px;
+    position: relative;
+    bottom: 5px;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    text-transform: none;
+}
+
+a:hover {
+    color: blue;
+    text-decoration: underline;
+}
+
+.icon-right {
+    font-size: 9px;
+    position: relative;
+    bottom: 1px;
+    margin-right: 10px;
+}
+
+.right-container {
+    display: grid;
+    grid-template-columns: 23px 1fr;
+}
+
+.right-header{
+    margin-bottom: 5px;
+}
+.right-item {
+    margin-bottom: 15px;
+}
+.content {
+    font-size: 12px;
+    white-space: normal;
+}
+.text {
+    margin-bottom: 5px;
+}
+
+.indent {
+    text-indent: 10px;
+}
+
+.topic {
+    font-weight: bold;
+}
+
+.vertical-line-1 {
+    border-left: 1px solid black;
+    height: 30px;
+    position: relative;
+    bottom: 10px;
+    left: 4px;
+}
+.vertical-line-2 {
+    border-left: 1px solid black;
+    height: 100px;
+    position: relative;
+    left:4px;
+    top:317px;
+}
+.vertical-line-3 {
+    border-left: 1px solid black;
+    height: 100px;
+    position: relative;
+    left:4px;
+    top:320px;
+    z-index: 1;
+}
+.vertical-line-4 {
+    border-left: 1px solid black;
+    height: 100px;
+    position: relative;
+    left:4px;
+    top:323px;
+    z-index: 1;
+}
+
+.circle-right {
+    font-weight: bolder;
+    position:relative;
+    left: 2px;
+    bottom: 6px;
+    font-size: 5px;
+}
