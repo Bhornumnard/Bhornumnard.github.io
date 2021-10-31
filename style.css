@@ -20,8 +20,6 @@ body {
     /* Required for text-overflow to do anything */
     white-space: nowrap;
     background-color: white;
-    position: relative;
-    right: 20px;
     border: 1px solid black;
     height:297mm;
     width:210mm;
