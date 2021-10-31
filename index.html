@@ -12,9 +12,11 @@
       integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
       crossorigin="anonymous"
     />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   </head>
   <body>
-    <div id="body">
+    <!-- <button onclick="print()">Print this page</button> -->
+    <div id="resume">
       <h2 class="text-center capital">bhornumnard wanasrisun</h2>
       <h6 class="text-center capital subhead">
         <span>WEB DEVELOPER &nbsp &nbsp</span>
@@ -208,7 +210,7 @@
                 <i class="fas fa-dot-circle circle-right"></i>
               </div>
               <div class="content">
-                <div class="text">Programming skills</div>
+                <div class="text topic">Programming skills</div>
                 <table>
                   <tr>
                     <td>
@@ -231,144 +233,135 @@
                 </table>
               </div>
             </div>
-          </div>
-          <div class="height500"></div>
-        </div>
-      </div>
-    </div>
-    <div id="body2">
-      <div class="container">
-        <div class="text-center"></div>
-        <div>
-          <div class="right-item">
-            <div class="right-container">
-              <div>
-                <i class="fas fa-dot-circle circle-right"></i>
-              </div>
-              <div class="content">
-                <div class="text">Frameworks</div>
-                <table>
-                  <tr>
-                    <td>
-                      <ol>
-                        <li>React</li>
-                        <li>Django</li>
-                        <li>Nest</li>
-                      </ol>
-                    </td>
-                    <td>
-                      <ol>
-                        <li>Redux</li>
-                        <li>node</li>
-                        <li>Django-Rest-framework</li>
-                      </ol>
-                    </td>
-                  </tr>
-                </table>
-              </div>
-              <div>
-                <i class="fas fa-dot-circle circle-right"></i>
-              </div>
-              <div class="content">
-                <div class="text">Databases</div>
-                <table>
-                  <tr>
-                    <td>
-                      <ol>
-                        <li>MySQL</li>
-                        <li>Mongo</li>
-                      </ol>
-                    </td>
-                    <td>
-                      <ol>
-                        <li>Redis</li>
-                        <li class="hidden"></li>
-                      </ol>
-                    </td>
-                  </tr>
-                </table>
-              </div>
-              <div>
-                <i class="fas fa-dot-circle circle-right"></i>
-              </div>
-              <div class="content">
-                <div class="text">Tools</div>
-                <table>
-                  <tr>
-                    <td>
-                      <ol>
-                        <li>Source tree</li>
-                        <li>Ngrok</li>
-                        <li>MySQL Workbench</li>
-                        <li>Nginx</li>
-                        <li>AWS ECR</li>
-                        <li>AWS CloudWatch</li>
-                        <li>Socket</li>
-                      </ol>
-                    </td>
-                    <td>
-                      <ol>
-                        <li>Git</li>
-                        <li>Docker</li>
-                        <li>Post-man</li>
-                        <li>AWS ECS</li>
-                        <li>AWS codecommit</li>
-                        <li>AWS EC2</li>
-                        <li>ORM (Sequelize, Django)</li>
-                      </ol>
-                    </td>
-                  </tr>
-                </table>
-              </div>
-              <div>
-                <i class="fas fa-dot-circle circle-right"></i>
-              </div>
-              <div class="content">
-                <div class="text">Cloud Platform</div>
+            <div class="right-item">
+              <div class="right-container">
                 <div>
-                  <ol>
-                    <li class="pd2">AWS</li>
-                  </ol>
+                  <i class="fas fa-dot-circle circle-right"></i>
+                </div>
+                <div class="content">
+                  <div class="text topic">Frameworks</div>
+                  <table>
+                    <tr>
+                      <td>
+                        <ol>
+                          <li>React</li>
+                          <li>Django</li>
+                          <li>Nest</li>
+                        </ol>
+                      </td>
+                      <td>
+                        <ol>
+                          <li>Redux</li>
+                          <li>node</li>
+                          <li>Django-Rest-framework</li>
+                        </ol>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+                <div>
+                  <i class="fas fa-dot-circle circle-right"></i>
+                </div>
+                <div class="content">
+                  <div class="text topic">Databases</div>
+                  <table>
+                    <tr>
+                      <td>
+                        <ol>
+                          <li>MySQL</li>
+                          <li>Mongo</li>
+                        </ol>
+                      </td>
+                      <td>
+                        <ol>
+                          <li>Redis</li>
+                          <li class="hidden"></li>
+                        </ol>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+                <div>
+                  <i class="fas fa-dot-circle circle-right"></i>
+                </div>
+                <div class="content">
+                  <div class="text topic">Tools</div>
+                  <table>
+                    <tr>
+                      <td>
+                        <ol>
+                          <li>Source tree</li>
+                          <li>Ngrok</li>
+                          <li>MySQL Workbench</li>
+                          <li>Nginx</li>
+                          <li>AWS ECR</li>
+                          <li>AWS CloudWatch</li>
+                          <li>Socket</li>
+                        </ol>
+                      </td>
+                      <td>
+                        <ol>
+                          <li>Git</li>
+                          <li>Docker</li>
+                          <li>Post-man</li>
+                          <li>AWS ECS</li>
+                          <li>AWS codecommit</li>
+                          <li>AWS EC2</li>
+                          <li>ORM (Sequelize, Django)</li>
+                        </ol>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+                <div>
+                  <i class="fas fa-dot-circle circle-right"></i>
+                </div>
+                <div class="content">
+                  <div class="text topic">Cloud Platform</div>
+                  <div>
+                    <ol>
+                      <li class="pd2">AWS</li>
+                    </ol>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="right-item">
-            <div class="capital right-header">
-              <i class="fas fa-seedling icon-right"></i>
-              <span>extra-curricular activities</span>
-            </div>
-
-            <div class="right-container">
-              <div>
-                <i class="fas fa-dot-circle circle-right"></i>
+            <div class="right-item">
+              <div class="capital right-header">
+                <i class="fas fa-seedling icon-right"></i>
+                <span>extra-curricular activities</span>
               </div>
-              <div class="content">
-                <div class="text topic">
-                  High school A-math competition at Suanboonyopatham Lamphun
-                  School, Lamphun, Thailand.
+              <div class="right-container">
+                <div>
+                  <i class="fas fa-dot-circle circle-right"></i>
                 </div>
-                <div class="text">Winner of A-math competition in 2010</div>
-              </div>
-              <div>
-                <i class="fas fa-dot-circle circle-right"></i>
-              </div>
-              <div class="content">
-                <div class="text topic">
-                  Attended an astronomy camp at NARIT Youth Camp (NYC), Chiang
-                  Mai, Thailand.
+                <div class="content">
+                  <div class="text topic">
+                    High school A-math competition at Suanboonyopatham Lamphun
+                    School, Lamphun, Thailand.
+                  </div>
+                  <div class="text">Winner of A-math competition in 2010</div>
                 </div>
-                <div class="text date">December 2010</div>
-              </div>
-              <div>
-                <i class="fas fa-dot-circle circle-right"></i>
-              </div>
-              <div class="content">
-                <div class="text topic">
-                  Chairman of the Athletics Club, Faculty of Science, Chiang
-                  Mai, Thailand.
+                <div>
+                  <i class="fas fa-dot-circle circle-right"></i>
                 </div>
-                <div class="text date">October 2013 — May 2016</div>
+                <div class="content">
+                  <div class="text topic">
+                    Attended an astronomy camp at NARIT Youth Camp (NYC), Chiang
+                    Mai, Thailand.
+                  </div>
+                  <div class="text date">December 2010</div>
+                </div>
+                <div>
+                  <i class="fas fa-dot-circle circle-right"></i>
+                </div>
+                <div class="content">
+                  <div class="text topic">
+                    Chairman of the Athletics Club, Faculty of Science, Chiang
+                    Mai, Thailand.
+                  </div>
+                  <div class="text date">October 2013 — May 2016</div>
+                </div>
               </div>
             </div>
           </div>
@@ -376,4 +369,13 @@
       </div>
     </div>
   </body>
+  <!-- <script>
+    function print () {
+      var originalContents = document.body.innerHTML;
+      var printContents = document.getElementById('resume').innerHTML;
+      document.body.innerHTML = printContents;
+      window.print();
+     document.body.innerHTML = originalContents;
+    }
+  </script> -->
 </html>
