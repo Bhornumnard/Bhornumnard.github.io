@@ -13,11 +13,14 @@ body {
         left: 0;
         padding-top: 0px;
     }
-    .tools{
+    /* .tools{
         height: 50px;
-    }
+    } */
     h2 {
         margin-top: 0px;
+    }
+    .print{
+        padding-top: 50px;
     }
 }
 button {
