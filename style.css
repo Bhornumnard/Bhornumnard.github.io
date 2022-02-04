@@ -20,8 +20,9 @@ body {
         margin-top: 0px;
     }
     .print{
-        padding-top: 50px;
+        padding-top: 40px;
     }
+
 }
 button {
     position: absolute;
@@ -45,6 +46,7 @@ button {
 
 h6{
     margin-top: 0px;
+    margin-bottom: 0px;
 }
 
 .subhead {
@@ -55,16 +57,28 @@ h6{
     text-align: center;
 }
 
-.container {
-    display: grid;
-    grid-template-columns: 1.5fr 3fr;
+.top-container {
+    background-color: #003152;
+    padding-bottom: 5px;
+    color:#fff;
 }
 
+.container {
+    display: grid;
+    grid-template-columns: 1.1fr 0.1fr 3fr;
+}
 
+.left-container {
+    background-color: #EEE;
+}
+.left-container > div:first-child {
+    margin-top: 10px;
+}
 
 .left-list-head {
     font-size: 16px;
 }
+
 .left-list-body {
     position: relative;
     bottom: 8px;
@@ -77,6 +91,9 @@ ul {
     padding-left: 0px;
 }
 
+ol > li:last-child {
+    margin-bottom: 10px;
+}
 ol {
     list-style: disc;
     list-style-position: inside;
@@ -96,6 +113,10 @@ li {
     text-transform:none;
     margin: 5px;
     font-size: 11px;
+    line-height: 17px;
+}
+.list-li {
+    margin-bottom: 5px !important;
 }
 
 .fa-circle{
@@ -116,6 +137,7 @@ a:hover {
 }
 
 .icon-right {
+    padding-left: 10px;
     font-size: 9px;
     position: relative;
     bottom: 2px;
@@ -124,18 +146,28 @@ a:hover {
 
 .right-container {
     display: grid;
-    grid-template-columns: 23px 1fr;
+    grid-template-columns: 10px 13px 1fr;
 }
 
 .right-header{
     margin-bottom: 5px;
+    /* background-color: #1e9fca; */
+    background-color: #e9c46a;
 }
+
+
 .right-item {
-    margin-bottom: 15px;
+    margin-bottom: 5px;
+}
+.right-item > div:first-child{
+    margin-top: 10px;
 }
 .content {
     font-size: 12px;
     white-space: normal;
+}
+.align-justify {
+    text-align-last: justify;
 }
 .text {
     margin-bottom: 5px;
@@ -143,13 +175,19 @@ a:hover {
 
 .indent {
     text-indent: 10px;
+    font-weight: bold;
 }
 
 .topic {
     font-weight: bold;
+    font-size: 14px;
     margin-bottom: 0px;
+    color:#b9963d;
 }
 
+.fa-dot-circle {
+    color: #b9963d;
+}
 
 .circle-right {
     font-weight: bolder;
