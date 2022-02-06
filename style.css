@@ -7,20 +7,39 @@ body {
     button {
         display: none;
     }
+    body {
+        margin: 0px;
+        padding: 0px;
+    }
     #resume {
         position: absolute;
-        top: 10;
+        top: 0;
         left: 0;
-        padding-top: 0px;
+        padding: 0px;
+        margin: 0px;
     }
     /* .tools{
         height: 50px;
     } */
-    h2 {
-        margin-top: 0px;
+    /* .left-container {
+        position: relative;
+        top: 1px;
+    } */
+    .top-container{
+        position: relative;
+        bottom: 50px;
+        z-index: 1;
     }
-    .print{
-        padding-top: 40px;
+    .container {
+        position: relative;
+        bottom: 50px;
+    }
+    .print1{
+        position: relative;
+        bottom: 13px;
+    }
+    .print2{
+        padding-top: 27px;
     }
 
 }
@@ -41,7 +60,13 @@ button {
     /* height:297mm; */
     width:210mm;
     margin: 30px auto;
-    padding: 10px 20px;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    /* padding: 10px 20px; */
+}
+
+h2 {
+    padding-top: 15px;
 }
 
 h6{
@@ -77,6 +102,7 @@ h6{
 
 .left-list-head {
     font-size: 16px;
+    font-weight: bolder;
 }
 
 .left-list-body {
@@ -93,6 +119,12 @@ ul {
 
 ol > li:last-child {
     margin-bottom: 10px;
+}
+.mg-0{
+    margin-bottom: 0px !important;
+}
+.mt-0 {
+    margin-top: 0px !important;
 }
 ol {
     list-style: disc;
