@@ -16,6 +16,33 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <!-- Draft: review employment dates (Sinwattana end, Uppass start/end) before publishing. -->
+    <style>
+      #resume .left-skill-block {
+        font-size: 10.5px;
+        line-height: 1.28;
+        bottom: 4px;
+      }
+      #resume .left-skill-nested {
+        list-style: disc;
+        padding-left: 0.9em;
+        margin: 0.08em 0 0.2em;
+        text-align: left;
+      }
+      #resume .left-skill-nested > li {
+        margin: 0 0 0.1em 0;
+      }
+      #resume .skill-pair {
+        display: grid;
+        grid-template-columns: max-content minmax(0, 1fr);
+        column-gap: 0.35em;
+        row-gap: 0.08em;
+        text-align: left;
+      }
+      #resume .skill-pair__label {
+        font-weight: bold;
+      }
+    </style>
   </head>
   <body>
     <div id="resume">
@@ -23,7 +50,7 @@
       <div class="top-container">
         <h2 class="text-center capital">b h o r n u m n a r d w a n a s r i s u n</h2>
         <h6 class="text-center capital subhead">
-          <span>FULL-STACK DEVELOPER &nbsp &nbsp</span>
+          <span>BACKEND DEVELOPER (PYTHON / FASTAPI) &nbsp &nbsp</span>
           <i class="fas fa-phone-alt"></i>
           <span> +66(0)84-555-0485</span>
         </h6>
@@ -62,11 +89,69 @@
           <div class="left-list-body">
             <ul>
               <li>cyber security</li>
-              <li>devops infrastructure</li>
-              <li>machine leaning and AI</li>
-              <li>block chain</li>
-              <li>cloud service (AWS, Azure, etc.)</li>
+              <li>machine learning and AI</li>
+              <li>cloud service (AWS, Azure, Google, etc.)</li>
               <li>fintech, Biotech</li>
+            </ul>
+          </div>
+          <div class="left-list-head capital">
+            <i class="far fa-circle"></i>
+            <span>skills</span>
+            <i class="far fa-circle"></i>
+          </div>
+          <div class="left-list-body left-skill-block">
+            <ul class="left-skill-nested">
+              <li>
+                <b class="left-skill-nested-label">Current</b>
+                <div></div>
+                <ul class="left-skill-nested">
+                  <li><b>Lang:</b> Python, SQL</li>
+                  <li><b>Framework:</b> FastAPI</li>
+                  <li><b>DB:</b> MySQL, MongoDB, Redis</li>
+                  <li><b>Cloud:</b> GCP, AWS, Azure</li>
+                  <li><b>Shell:</b> Linux shell</li>
+                  <li>
+                    <div class="skill-pair">
+                      <span class="skill-pair__label">Tool:</span>
+                      <span>Git, Docker, Postman</span>
+                      <span></span>
+                      <span>Cursor, ClickUp, Nginx</span>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <b class="left-skill-nested-label">Earlier</b>
+                <div></div>
+                <ul class="left-skill-nested"></ul>
+                <ul class="left-skill-nested">
+                  <li>
+                    <div class="skill-pair">
+                      <span class="skill-pair__label">Lang:</span>
+                      <span>JavaScript, TypeScript, HTML</span>
+                      <span></span>
+                      <span>CSS</span>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="skill-pair">
+                      <span class="skill-pair__label">Stack:</span>
+                      <span>React, Redux, Node.js</span>
+                      <span></span>
+                      <span>Nest, Django, DRF</span>
+                    </div>
+                  </li>
+                  <li><b>ORM:</b> Sequelize, Django ORM</li>
+                  <li>
+                    <div class="skill-pair">
+                      <span class="skill-pair__label">Tool:</span>
+                      <span>SourceTree, Ngrok</span>
+                      <span></span>
+                      <span>MySQL Workbench, Socket</span>
+                    </div>
+                  </li>
+                </ul>
+              </li>
             </ul>
           </div>
         </div>
@@ -81,12 +166,13 @@
               <div></div>
               <div>
                 <i class="fas fa-dot-circle circle-right"></i>
-                <!-- <div class="vertical-line-1"></div> -->
               </div>
               <div class="content align-justify">
-                I am an energetic programmer with experience working across full-stack of software development. 
-                Excellent in time management and good responsibility. I’m looking for a role 
-                where I could grow up and continue learning from other experienced team members.
+                Backend-focused software engineer; day-to-day work is primarily
+                <b>Python</b> and <b>FastAPI</b> on core services and microservices, with
+                a broader full-stack background. I care about clear ownership, reliable
+                APIs and integrations, and working well with product and support when
+                issues reach production.
               </div>
               <div class="content"></div>
             </div>
@@ -100,7 +186,6 @@
               <div></div>
               <div>
                 <i class="fas fa-dot-circle circle-right"></i>
-                <!-- <div class="vertical-line-1"></div> -->
               </div>
               <div class="content">
                 <b>Name</b> : Bhornumnard Wanasrisun
@@ -108,7 +193,6 @@
               <div></div>
               <div>
                 <i class="fas fa-dot-circle circle-right"></i>
-                <!-- <div class="vertical-line-1"></div> -->
               </div>
               <div class="content">
                 <b>Nickname</b> : Tuck
@@ -116,7 +200,6 @@
               <div></div>
               <div>
                 <i class="fas fa-dot-circle circle-right"></i>
-                <!-- <div class="vertical-line-1"></div> -->
               </div>
               <div class="content">
                 <b>Date of Birth</b> : 3<sup>rd</sup> May 1994
@@ -124,7 +207,6 @@
               <div></div>
               <div>
                 <i class="fas fa-dot-circle circle-right"></i>
-                <!-- <div class="vertical-line-1"></div> -->
               </div>
               <div class="content">
                 <b>Address</b> : 135/22 Moo 11, Bangklang, Mueang Lamphun District, Lamphun.
@@ -159,142 +241,10 @@
                 </div>
                 <div class="text date">October 2019 — January 2021</div>
                 <div class="text">
-                  Studied 4-months course Mon-Fri (Full-stack, JavaScript).
+                  Full-time Mon–Fri program (Full-stack, JavaScript).
                 </div>
               </div>
             </div>
-          </div>
-          <div class="right-item">
-            <div class="capital right-header">
-              <i class="fas fa-star icon-right"></i>
-              <span>skills</span>
-            </div>
-            <div class="right-container">
-              <div></div>
-              <div>
-                <i class="fas fa-dot-circle circle-right"></i>
-              </div>
-              <div class="content">
-                <div class="topic">Programming skills</div>
-                <table>
-                  <tr>
-                    <td>
-                      <ol>
-                        <li class="mt-0">JavaScript</li>
-                        <li>SQL</li>
-                        <li>HTML</li>
-                        <li class="mg-0">Linux Shell</li>
-                      </ol>
-                    </td>
-                    <td>
-                      <ol>
-                        <li class="mt-0">Python</li>
-                        <li>CSS</li>
-                        <li>Type-script</li>
-                        <li class="hidden mg-0"></li>
-                      </ol>
-                    </td>
-                  </tr>
-                </table>
-              </div>
-            
-            <!-- <div class="right-item">
-              <div class="right-container"> -->
-                <div></div>
-                <div>
-                  <i class="fas fa-dot-circle circle-right"></i>
-                </div>
-                <div class="content">
-                  <div class="topic">Frameworks</div>
-                  <table>
-                    <tr>
-                      <td>
-                        <ol>
-                          <li class="mt-0">React</li>
-                          <li>Django</li>
-                          <li class="mg-0">Nest</li>
-                        </ol>
-                      </td>
-                      <td>
-                        <ol>
-                          <li class="mt-0">Redux</li>
-                          <li>node</li>
-                          <li class="mg-0">Django-Rest-framework</li>
-                        </ol>
-                      </td>
-                    </tr>
-                  </table>
-                </div>
-                <div></div>
-                <div>
-                  <i class="fas fa-dot-circle circle-right"></i>
-                </div>
-                <div class="content">
-                  <div class="topic">Databases</div>
-                  <table>
-                    <tr>
-                      <td>
-                        <ol>
-                          <li class="mt-0">MySQL</li>
-                          <li class="mg-0">MongoDB</li>
-                        </ol>
-                      </td>
-                      <td>
-                        <ol>
-                          <li class="mt-0">Redis</li>
-                          <li class="hidden"></li>
-                        </ol>
-                      </td>
-                    </tr>
-                  </table>
-                </div>
-                <div></div>
-                <div>
-                  <i class="fas fa-dot-circle circle-right"></i>
-                </div>
-                <div class="content">
-                  <div class="topic">Tools</div>
-                  <table>
-                    <tr>
-                      <td>
-                        <ol>
-                          <li class="mt-0">Source tree</li>
-                          <li>Ngrok</li>
-                          <li>MySQL Workbench</li>
-                          <li>Nginx</li>
-                          <li>AWS ECR</li>
-                          <li>AWS CloudWatch</li>
-                          <li class="mg-0">Socket</li>
-                        </ol>
-                      </td>
-                      <td>
-                        <ol>
-                          <li class="mt-0">Git</li>
-                          <li>Docker</li>
-                          <li>Postman</li>
-                          <li>AWS ECS</li>
-                          <li>AWS codecommit</li>
-                          <li>AWS EC2</li>
-                          <li class="mg-0">ORM (Sequelize, Django)</li>
-                        </ol>
-                      </td>
-                    </tr>
-                  </table>
-                </div>
-                <div></div>
-                <div>
-                  <i class="fas fa-dot-circle circle-right"></i>
-                </div>
-                <div class="content">
-                  <div class="topic">Cloud Platform</div>
-                  <div>
-                    <ol>
-                      <li class="pd2 mg-0 mt-0">AWS</li>
-                    </ol>
-                  </div>
-                </div>
-              <!-- </div>
-            </div> -->
           </div>
           <div class="right-item">
             <div class="capital right-header">
@@ -308,19 +258,16 @@
               </div>
               <div class="content">
                 <div class="text topic">
-                  DevSecOps at Sinwattana Crowdfunding, Bangkok,
-                  Thailand.
+                  Backend Developer at Uppass, Bangkok, Thailand.
                 </div>
-                <div class="text date print1">February 2022 — Present</div>
-                <div class="text indent print2">
-                  Designed Microservice and setting permission and scalability of
-                  Company applications.
+                <div class="text date">January 2024 — February 2026</div>
+                <div class="text indent">
+                  Python/FastAPI backend on the core product and microservices; integrations with external data and compliance sources.
                 </div>
                 <ol>
-                  <li class="pd2">Maintained architecture system.</li>
-                  <li class="pd2">Managed AWS Clound security.</li>
-                  <li class="pd2">Designed Microservice.</li>
-                  <li class="pd2">Backend developer task.</li>
+                  <li class="pd2">Developed and maintained the main core project and related microservices.</li>
+                  <li class="pd2">Built microservices that sync with third-party sources (business data, AML, bank statement and utility-bill extraction).</li>
+                  <li class="pd2">Ongoing microservice maintenance, technical support, and occasional customer support.</li>
                 </ol>
               </div>
               <div></div>
@@ -329,91 +276,51 @@
               </div>
               <div class="content">
                 <div class="text topic">
-                  Senior Backend Developer at Sinwattana Crowdfunding, Bangkok,
-                  Thailand.
+                  Backend Developer (DevOps focus) at Sinwattana Crowdfunding, Bangkok, Thailand.
+                </div>
+                <div class="text date">February 2022 — December 2023</div>
+                <div class="text indent">
+                  Microservices, access controls, and AWS operations for company applications.
+                </div>
+                <ol>
+                  <li class="pd2">Contributed to microservice design, permissions, and scalability.</li>
+                  <li class="pd2">Helped manage AWS security and production operations.</li>
+                  <li class="pd2">Backend development and architecture upkeep.</li>
+                </ol>
+              </div>
+              <div></div>
+              <div>
+                <i class="fas fa-dot-circle circle-right"></i>
+              </div>
+              <div class="content">
+                <div class="text topic">
+                  Backend Developer at Sinwattana Crowdfunding, Bangkok, Thailand.
                 </div>
                 <div class="text date">October 2020 — January 2022</div>
                 <div class="text indent">
-                  Designed database system. Developed and Deployed
-                  applications for Crowdfunding.
+                  Database and application work for multi-product crowdfunding (Equity, Debt, Social) and public sites.
                 </div>
                 <ol>
-                  <li class="pd2">Developed application system for the investors.</li>
-                  <li class="pd2">Developed fundraising system for the companys.</li>
-                  <li class="pd2">Developed stock reservation system.</li>
-                  <li class="pd2">Developed reserve units for investment.</li>
-                  <li class="pd2">
-                    Developed administrator system for management user
-                    registration, approval documentation, equity reservation, debt reservation.
-                  </li class="pd2">
-                  <li class="pd2">Developed repayment system of Debt Crowdfunding platform.</li>
-                </ol>
-                <div class="text indent">
-                  Working with APIs connection to third-party payment gateway.
-                </div>
-                <ol>
-                  <li class="pd2">
-                    K Plus, SCB Easy, Prompt Pay, Omise (credit card), Rabbit
-                    line pay, PayPal
-                  </li>
-                </ol>
-                <div class="text indent">
-                  Connected Oauth2 social login system with Sinwattana website.
-                </div>
-                <ol>
-                  <li class="pd2">Linked In, Line, Facebook, Google</li>
-                </ol>
-                <div class="text indent">Development and Maintenance company’s website.</div>
-                <ol>
-                  <li class="pd2">Equity (Equity Crowdfunding platform)</li>
-                  <li class="pd2">Debt (Debt Security Crowdfunding platform)</li>
-                  <li class="pd2">
-                    Social (Reward Crowdfunding platform, Donatin Crowdfunding
-                    platform)
-                  </li>
-                  <li class="pd2">Sinwattana official website</li>
-                </ol>
-                <div class="text indent">
-                  Designed and prepared to change monolithic system into micro
-                  service for single sign on system.
-                </div>
-                <ol>
-                  <li class="pd2">Equity (Equity Crowdfunding platform)</li>
-                  <li class="pd2">
-                    Social (Reward Crowdfunding platform, Donatin Crowdfunding
-                    platform)
-                  </li>
-                  <li class="pd2">Sinwattana official website</li>
-                </ol>
-                <div class="text indent">
-                  Authentication (2FA)
-                </div>
-                <ol>
-                  <li class="pd2">JWT authentication</li>
-                  <li class="pd2">
-                    TOTP authentication
-                  </li>
+                  <li class="pd2">Built features for investors, fundraisers, stock/unit reservation, admin/KYC-style approvals, and debt repayments.</li>
+                  <li class="pd2">Integrated third-party payment APIs (e.g. bank apps, cards, e-wallets) and OAuth2 social logins (LinkedIn, Line, Facebook, Google).</li>
+                  <li class="pd2">Helped plan migration from monolith toward microservices/SSO and implemented 2FA (JWT + TOTP) where required.</li>
                 </ol>
               </div>
               <div></div>
-              <div>
+              <div class="page-1-break">
                 <i class="fas fa-dot-circle circle-right"></i>
               </div>
-              <div class="content">
+              <div class="content page-1-break">
                 <div class="text topic">
-                  Teacher Assistant at Software park code camp, Bangkok,
-                  Thailand.
+                  Teacher Assistant at Software park code camp, Bangkok, Thailand.
                 </div>
                 <div class="text date">February 2020 — September 2020</div>
                 <ol>
-                  <li class="pd2">Taught Basic HTML.</li>
-                  <li class="pd2">Taught CSS, JavaScript.</li>
-                  <li class="pd2">Taught React hook, React, Redux, DOM, j query.</li>
+                  <li class="pd2">Taught HTML, CSS, JavaScript, React, Redux, and DOM basics.</li>
                 </ol>
               </div>
             </div>
           </div>
-          
             <div class="right-item">
               <div class="capital right-header">
                 <i class="fas fa-seedling icon-right"></i>
@@ -426,10 +333,8 @@
                 </div>
                 <div class="content">
                   <div class="text topic">
-                    High school A-math competition at Suanboonyopatham Lamphun
-                    School, Lamphun, Thailand.
+                    A-math competition, Suanboonyopatham Lamphun School — winner (2010)
                   </div>
-                  <div class="text">Winner of A-math competition in 2010</div>
                 </div>
                 <div></div>
                 <div>
@@ -437,36 +342,13 @@
                 </div>
                 <div class="content">
                   <div class="text topic">
-                    Attended an astronomy camp at NARIT Youth Camp (NYC), Chiang
-                    Mai, Thailand.
+                    Chairman, Athletics Club, Faculty of Science, CMU (October 2013 — May 2016)
                   </div>
-                  <div class="text">December 2010</div>
-                </div>
-                <div></div>
-                <div>
-                  <i class="fas fa-dot-circle circle-right"></i>
-                </div>
-                <div class="content">
-                  <div class="text topic">
-                    Chairman of the Athletics Club, Faculty of Science, Chiang
-                    Mai, Thailand.
-                  </div>
-                  <div class="text">October 2013 — May 2016</div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
   </body>
-  <!-- <script>
-    function print () {
-      var originalContents = document.body.innerHTML;
-      var printContents = document.getElementById('resume').innerHTML;
-      document.body.innerHTML = printContents;
-      window.print();
-     document.body.innerHTML = originalContents;
-    }
-  </script> -->
 </html>

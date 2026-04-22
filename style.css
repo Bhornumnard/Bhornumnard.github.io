@@ -34,12 +34,25 @@ body {
         position: relative;
         bottom: 50px;
     }
+    .page-1-break{
+        margin-top: 50px;
+    }
+    
+    .page-break{
+        break-before: page;   
+        page-break-after: always;
+    }
+    
     .print1{
         position: relative;
         bottom: 13px;
     }
     .print2{
         padding-top: 27px;
+    }
+
+    .align-justify {
+        text-align: justify;
     }
 
 }
@@ -199,7 +212,7 @@ a:hover {
     white-space: normal;
 }
 .align-justify {
-    text-align-last: justify;
+    text-align-last: left;
 }
 .text {
     margin-bottom: 5px;
@@ -247,4 +260,22 @@ td {
 
 .date {
     color: #666666;
+}
+
+.left-list-head > li {
+    padding-bottom: 10px;
+}
+
+.left-skill-nested{
+    list-style: none !important;
+}
+
+.left-skill-nested > li > .left-skill-nested-label {
+    font-size: 14px;
+    display: inline;
+    padding-left: 10px;
+}
+
+ul.left-skill-nested {
+    padding-top: 3px;
 }
