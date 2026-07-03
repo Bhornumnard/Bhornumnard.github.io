@@ -496,21 +496,6 @@ a:hover {
 }
 
 /* Skills */
-.skill-group {
-  margin-bottom: 16px;
-}
-
-.skill-group:last-child {
-  margin-bottom: 0;
-}
-
-.skill-group-title {
-  font-size: 13px;
-  font-weight: 600;
-  margin-bottom: 8px;
-}
-
-
 .skill-category {
   margin-bottom: 12px;
 }
@@ -585,6 +570,11 @@ a:hover {
 .job-highlights {
   margin: 0;
   padding-left: 1.2em;
+  list-style-type: disc;
+}
+
+.job-highlights li::marker {
+  color: var(--text-muted);
 }
 
 .job-highlights li {

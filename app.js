@@ -114,27 +114,22 @@
   function renderSkills() {
     const container = document.getElementById("skills-container");
     container.innerHTML = data.skills
-      .map((group) => {
-        const cats = group.categories
-          .map((cat) => {
-            let pills = [];
-            if (cat.rows) {
-              cat.rows.forEach((row) => {
-                row[0].split(",").forEach((item) => {
-                  const trimmed = item.trim();
-                  if (trimmed) pills.push(trimmed);
-                });
-              });
-            } else if (cat.items) {
-              pills = cat.items;
-            }
-            const pillHtml = pills
-              .map((item) => `<span class="skill-pill">${item}</span>`)
-              .join("");
-            return `<div class="skill-category"><div class="skill-category-label">${cat.label}</div><div class="skill-pills">${pillHtml}</div></div>`;
-          })
+      .map((cat) => {
+        let pills = [];
+        if (cat.rows) {
+          cat.rows.forEach((row) => {
+            row[0].split(",").forEach((item) => {
+              const trimmed = item.trim();
+              if (trimmed) pills.push(trimmed);
+            });
+          });
+        } else if (cat.items) {
+          pills = cat.items;
+        }
+        const pillHtml = pills
+          .map((item) => `<span class="skill-pill">${item}</span>`)
           .join("");
-        return `<div class="skill-group"><div class="skill-group-title">${t(group, "label")}</div>${cats}</div>`;
+        return `<div class="skill-category"><div class="skill-category-label">${cat.label}</div><div class="skill-pills">${pillHtml}</div></div>`;
       })
       .join("");
   }
@@ -154,7 +149,7 @@
             <h3 class="job-title">${role} at ${job.company}, ${loc}</h3>
             <p class="job-date">${formatRange(job.startDate, job.endDate)}</p>
             ${desc ? `<p class="job-desc">${desc}</p>` : ""}
-            <ol class="job-highlights">${bullets}</ol>
+            <ul class="job-highlights">${bullets}</ul>
           </article>`;
       })
       .join("");
@@ -162,7 +157,8 @@
 
   function renderEducation() {
     const container = document.getElementById("education-container");
-    container.innerHTML = data.education
+    container.innerHTML = [...data.education]
+      .sort((a, b) => b.endDate.localeCompare(a.endDate) || b.startDate.localeCompare(a.startDate))
       .map((edu) => {
         const note = t(edu, "note");
         return `
