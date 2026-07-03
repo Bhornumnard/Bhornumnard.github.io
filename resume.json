@@ -1,0 +1,297 @@
+{
+  "settings": {
+    "defaultLocale": "en",
+    "pdfFilename": "Bhornumnard_Wanasrisun_Resume.pdf",
+    "siteUrl": "https://bhornumnard.github.io"
+  },
+  "labels": {
+    "contacts_en": "Contacts",
+    "contacts_th": "ช่องทางติดต่อ",
+    "languages_en": "Languages",
+    "languages_th": "ภาษา",
+    "skills_en": "Skills",
+    "skills_th": "ทักษะ",
+    "profile_en": "Profile",
+    "profile_th": "ประวัติโดยย่อ",
+    "employment_en": "Employment History",
+    "employment_th": "ประสบการณ์ทำงาน",
+    "education_en": "Education",
+    "education_th": "การศึกษา",
+    "present_en": "Present",
+    "present_th": "ปัจจุบัน",
+    "downloadPdf_en": "Download PDF",
+    "downloadPdf_th": "ดาวน์โหลด PDF",
+    "copyLink_en": "Copy Link",
+    "copyLink_th": "คัดลอกลิงก์",
+    "copied_en": "Copied!",
+    "copied_th": "คัดลอกแล้ว!",
+    "contactPhone_en": "Phone",
+    "contactPhone_th": "โทรศัพท์",
+    "contactEmail_en": "Email",
+    "contactEmail_th": "อีเมล",
+    "contactLinkedin_en": "LinkedIn",
+    "contactLinkedin_th": "LinkedIn",
+    "contactGithub_en": "GitHub",
+    "contactGithub_th": "GitHub"
+  },
+  "profile": {
+    "fullName": "Bhornumnard Wanasrisun",
+    "title_en": "Software Engineer (Backend) — Python / FastAPI",
+    "title_th": "วิศวกรซอฟต์แวร์ (แบ็กเอนด์) — Python / FastAPI",
+    "location_en": "Lamphun, Thailand",
+    "location_th": "ลำพูน ประเทศไทย",
+    "phone": "+66(0)84-555-0485",
+    "phoneDisplay": "+66 (0)84-555-0485",
+    "phoneHref": "tel:+66845550485",
+    "email": "bhornumnard.w@gmail.com",
+    "linkedinUrl": "https://www.linkedin.com/in/bhornumnard-wanasrisun-801bb0138/",
+    "linkedinLabel": "linkedin.com/in/bhornumnard",
+    "githubUrl": "https://github.com/Bhornumnard",
+    "githubLabel": "github.com/Bhornumnard",
+    "availability_en": "Open to remote",
+    "availability_th": "เปิดรับ remote"
+  },
+  "summary": {
+    "summary_en": "Senior backend engineer with 5+ years building Python/FastAPI microservices on production fintech platforms. Specialized in credit decisioning, eKYC pipelines (AML, OCR, face recognition), and third-party data integrations serving 40k–80k daily active users. Experienced in full service ownership—from design and delivery through production observability and incident response. Open to remote roles in fintech, compliance tech, or data-engineering-adjacent backend positions.",
+    "summary_th": "วิศวกร Backend อาวุโสที่มีประสบการณ์กว่า 5 ปีในการพัฒนา microservices ด้วย Python/FastAPI บนแพลตฟอร์ม fintech ระดับ production เชี่ยวชาญด้าน credit decisioning, eKYC pipelines (AML, OCR, face recognition) และการ integrate ข้อมูลจาก third-party รองรับผู้ใช้งานรายวัน 40,000–80,000 คน มีประสบการณ์ในการดูแลบริการตั้งแต่การออกแบบ การส่งมอบ ไปจนถึง production observability และการตอบสนองเหตุการณ์ เปิดรับตำแหน่ง remote ใน fintech, compliance tech หรือ backend ที่เกี่ยวข้องกับ data engineering"
+  },
+  "languages": [
+    {
+      "name_en": "Thai",
+      "name_th": "ไทย",
+      "level_en": "Native",
+      "level_th": "เจ้าภาษา"
+    },
+    {
+      "name_en": "English",
+      "name_th": "อังกฤษ",
+      "level_en": "Professional Working Proficiency",
+      "level_th": "ใช้งานได้ในระดับมืออาชีพ"
+    }
+  ],
+  "skills": [
+    {
+      "groupKey": "current",
+      "label_en": "Current",
+      "label_th": "ปัจจุบัน",
+      "categories": [
+        {
+          "label": "Languages",
+          "items": [
+            "Python",
+            "SQL"
+          ]
+        },
+        {
+          "label": "Framework",
+          "items": [
+            "FastAPI"
+          ]
+        },
+        {
+          "label": "Data & Storage",
+          "items": [
+            "MySQL",
+            "MongoDB",
+            "Redis"
+          ]
+        },
+        {
+          "label": "Cloud",
+          "items": [
+            "GCP",
+            "AWS",
+            "Azure"
+          ]
+        },
+        {
+          "label": "Shell / CLI",
+          "items": [
+            "Linux shell"
+          ]
+        },
+        {
+          "label": "Tools",
+          "rows": [
+            [
+              "Git, Docker, Postman"
+            ],
+            [
+              "Cursor, ClickUp, Nginx"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "groupKey": "earlier",
+      "label_en": "Earlier",
+      "label_th": "ก่อนหน้า",
+      "categories": [
+        {
+          "label": "Languages",
+          "rows": [
+            [
+              "JavaScript, TypeScript, HTML"
+            ],
+            [
+              "CSS"
+            ]
+          ]
+        },
+        {
+          "label": "Stack",
+          "rows": [
+            [
+              "React, Redux, Node.js"
+            ],
+            [
+              "Nest, Django, DRF"
+            ]
+          ]
+        },
+        {
+          "label": "ORM",
+          "items": [
+            "Sequelize",
+            "Django ORM"
+          ]
+        },
+        {
+          "label": "Tools",
+          "rows": [
+            [
+              "SourceTree, Ngrok"
+            ],
+            [
+              "MySQL Workbench, Socket"
+            ]
+          ]
+        }
+      ]
+    }
+  ],
+  "experience": [
+    {
+      "role_en": "Software Engineer (Backend)",
+      "role_th": "วิศวกรซอฟต์แวร์ (Backend)",
+      "company": "Uppass",
+      "location_en": "Bangkok, Thailand",
+      "location_th": "กรุงเทพมหานคร ประเทศไทย",
+      "startDate": "2022-04",
+      "endDate": "2026-02",
+      "description_en": "Python/FastAPI backends for credit decisioning and integrations on a production fintech platform.",
+      "description_th": "พัฒนา backend Python/FastAPI สำหรับ credit decisioning และการ integrate บนแพลตฟอร์ม fintech ระดับ production",
+      "highlights_en": [
+        "Built and maintained <strong>6–7 backend microservices</strong> in Python/FastAPI supporting <strong>credit decisioning</strong> and partner integrations for <strong>~40k–60k daily active users</strong> (peak <strong>~80k/day</strong>; sustained <strong>20–40 RPS</strong>).",
+        "Delivered backend for credit decision flows and eKYC pipelines (ID card OCR, face recognition, AML screening, bank statement extraction, utility bill parsing); integrated 5+ third-party data providers across compliance, identity, and financial data domains.",
+        "Shipped eKYC API gateway fixes and reliability improvements; owned client configuration for production rollouts.",
+        "Led backend delivery for Rabbit Cash financial features (installment and revolving flows), inheriting an existing codebase and owning the full development-to-handover lifecycle to the Rabbit Cash team; coordinated incident response across QA, PM, support, and leadership for 2–3 core services.",
+        "Maintained ~99% uptime across core services via production observability (Cloud Logging, Sentry, alerting, metrics dashboards) covering internal services and third-party dependency health."
+      ],
+      "highlights_th": [
+        "พัฒนาและดูแล backend <strong>microservices 6–7 บริการ</strong> ด้วย Python/FastAPI รองรับ <strong>credit decisioning</strong> และ partner integrations สำหรับผู้ใช้งานรายวัน <strong>~40,000–60,000 คน</strong> (peak <strong>~80,000/วัน</strong>; sustained <strong>20–40 RPS</strong>)",
+        "ส่งมอบ backend สำหรับ credit decision flows และ eKYC pipelines (ID card OCR, face recognition, AML screening, bank statement extraction, utility bill parsing); integrate ผู้ให้บริการข้อมูล third-party กว่า 5 รายในด้าน compliance, identity และ financial data",
+        "แก้ไขและปรับปรุงความเสถียรของ eKYC API gateway; ดูแล client configuration สำหรับ production rollouts",
+        "นำการส่งมอบ backend สำหรับฟีเจอร์ Rabbit Cash (installment และ revolving flows) รับช่วง codebase เดิมและดูแล lifecycle ตั้งแต่พัฒนาจนส่งมอบให้ทีม Rabbit Cash; ประสานงาน incident response ร่วมกับ QA, PM, support และฝ่ายบริหารสำหรับบริการหลัก 2–3 บริการ",
+        "รักษา uptime ~99% ของบริการหลักผ่าน production observability (Cloud Logging, Sentry, alerting, metrics dashboards) ครอบคลุมทั้งบริการภายในและสุขภาพของ third-party dependencies"
+      ]
+    },
+    {
+      "role_en": "Software Engineer (Backend)",
+      "role_th": "วิศวกรซอฟต์แวร์ (Backend)",
+      "company": "Sinwattana Crowdfunding",
+      "location_en": "Bangkok, Thailand",
+      "location_th": "กรุงเทพมหานคร ประเทศไทย",
+      "startDate": "2020-09",
+      "endDate": "2022-03",
+      "description_en": "Backend delivery for investor/fundraiser journeys on a live crowdfunding product with payment and social integrations.",
+      "description_th": "พัฒนา backend สำหรับเส้นทางผู้ลงทุน/ผู้ระดมทุนบนผลิตภัณฑ์ crowdfunding ที่ใช้งานจริง พร้อมการ integrate การชำระเงินและ social login",
+      "highlights_en": [
+        "Implemented investor/fundraiser flows, reservations, and internal admin tooling used in day-to-day operations.",
+        "Integrated payment and social-login providers via third-party APIs with production-grade error handling and rollout support.",
+        "Partnered with product and engineering on defect triage, releases, and incremental reliability improvements."
+      ],
+      "highlights_th": [
+        "พัฒนา flow สำหรับผู้ลงทุน/ผู้ระดมทุน ระบบจอง และเครื่องมือ admin ภายในที่ใช้งานในปฏิบัติการประจำวัน",
+        "Integrate ผู้ให้บริการชำระเงินและ social login ผ่าน third-party APIs พร้อม error handling ระดับ production และการสนับสนุน rollout",
+        "ร่วมมือกับทีม product และ engineering ในการ triage defect การ release และการปรับปรุงความเสถียรอย่างต่อเนื่อง"
+      ]
+    },
+    {
+      "role_en": "Teaching Assistant",
+      "role_th": "ผู้ช่วยสอน",
+      "company": "Software Park Code Camp",
+      "location_en": "Bangkok, Thailand",
+      "location_th": "กรุงเทพมหานคร ประเทศไทย",
+      "startDate": "2020-02",
+      "endDate": "2020-09",
+      "description_en": null,
+      "description_th": null,
+      "highlights_en": [
+        "Supported instruction in HTML, CSS, JavaScript, React, Redux, and DOM fundamentals for full-time bootcamp cohorts."
+      ],
+      "highlights_th": [
+        "สนับสนุนการสอน HTML, CSS, JavaScript, React, Redux และพื้นฐาน DOM สำหรับรุ่น bootcamp แบบเต็มเวลา"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree_en": "Bachelor of Science (Biology)",
+      "degree_th": "วิทยาศาสตรบัณฑิต (ชีววิทยา)",
+      "institution": "Chiang Mai University",
+      "location_en": "Chiang Mai, Thailand",
+      "location_th": "เชียงใหม่ ประเทศไทย",
+      "startDate": "2012-06",
+      "endDate": "2016-05",
+      "note_en": null,
+      "note_th": null
+    },
+    {
+      "degree_en": "Software Park Code Camp",
+      "degree_th": "Software Park Code Camp",
+      "institution": "Software Park Thailand",
+      "location_en": "Bangkok, Thailand",
+      "location_th": "กรุงเทพมหานคร ประเทศไทย",
+      "startDate": "2019-10",
+      "endDate": "2021-01",
+      "note_en": "Full-time Mon–Fri program (Full-stack, JavaScript).",
+      "note_th": "หลักสูตรเต็มเวลา จันทร์–ศุกร์ (Full-stack, JavaScript)"
+    }
+  ],
+  "heroCode": {
+    "filename": "engineer.py",
+    "lang": [
+      "Python",
+      "SQL"
+    ],
+    "stack": "FastAPI",
+    "domain_en": "fintech · eKYC",
+    "domain_th": "fintech · eKYC",
+    "years": 5,
+    "remote": true
+  },
+  "metrics": [
+    {
+      "value": "5+",
+      "label_en": "years exp",
+      "label_th": "ปีประสบการณ์"
+    },
+    {
+      "value": "40–80k",
+      "label_en": "daily users",
+      "label_th": "ผู้ใช้งาน/วัน"
+    },
+    {
+      "value": "6–7",
+      "label_en": "microservices",
+      "label_th": "microservices"
+    },
+    {
+      "value": "~99%",
+      "label_en": "uptime",
+      "label_th": "uptime"
+    }
+  ]
+}
