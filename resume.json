@@ -2,7 +2,7 @@
   "settings": {
     "defaultLocale": "en",
     "pdfFilename": "Bhornumnard_Wanasrisun_Resume.pdf",
-    "siteUrl": "https://bhornumnard.github.io"
+    "siteUrl": "https://bhornumnard.github.io#backend"
   },
   "labels": {
     "contacts_en": "Contacts",
@@ -32,7 +32,9 @@
     "contactLinkedin_en": "LinkedIn",
     "contactLinkedin_th": "LinkedIn",
     "contactGithub_en": "GitHub",
-    "contactGithub_th": "GitHub"
+    "contactGithub_th": "GitHub",
+    "contactPortfolio_en": "Portfolio",
+    "contactPortfolio_th": "Portfolio"
   },
   "profile": {
     "fullName": "Bhornumnard Wanasrisun",
@@ -44,10 +46,12 @@
     "phoneDisplay": "+66 (0)84-555-0485",
     "phoneHref": "tel:+66845550485",
     "email": "bhornumnard.w@gmail.com",
-    "linkedinUrl": "https://www.linkedin.com/in/bhornumnard-wanasrisun-801bb0138/",
-    "linkedinLabel": "linkedin.com/in/bhornumnard",
+    "linkedinUrl": "https://www.linkedin.com/in/bhornumnard-wanasrisun/",
+    "linkedinLabel": "linkedin.com/in/bhornumnard-wanasrisun",
     "githubUrl": "https://github.com/Bhornumnard",
     "githubLabel": "github.com/Bhornumnard",
+    "portfolioUrl": "https://bhornumnard.github.io#backend",
+    "portfolioLabel": "bhornumnard.github.io",
     "availability_en": "Open to remote · UTC+7 · ±2–3h from local hours",
     "availability_th": "เปิดรับ remote · UTC+7 · ปรับเวลาได้ ±2–3 ชม. จากปกติ"
   },

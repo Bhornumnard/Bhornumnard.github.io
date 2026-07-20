@@ -1,0 +1,235 @@
+{
+  "settings": {
+    "defaultLocale": "en",
+    "pdfFilename": "Bhornumnard_Wanasrisun_Resume_Data.pdf",
+    "siteUrl": "https://bhornumnard.github.io#data-engineering"
+  },
+  "labels": {
+    "contacts_en": "Contacts",
+    "contacts_th": "ช่องทางติดต่อ",
+    "languages_en": "Languages",
+    "languages_th": "ภาษา",
+    "skills_en": "Skills",
+    "skills_th": "ทักษะ",
+    "profile_en": "Profile",
+    "profile_th": "ประวัติโดยย่อ",
+    "employment_en": "Employment History",
+    "employment_th": "ประสบการณ์ทำงาน",
+    "education_en": "Education",
+    "education_th": "การศึกษา",
+    "present_en": "Present",
+    "present_th": "ปัจจุบัน",
+    "downloadPdf_en": "Download PDF",
+    "downloadPdf_th": "ดาวน์โหลด PDF",
+    "copyLink_en": "Copy Link",
+    "copyLink_th": "คัดลอกลิงก์",
+    "copied_en": "Copied!",
+    "copied_th": "คัดลอกแล้ว!",
+    "contactPhone_en": "Phone",
+    "contactPhone_th": "โทรศัพท์",
+    "contactEmail_en": "Email",
+    "contactEmail_th": "อีเมล",
+    "contactLinkedin_en": "LinkedIn",
+    "contactLinkedin_th": "LinkedIn",
+    "contactGithub_en": "GitHub",
+    "contactGithub_th": "GitHub",
+    "contactPortfolio_en": "Portfolio",
+    "contactPortfolio_th": "Portfolio"
+  },
+  "profile": {
+    "fullName": "Bhornumnard Wanasrisun",
+    "title_en": "Software Engineer (Python) — FinTech Data Integrations",
+    "title_th": "วิศวกรซอฟต์แวร์ (Python) — การเชื่อมต่อข้อมูลใน FinTech",
+    "location_en": "Lamphun, Thailand",
+    "location_th": "ลำพูน ประเทศไทย",
+    "phone": "+66(0)84-555-0485",
+    "phoneDisplay": "+66 (0)84-555-0485",
+    "phoneHref": "tel:+66845550485",
+    "email": "bhornumnard.w@gmail.com",
+    "linkedinUrl": "https://www.linkedin.com/in/bhornumnard-wanasrisun/",
+    "linkedinLabel": "linkedin.com/in/bhornumnard-wanasrisun",
+    "githubUrl": "https://github.com/Bhornumnard",
+    "githubLabel": "github.com/Bhornumnard",
+    "portfolioUrl": "https://bhornumnard.github.io#data-engineering",
+    "portfolioLabel": "bhornumnard.github.io",
+    "availability_en": "Available immediately · 6-month contract / WFH hybrid OK · UTC+7",
+    "availability_th": "พร้อมเริ่มทันที · รับสัญญา 6 เดือน / WFH hybrid ได้ · UTC+7"
+  },
+  "summary": {
+    "summary_en": "Software engineer with 5+ years in FinTech, strong in Python and SQL. At Uppass, owned backend services that call partner APIs, transform responses (AML, OCR, face recognition, bank statements, utility bills), and feed credit decisioning / eKYC on a live platform (~40k–80k daily users). Comfortable with production reliability, Linux shell, Docker, and cross-team work with product, QA, support, and business stakeholders. Currently learning formal data engineering via R2DE 3.0 (Airflow, Spark, BigQuery, GCP). Available to start immediately on a 6-month contract.",
+    "summary_th": "วิศวกรซอฟต์แวร์ประสบการณ์กว่า 5 ปีใน FinTech เชี่ยวชาญ Python และ SQL ที่ Uppass ดูแล backend ที่เรียก partner APIs แปลงผลลัพธ์ (AML, OCR, face recognition, bank statements, utility bills) แล้วส่งเข้า credit decisioning / eKYC บนระบบจริง (~40,000–80,000 ผู้ใช้/วัน) คุ้นกับความเสถียรใน production, Linux shell, Docker และการทำงานร่วมกับ product, QA, support และฝ่ายธุรกิจ กำลังเรียน data engineering ผ่าน R2DE 3.0 (Airflow, Spark, BigQuery, GCP) พร้อมเริ่มสัญญา 6 เดือนได้ทันที"
+  },
+  "languages": [
+    {
+      "name_en": "Thai",
+      "name_th": "ไทย",
+      "level_en": "Native",
+      "level_th": "เจ้าภาษา"
+    },
+    {
+      "name_en": "English",
+      "name_th": "อังกฤษ",
+      "level_en": "Professional Working Proficiency",
+      "level_th": "ใช้งานได้ในระดับมืออาชีพ"
+    }
+  ],
+  "skills": [
+    {
+      "label": "Core",
+      "items": ["Python", "SQL", "FastAPI"]
+    },
+    {
+      "label": "Data work (production)",
+      "items": [
+        "Third-party API integrations",
+        "Data transform for decisioning / eKYC",
+        "MySQL",
+        "MongoDB",
+        "Redis"
+      ]
+    },
+    {
+      "label": "Cloud",
+      "items": ["AWS", "GCP", "Azure"]
+    },
+    {
+      "label": "Ops",
+      "items": ["Linux shell", "Docker", "Git", "Nginx"]
+    },
+    {
+      "label": "Learning (R2DE 3.0)",
+      "items": ["Airflow", "Spark", "BigQuery", "GCP data stack"]
+    }
+  ],
+  "experience": [
+    {
+      "role_en": "Software Engineer (Backend / Data Integrations)",
+      "role_th": "วิศวกรซอฟต์แวร์ (Backend / Data Integrations)",
+      "company": "Uppass",
+      "location_en": "Bangkok, Thailand",
+      "location_th": "กรุงเทพมหานคร ประเทศไทย",
+      "startDate": "2022-04",
+      "endDate": "2026-02",
+      "description_en": "Python backend for credit decisioning and partner data integrations on a production FinTech platform.",
+      "description_th": "Backend Python สำหรับ credit decisioning และการเชื่อมต่อข้อมูล partner บนแพลตฟอร์ม FinTech ระดับ production",
+      "highlights_en": [
+        "Built <strong>Python data pipelines</strong> that ingest partner APIs and transform identity/compliance/financial data (ID OCR, face recognition, AML screening, bank-statement extraction, utility-bill parsing) for eKYC and credit decisioning; integrated <strong>5+ third-party providers</strong>.",
+        "Owned and maintained <strong>6–7 backend services</strong> supporting decisioning and integrations for <strong>~40k–60k daily active users</strong> (peak <strong>~80k/day</strong>; sustained <strong>~20–40 RPS</strong>).",
+        "Improved reliability of data-dependent flows: client configuration, production rollouts, and handling failures from partner feeds.",
+        "Led backend delivery for Rabbit Cash financial features (installment and revolving flows), owning development-to-handover and coordinating with QA, PM, support, and leadership on 2–3 core services.",
+        "Kept core services at <strong>~99% uptime</strong> using Cloud Logging, Sentry, alerting, and metrics dashboards (internal services + third-party health)."
+      ],
+      "highlights_th": [
+        "สร้าง <strong>Python data pipelines</strong> ที่ ingest จาก partner APIs และแปลงข้อมูล identity/compliance/การเงิน (ID OCR, face recognition, AML screening, bank-statement extraction, utility-bill parsing) สำหรับ eKYC และ credit decisioning; เชื่อม <strong>ผู้ให้บริการ third-party กว่า 5 ราย</strong>",
+        "ดูแล backend <strong>6–7 บริการ</strong> รองรับ decisioning และการเชื่อมต่อข้อมูล สำหรับผู้ใช้งานรายวัน <strong>~40,000–60,000 คน</strong> (peak <strong>~80,000/วัน</strong>; <strong>~20–40 RPS</strong>)",
+        "ปรับปรุงความเสถียรของ flow ที่พึ่งพาข้อมูล: client configuration, production rollouts และการจัดการ failure จาก partner feeds",
+        "นำการส่งมอบ backend ของ Rabbit Cash (installment และ revolving) จนส่งมอบ และประสานงานกับ QA, PM, support และฝ่ายบริหารสำหรับบริการหลัก 2–3 บริการ",
+        "รักษา <strong>uptime ~99%</strong> ของบริการหลักด้วย Cloud Logging, Sentry, alerting และ metrics dashboards"
+      ]
+    },
+    {
+      "role_en": "Software Engineer",
+      "role_th": "วิศวกรซอฟต์แวร์",
+      "company": "Sinwattana Crowdfunding",
+      "location_en": "Bangkok, Thailand",
+      "location_th": "กรุงเทพมหานคร ประเทศไทย",
+      "startDate": "2020-09",
+      "endDate": "2022-03",
+      "description_en": "Backend for investor/fundraiser journeys with payment and social-login integrations.",
+      "description_th": "Backend สำหรับเส้นทางผู้ลงทุน/ผู้ระดมทุน พร้อมการเชื่อมต่อ payment และ social login",
+      "highlights_en": [
+        "Implemented investor/fundraiser flows, reservations, and internal admin tooling used in day-to-day operations.",
+        "Integrated payment and social-login providers via third-party APIs with production error handling and rollout support.",
+        "Partnered with product and engineering on defect triage, releases, and reliability improvements."
+      ],
+      "highlights_th": [
+        "พัฒนา flow ผู้ลงทุน/ผู้ระดมทุน ระบบจอง และเครื่องมือ admin ที่ใช้ในงานประจำวัน",
+        "Integrate ผู้ให้บริการชำระเงินและ social login ผ่าน third-party APIs พร้อม error handling ระดับ production",
+        "ร่วมมือกับทีม product และ engineering ในการ triage defect การ release และการปรับปรุงความเสถียร"
+      ]
+    },
+    {
+      "role_en": "Teaching Assistant",
+      "role_th": "ผู้ช่วยสอน",
+      "company": "Software Park Code Camp",
+      "location_en": "Bangkok, Thailand",
+      "location_th": "กรุงเทพมหานคร ประเทศไทย",
+      "startDate": "2020-02",
+      "endDate": "2020-09",
+      "description_en": "Supported full-time bootcamp cohorts.",
+      "description_th": "สนับสนุนการสอนสำหรับรุ่นเรียนเต็มเวลา",
+      "highlights_en": [
+        "Supported instruction in HTML, CSS, JavaScript, React, Redux, and DOM fundamentals for full-time bootcamp cohorts."
+      ],
+      "highlights_th": [
+        "สนับสนุนการสอน HTML, CSS, JavaScript, React, Redux และพื้นฐาน DOM สำหรับรุ่นเรียนเต็มเวลา"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree_en": "R2DE 3.0 (Data Engineering) — In progress",
+      "degree_th": "R2DE 3.0 (Data Engineering) — กำลังเรียน",
+      "institution": "R2DE",
+      "location_en": "Online",
+      "location_th": "ออนไลน์",
+      "startDate": "2025-01",
+      "endDate": "2026-12",
+      "note_en": "Airflow, Spark, BigQuery, GCP data pipelines.",
+      "note_th": "Airflow, Spark, BigQuery, GCP data pipelines"
+    },
+    {
+      "degree_en": "Bachelor of Science (Biology)",
+      "degree_th": "วิทยาศาสตรบัณฑิต (ชีววิทยา)",
+      "institution": "Chiang Mai University",
+      "location_en": "Chiang Mai, Thailand",
+      "location_th": "เชียงใหม่ ประเทศไทย",
+      "startDate": "2012-06",
+      "endDate": "2016-05",
+      "note_en": null,
+      "note_th": null
+    },
+    {
+      "degree_en": "Software Park Code Camp",
+      "degree_th": "Software Park Code Camp",
+      "institution": "Software Park Thailand",
+      "location_en": "Bangkok, Thailand",
+      "location_th": "กรุงเทพมหานคร ประเทศไทย",
+      "startDate": "2019-10",
+      "endDate": "2021-01",
+      "note_en": "Full-time Mon–Fri program (Full-stack, JavaScript). Teaching Assistant (Feb–Sep 2020).",
+      "note_th": "หลักสูตรเต็มเวลา จันทร์–ศุกร์ (Full-stack, JavaScript) · ผู้ช่วยสอน (ก.พ.–ก.ย. 2020)"
+    }
+  ],
+  "heroCode": {
+    "filename": "integrations.py",
+    "lang": ["Python", "SQL"],
+    "stack": "FastAPI · APIs",
+    "domain_en": "FinTech · eKYC",
+    "domain_th": "FinTech · eKYC",
+    "years": 5,
+    "remote": true
+  },
+  "metrics": [
+    {
+      "value": "5+",
+      "label_en": "years FinTech",
+      "label_th": "ปีใน FinTech"
+    },
+    {
+      "value": "Python+SQL",
+      "label_en": "core stack",
+      "label_th": "สแต็กหลัก"
+    },
+    {
+      "value": "5+",
+      "label_en": "partner APIs",
+      "label_th": "partner APIs"
+    },
+    {
+      "value": "Now",
+      "label_en": "available",
+      "label_th": "พร้อมเริ่ม"
+    }
+  ]
+}

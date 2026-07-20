@@ -1,0 +1,101 @@
+{
+  "settings": {
+    "defaultLocale": "en",
+    "pdfFilename": "Bhornumnard_Wanasrisun_Resume_AI.pdf",
+    "siteUrl": "https://bhornumnard.github.io#ai",
+    "placeholder": true
+  },
+  "labels": {
+    "contacts_en": "Contacts",
+    "contacts_th": "ช่องทางติดต่อ",
+    "languages_en": "Languages",
+    "languages_th": "ภาษา",
+    "skills_en": "Skills",
+    "skills_th": "ทักษะ",
+    "profile_en": "Profile",
+    "profile_th": "ประวัติโดยย่อ",
+    "employment_en": "Employment History",
+    "employment_th": "ประสบการณ์ทำงาน",
+    "education_en": "Education",
+    "education_th": "การศึกษา",
+    "present_en": "Present",
+    "present_th": "ปัจจุบัน",
+    "downloadPdf_en": "Download PDF",
+    "downloadPdf_th": "ดาวน์โหลด PDF",
+    "copyLink_en": "Copy Link",
+    "copyLink_th": "คัดลอกลิงก์",
+    "copied_en": "Copied!",
+    "copied_th": "คัดลอกแล้ว!",
+    "contactPhone_en": "Phone",
+    "contactPhone_th": "โทรศัพท์",
+    "contactEmail_en": "Email",
+    "contactEmail_th": "อีเมล",
+    "contactLinkedin_en": "LinkedIn",
+    "contactLinkedin_th": "LinkedIn",
+    "contactGithub_en": "GitHub",
+    "contactGithub_th": "GitHub",
+    "contactPortfolio_en": "Portfolio",
+    "contactPortfolio_th": "Portfolio"
+  },
+  "profile": {
+    "fullName": "Bhornumnard Wanasrisun",
+    "title_en": "AI Backend Engineer — Coming Soon",
+    "title_th": "AI Backend Engineer — เร็วๆ นี้",
+    "location_en": "Lamphun, Thailand",
+    "location_th": "ลำพูน ประเทศไทย",
+    "phone": "+66(0)84-555-0485",
+    "phoneDisplay": "+66 (0)84-555-0485",
+    "phoneHref": "tel:+66845550485",
+    "email": "bhornumnard.w@gmail.com",
+    "linkedinUrl": "https://www.linkedin.com/in/bhornumnard-wanasrisun/",
+    "linkedinLabel": "linkedin.com/in/bhornumnard-wanasrisun",
+    "githubUrl": "https://github.com/Bhornumnard",
+    "githubLabel": "github.com/Bhornumnard",
+    "portfolioUrl": "https://bhornumnard.github.io#ai",
+    "portfolioLabel": "bhornumnard.github.io",
+    "availability_en": "Track in preparation · See Backend or Data Engineering for current resume",
+    "availability_th": "กำลังเตรียมเนื้อหา · ดู Backend หรือ Data Engineering สำหรับเรซูเม่ปัจจุบัน"
+  },
+  "summary": {
+    "summary_en": "This AI Backend track is a placeholder. Content will be added later. For now, please use the Backend (#backend) or Data Engineering (#data-engineering) resume tracks.",
+    "summary_th": "แทร็ก AI Backend เป็นหน้า placeholder เนื้อหาจะเพิ่มภายหลัง ตอนนี้กรุณาใช้เรซูเม่ Backend (#backend) หรือ Data Engineering (#data-engineering)"
+  },
+  "languages": [
+    {
+      "name_en": "Thai",
+      "name_th": "ไทย",
+      "level_en": "Native",
+      "level_th": "เจ้าภาษา"
+    },
+    {
+      "name_en": "English",
+      "name_th": "อังกฤษ",
+      "level_en": "Professional Working Proficiency",
+      "level_th": "ใช้งานได้ในระดับมืออาชีพ"
+    }
+  ],
+  "skills": [
+    {
+      "label": "Coming soon",
+      "items": ["Python", "APIs", "LLM tooling (planned)"]
+    }
+  ],
+  "experience": [],
+  "education": [],
+  "heroCode": {
+    "filename": "ai_backend.py",
+    "lang": ["Python"],
+    "stack": "AI · APIs",
+    "domain_en": "coming soon",
+    "domain_th": "เร็วๆ นี้",
+    "years": 5,
+    "remote": true
+  },
+  "metrics": [
+    {
+      "value": "—",
+      "label_en": "coming soon",
+      "label_th": "เร็วๆ นี้"
+    }
+  ]
+}

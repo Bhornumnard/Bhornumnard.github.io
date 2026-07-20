@@ -2,8 +2,36 @@
   "use strict";
 
   const LOCALE_KEY = "resume-locale";
+  const BASE_SITE_URL = "https://bhornumnard.github.io";
+
+  const ROLES = {
+    backend: {
+      id: "backend",
+      file: "resume.json",
+      hash: "backend",
+      label_en: "Backend",
+      label_th: "Backend",
+    },
+    "data-engineering": {
+      id: "data-engineering",
+      file: "resume-ds.json",
+      hash: "data-engineering",
+      label_en: "Data Eng",
+      label_th: "Data Eng",
+    },
+    ai: {
+      id: "ai",
+      file: "resume-ai.json",
+      hash: "ai",
+      label_en: "AI",
+      label_th: "AI",
+    },
+  };
+
   let data = null;
+  let currentRole = "backend";
   let locale = localStorage.getItem(LOCALE_KEY) || "en";
+  let eventsBound = false;
 
   const MONTHS_EN = [
     "January", "February", "March", "April", "May", "June",
@@ -37,6 +65,28 @@
 
   function formatRange(start, end) {
     return `${formatDate(start, false)} — ${formatDate(end, true)}`;
+  }
+
+  function parseRoleFromHash() {
+    const raw = (window.location.hash || "").replace(/^#/, "").toLowerCase();
+    if (!raw || raw === "backend") return "backend";
+    if (raw === "data-engineering" || raw === "data" || raw === "de") return "data-engineering";
+    // AI track hidden until ready — treat #ai as backend for public visitors
+    if (raw === "ai" || raw === "ai-backend") return "backend";
+    return "backend";
+  }
+
+  function roleShareUrl(roleId) {
+    const role = ROLES[roleId] || ROLES.backend;
+    return `${BASE_SITE_URL}#${role.hash}`;
+  }
+
+  function syncRoleButtons() {
+    document.querySelectorAll(".role-btn").forEach((btn) => {
+      const active = btn.dataset.role === currentRole;
+      btn.classList.toggle("active", active);
+      btn.setAttribute("aria-pressed", String(active));
+    });
   }
 
   function setLocale(next) {
@@ -75,10 +125,8 @@
       .join(" · ");
     document.getElementById("profile-text").textContent = t(data.summary, "summary");
 
-    document.title =
-      locale === "th"
-        ? `${p.fullName} — Resume`
-        : `${p.fullName} — Resume`;
+    const roleName = ROLES[currentRole]?.label_en || "Backend";
+    document.title = `${p.fullName} — ${roleName} Resume`;
   }
 
   function renderContacts() {
@@ -88,7 +136,11 @@
       { type: "link", labelKey: "contactEmail", href: `mailto:${p.email}`, label: p.email },
       { type: "link", labelKey: "contactLinkedin", href: p.linkedinUrl, label: p.linkedinLabel },
       { type: "link", labelKey: "contactGithub", href: p.githubUrl, label: p.githubLabel },
-    ];
+      { type: "link", labelKey: "contactPortfolio", href: p.portfolioUrl, label: p.portfolioLabel },
+    ].filter((item) => {
+      if (item.type === "link") return item.href && item.label;
+      return item.value;
+    });
     const ul = document.getElementById("contact-list");
     ul.innerHTML = items
       .map((item) => {
@@ -136,7 +188,17 @@
 
   function renderExperience() {
     const container = document.getElementById("experience-container");
-    container.innerHTML = data.experience
+    const jobs = data.experience || [];
+    if (!jobs.length) {
+      container.innerHTML =
+        '<p class="profile-text">' +
+        (locale === "th"
+          ? "เนื้อหาประสบการณ์สำหรับแทร็กนี้ยังไม่พร้อม — ดู Backend หรือ Data Engineering"
+          : "Experience for this track is not ready yet — see Backend or Data Engineering.") +
+        "</p>";
+      return;
+    }
+    container.innerHTML = jobs
       .map((job, index) => {
         const role = t(job, "role");
         const loc = t(job, "location");
@@ -157,7 +219,12 @@
 
   function renderEducation() {
     const container = document.getElementById("education-container");
-    container.innerHTML = [...data.education]
+    const list = data.education || [];
+    if (!list.length) {
+      container.innerHTML = "";
+      return;
+    }
+    container.innerHTML = [...list]
       .sort((a, b) => b.endDate.localeCompare(a.endDate) || b.startDate.localeCompare(a.startDate))
       .map((edu) => {
         const note = t(edu, "note");
@@ -170,8 +237,6 @@
       })
       .join("");
   }
-
-
 
   function renderMetrics() {
     const container = document.getElementById("metrics");
@@ -211,6 +276,7 @@
   }
 
   function render() {
+    if (!data) return;
     renderLabels();
     renderProfile();
     renderHeroCode();
@@ -220,6 +286,7 @@
     renderSkills();
     renderExperience();
     renderEducation();
+    syncRoleButtons();
   }
 
   function showToast(message) {
@@ -231,13 +298,14 @@
 
   async function initQr() {
     const canvas = document.getElementById("qr-canvas");
-    if (!canvas || !data?.settings?.siteUrl) return;
+    if (!canvas) return;
     if (typeof QRCode === "undefined") {
       console.warn("QRCode library failed to load");
       return;
     }
+    const url = roleShareUrl(currentRole);
     try {
-      await QRCode.toCanvas(canvas, data.settings.siteUrl, {
+      await QRCode.toCanvas(canvas, url, {
         width: 72,
         margin: 1,
         color: { dark: "#1d1d1f", light: "#ffffff" },
@@ -257,7 +325,7 @@
   }
 
   async function copyLink() {
-    const url = data.settings.siteUrl;
+    const url = roleShareUrl(currentRole);
     try {
       await navigator.clipboard.writeText(url);
       showToast(label("copied"));
@@ -266,18 +334,47 @@
     }
   }
 
+  function setRole(roleId, { pushHash = true } = {}) {
+    const role = ROLES[roleId] || ROLES.backend;
+    if (pushHash) {
+      const nextHash = `#${role.hash}`;
+      if (window.location.hash !== nextHash) {
+        history.pushState(null, "", nextHash);
+      }
+    }
+    return loadRole(role.id);
+  }
+
   function bindEvents() {
+    if (eventsBound) return;
+    eventsBound = true;
+
     document.querySelectorAll(".lang-btn").forEach((btn) => {
       btn.addEventListener("click", () => setLocale(btn.dataset.lang));
     });
+    document.querySelectorAll(".role-btn").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        setRole(btn.dataset.role).catch((err) => {
+          console.error(err);
+          showLoadError();
+        });
+      });
+    });
     document.getElementById("btn-download").addEventListener("click", downloadPdf);
     document.getElementById("btn-copy").addEventListener("click", copyLink);
+    window.addEventListener("hashchange", () => {
+      const next = parseRoleFromHash();
+      if (next === currentRole) return;
+      loadRole(next).catch((err) => {
+        console.error(err);
+        showLoadError();
+      });
+    });
     window.addEventListener("resize", () => {
       clearTimeout(window._qrResizeTimer);
       window._qrResizeTimer = setTimeout(initQr, 200);
     });
   }
-
 
   function showLoadError() {
     const resume = document.getElementById("resume");
@@ -286,10 +383,21 @@
       '<p class="load-error">Failed to load resume. Please refresh the page or contact <a href="mailto:bhornumnard.w@gmail.com">bhornumnard.w@gmail.com</a>.</p>';
   }
 
-  async function init() {
-    const res = await fetch("resume.json");
-    if (!res.ok) throw new Error("resume.json " + res.status);
+  async function loadRole(roleId) {
+    const role = ROLES[roleId] || ROLES.backend;
+    currentRole = role.id;
+
+    const forcedSrc = document.body.dataset.resumeSrc;
+    const src = forcedSrc || role.file;
+    const res = await fetch(src);
+    if (!res.ok) throw new Error(src + " " + res.status);
     data = await res.json();
+
+    if (!forcedSrc) {
+      data.settings = data.settings || {};
+      data.settings.siteUrl = roleShareUrl(currentRole);
+    }
+
     locale = localStorage.getItem(LOCALE_KEY) || data.settings.defaultLocale || "en";
     document.documentElement.lang = locale === "th" ? "th" : "en";
     document.querySelectorAll(".lang-btn").forEach((btn) => {
@@ -297,9 +405,21 @@
       btn.classList.toggle("active", active);
       btn.setAttribute("aria-pressed", String(active));
     });
+
+    document.body.dataset.role = currentRole;
     bindEvents();
     render();
     await initQr();
+  }
+
+  async function init() {
+    if (document.body.dataset.resumeSrc) {
+      currentRole = "backend";
+      await loadRole("backend");
+      return;
+    }
+    currentRole = parseRoleFromHash();
+    await loadRole(currentRole);
   }
 
   init().catch((err) => {
