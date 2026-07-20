@@ -5,7 +5,7 @@
   const BASE_SITE_URL = "https://bhornumnard.github.io";
 
   const ROLES = {
-    backend: {
+    "backend": {
       id: "backend",
       file: "resume.json",
       hash: "backend",
@@ -19,7 +19,7 @@
       label_en: "Data Eng",
       label_th: "Data Eng",
     },
-    ai: {
+    "ai": {
       id: "ai",
       file: "resume-ai.json",
       hash: "ai",
@@ -334,15 +334,32 @@
     }
   }
 
-  function setRole(roleId, { pushHash = true } = {}) {
+  function assetUrl(file) {
+    // Resolve against site root so hash/query never break relative fetch on GitHub Pages
+    return new URL(file, window.location.origin + "/").href;
+  }
+
+  function setRole(roleId) {
     const role = ROLES[roleId] || ROLES.backend;
-    if (pushHash) {
-      const nextHash = `#${role.hash}`;
-      if (window.location.hash !== nextHash) {
-        history.pushState(null, "", nextHash);
-      }
+    const nextHash = `#${role.hash}`;
+    // Prefer real hash updates (fires hashchange) over pushState — more reliable on GitHub Pages
+    if (window.location.hash !== nextHash) {
+      window.location.hash = role.hash;
+      return Promise.resolve();
     }
     return loadRole(role.id);
+  }
+
+  function onHashChange() {
+    const next = parseRoleFromHash();
+    if (next === currentRole) {
+      syncRoleButtons();
+      return;
+    }
+    loadRole(next).catch((err) => {
+      console.error(err);
+      showLoadError();
+    });
   }
 
   function bindEvents() {
@@ -353,7 +370,8 @@
       btn.addEventListener("click", () => setLocale(btn.dataset.lang));
     });
     document.querySelectorAll(".role-btn").forEach((btn) => {
-      btn.addEventListener("click", () => {
+      btn.addEventListener("click", (e) => {
+        e.preventDefault();
         setRole(btn.dataset.role).catch((err) => {
           console.error(err);
           showLoadError();
@@ -362,14 +380,7 @@
     });
     document.getElementById("btn-download").addEventListener("click", downloadPdf);
     document.getElementById("btn-copy").addEventListener("click", copyLink);
-    window.addEventListener("hashchange", () => {
-      const next = parseRoleFromHash();
-      if (next === currentRole) return;
-      loadRole(next).catch((err) => {
-        console.error(err);
-        showLoadError();
-      });
-    });
+    window.addEventListener("hashchange", onHashChange);
     window.addEventListener("resize", () => {
       clearTimeout(window._qrResizeTimer);
       window._qrResizeTimer = setTimeout(initQr, 200);
@@ -388,8 +399,9 @@
     currentRole = role.id;
 
     const forcedSrc = document.body.dataset.resumeSrc;
-    const src = forcedSrc || role.file;
-    const res = await fetch(src);
+    const file = forcedSrc || role.file;
+    const src = assetUrl(file);
+    const res = await fetch(src, { cache: "no-cache" });
     if (!res.ok) throw new Error(src + " " + res.status);
     data = await res.json();
 
