@@ -862,6 +862,20 @@ a:hover {
     break-inside: avoid;
   }
 
+  /* Keep Profile with hero on page 1; allow Employment to flow across pages */
+  #section-profile {
+    break-inside: avoid;
+    break-after: avoid;
+  }
+
+  #section-employment.card {
+    break-inside: auto;
+  }
+
+  #section-employment .job {
+    break-inside: avoid;
+  }
+
   a {
     color: var(--text);
     text-decoration: none;

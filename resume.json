@@ -191,6 +191,17 @@
   ],
   "education": [
     {
+      "degree_en": "Road to Data Engineer 3.0 · 2026 Edition — In progress",
+      "degree_th": "Road to Data Engineer 3.0 · 2026 Edition — กำลังเรียน",
+      "institution": "DataTH",
+      "location_en": "Online (Hybrid live)",
+      "location_th": "ออนไลน์ (Hybrid live)",
+      "startDate": "2026-05",
+      "endDate": null,
+      "note_en": "Live Sat 13:00–15:00 (16 May – 18 Jul 2026). Python, SQL, Spark, GCP, Airflow, BigQuery.",
+      "note_th": "Live เสาร์ 13:00–15:00 (16 พ.ค. – 18 ก.ค. 2026) · Python, SQL, Spark, GCP, Airflow, BigQuery"
+    },
+    {
       "degree_en": "Bachelor of Science (Biology)",
       "degree_th": "วิทยาศาสตรบัณฑิต (ชีววิทยา)",
       "institution": "Chiang Mai University",

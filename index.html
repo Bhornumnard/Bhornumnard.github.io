@@ -95,16 +95,7 @@
         </aside>
 
         <div class="main-content">
-          <section class="card card--featured">
-            <div class="card-titlebar card-titlebar--featured">
-              <h2 class="card-title" id="label-employment">Employment History</h2>
-            </div>
-            <div class="card-body">
-              <div id="experience-container"></div>
-            </div>
-          </section>
-
-          <section class="card card--standard">
+          <section class="card card--standard" id="section-profile">
             <div class="card-titlebar">
               <h2 class="card-title" id="label-profile">Profile</h2>
             </div>
@@ -113,7 +104,16 @@
             </div>
           </section>
 
-          <section class="card card--quiet">
+          <section class="card card--featured" id="section-employment">
+            <div class="card-titlebar card-titlebar--featured">
+              <h2 class="card-title" id="label-employment">Employment History</h2>
+            </div>
+            <div class="card-body">
+              <div id="experience-container"></div>
+            </div>
+          </section>
+
+          <section class="card card--quiet" id="section-education">
             <h2 class="section-title" id="label-education">Education</h2>
             <div id="education-container"></div>
           </section>
@@ -124,6 +124,6 @@
     <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
     <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
-    <script src="app.js?v=20260720"></script>
+    <script src="app.js?v=20260720b"></script>
   </body>
 </html>

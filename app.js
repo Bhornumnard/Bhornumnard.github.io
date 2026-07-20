@@ -225,7 +225,11 @@
       return;
     }
     container.innerHTML = [...list]
-      .sort((a, b) => b.endDate.localeCompare(a.endDate) || b.startDate.localeCompare(a.startDate))
+      .sort((a, b) => {
+        const endA = a.endDate || "9999-12";
+        const endB = b.endDate || "9999-12";
+        return endB.localeCompare(endA) || b.startDate.localeCompare(a.startDate);
+      })
       .map((edu) => {
         const note = t(edu, "note");
         return `
