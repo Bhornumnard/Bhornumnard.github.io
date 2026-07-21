@@ -56,8 +56,8 @@
     "availability_th": "เปิดรับ remote · UTC+7 · ปรับเวลาได้ ±2–3 ชม. จากปกติ"
   },
   "summary": {
-    "summary_en": "Senior backend engineer with 5+ years building Python/FastAPI microservices on production fintech platforms. Production experience integrating AI/ML services (OCR, face recognition, document extraction) into regulated credit decisioning and eKYC workflows serving 40k–80k daily active users. Uses AI-assisted development (Cursor, Claude, ChatGPT, Gemini) in day-to-day backend work for implementation, debugging, and code review. Experienced in full service ownership—from design and delivery through production observability and incident response. Open to remote roles in fintech, compliance tech, or data-engineering-adjacent backend positions. Based in UTC+7; can adjust working hours by ±2–3 hours from the local schedule when needed for meeting overlap.",
-    "summary_th": "วิศวกร Backend อาวุโสที่มีประสบการณ์กว่า 5 ปีในการพัฒนา microservices ด้วย Python/FastAPI บนแพลตฟอร์ม fintech ระดับ production มีประสบการณ์ integrate AI/ML services (OCR, face recognition, document extraction) ใน credit decisioning และ eKYC workflows ที่ใช้งานจริง รองรับผู้ใช้งานรายวัน 40,000–80,000 คน ใช้ AI-assisted development (Cursor, Claude, ChatGPT, Gemini) ในงาน backend ประจำวันสำหรับ implementation, debugging และ code review มีประสบการณ์ในการดูแลบริการตั้งแต่การออกแบบ การส่งมอบ ไปจนถึง production observability และการตอบสนองเหตุการณ์ เปิดรับตำแหน่ง remote ใน fintech, compliance tech หรือ backend ที่เกี่ยวข้องกับ data engineering อยู่ใน UTC+7 และสามารถปรับเวลาทำงาน ±2–3 ชั่วโมงจากปกติเมื่อจำเป็นสำหรับ meeting"
+    "summary_en": "Software engineer with 5+ years building Python/FastAPI microservices on production fintech platforms. Owned end-to-end delivery of data-integration and crawler services (Thai court records, business registry) and led backend delivery for a consumer credit product (Rabbit Cash) on a platform serving ~40–60k daily active users at ~99% uptime. Comfortable with production observability, on-call incident response, and cross-team delivery with QA, PM, support, and leadership. Uses AI-assisted development (Cursor, Claude, ChatGPT, Gemini) in day-to-day backend work. Open to remote roles in fintech, compliance tech, or data-adjacent backend positions. Based in UTC+7; adjustable by ±2–3h for meeting overlap.",
+    "summary_th": "วิศวกร Backend ประสบการณ์กว่า 5 ปีในการพัฒนา microservices ด้วย Python/FastAPI บนแพลตฟอร์ม fintech ระดับ production ดูแลการส่งมอบ data-integration และ crawler services (ข้อมูลศาลไทย, ข้อมูลนิติบุคคล) แบบ end-to-end และนำการส่งมอบ backend ของผลิตภัณฑ์สินเชื่อผู้บริโภค (Rabbit Cash) บนแพลตฟอร์มที่รองรับผู้ใช้งานรายวัน ~40,000–60,000 คน ที่ uptime ~99% คุ้นกับ production observability, การตอบสนองเหตุการณ์ และงานข้ามทีมกับ QA, PM, support และฝ่ายบริหาร ใช้ AI-assisted development (Cursor, Claude, ChatGPT, Gemini) ในงาน backend ประจำวัน เปิดรับตำแหน่ง remote ใน fintech, compliance tech หรือ backend ที่เกี่ยวข้องกับข้อมูล อยู่ใน UTC+7 และปรับเวลาได้ ±2–3 ชม. สำหรับ meeting"
   },
   "languages": [
     {
@@ -143,28 +143,28 @@
   ],
   "experience": [
     {
-      "role_en": "Software Engineer (Backend)",
-      "role_th": "วิศวกรซอฟต์แวร์ (Backend)",
-      "company": "Uppass",
+      "role_en": "Technical Support and Software Engineer",
+      "role_th": "Technical Support และวิศวกรซอฟต์แวร์",
+      "company": "UpPass",
       "location_en": "Bangkok, Thailand",
       "location_th": "กรุงเทพมหานคร ประเทศไทย",
       "startDate": "2022-04",
       "endDate": "2026-02",
-      "description_en": "Python/FastAPI backends for credit decisioning and integrations on a production fintech platform.",
-      "description_th": "พัฒนา backend Python/FastAPI สำหรับ credit decisioning และการ integrate บนแพลตฟอร์ม fintech ระดับ production",
+      "description_en": "Python/FastAPI backends and production support for credit decisioning and third-party integrations on a live fintech platform.",
+      "description_th": "Backend Python/FastAPI และ production support สำหรับ credit decisioning และการเชื่อมต่อ third-party บนแพลตฟอร์ม fintech ที่ใช้งานจริง",
       "highlights_en": [
-        "Built and maintained <strong>6–7 backend microservices</strong> in Python/FastAPI supporting <strong>credit decisioning</strong> and partner integrations for <strong>~40k–60k daily active users</strong> (peak <strong>~80k/day</strong>; sustained <strong>20–40 RPS</strong>).",
-        "Delivered backend for credit decision flows and AI-powered eKYC pipelines (ID card OCR, face recognition, AML screening, bank statement extraction, utility bill parsing); integrated 5+ third-party data providers across compliance, identity, and financial data domains.",
-        "Shipped eKYC API gateway fixes and reliability improvements; owned client configuration for production rollouts.",
-        "Led backend delivery for Rabbit Cash financial features (installment and revolving flows), inheriting an existing codebase and owning the full development-to-handover lifecycle to the Rabbit Cash team; coordinated incident response across QA, PM, support, and leadership for 2–3 core services.",
-        "Maintained ~99% uptime across core services via production observability (Cloud Logging, Sentry, alerting, metrics dashboards) covering internal services and third-party dependency health."
+        "Owned end-to-end delivery of two Python/FastAPI microservices — COJ (Thai court records) and BDEX (business registry) — covering extraction, transformation, and scheduled processing into credit decisioning workflows.",
+        "Led backend delivery for Rabbit Cash consumer credit product (installment and revolving credit flows) — inherited existing codebase, shipped features to production, coordinated with QA, PM, support, and leadership, and handed off to the client team.",
+        "Co-owned (~50%) bank-statement and utility-bill extraction pipelines supporting eKYC and credit decisioning; contributed to AML screening logic and maintained ID OCR and face-recognition components on the core platform.",
+        "Set up and ran production observability (Cloud Logging, Sentry, alerting, metrics dashboards) across owned services — maintaining <strong>~99% uptime</strong> on a platform serving <strong>~40–60k daily active users</strong> (peaks near 80k, sustained 20–40 RPS).",
+        "Coordinated production incident response with QA, PM, customer support, and CTO/leadership; hardened data-dependent flows against partner feed failures via retries, fallbacks, and staged rollouts."
       ],
       "highlights_th": [
-        "พัฒนาและดูแล backend <strong>microservices 6–7 บริการ</strong> ด้วย Python/FastAPI รองรับ <strong>credit decisioning</strong> และ partner integrations สำหรับผู้ใช้งานรายวัน <strong>~40,000–60,000 คน</strong> (peak <strong>~80,000/วัน</strong>; sustained <strong>20–40 RPS</strong>)",
-        "ส่งมอบ backend สำหรับ credit decision flows และ AI-powered eKYC pipelines (ID card OCR, face recognition, AML screening, bank statement extraction, utility bill parsing); integrate ผู้ให้บริการข้อมูล third-party กว่า 5 รายในด้าน compliance, identity และ financial data",
-        "แก้ไขและปรับปรุงความเสถียรของ eKYC API gateway; ดูแล client configuration สำหรับ production rollouts",
-        "นำการส่งมอบ backend สำหรับฟีเจอร์ Rabbit Cash (installment และ revolving flows) รับช่วง codebase เดิมและดูแล lifecycle ตั้งแต่พัฒนาจนส่งมอบให้ทีม Rabbit Cash; ประสานงาน incident response ร่วมกับ QA, PM, support และฝ่ายบริหารสำหรับบริการหลัก 2–3 บริการ",
-        "รักษา uptime ~99% ของบริการหลักผ่าน production observability (Cloud Logging, Sentry, alerting, metrics dashboards) ครอบคลุมทั้งบริการภายในและสุขภาพของ third-party dependencies"
+        "ดูแลการส่งมอบแบบ end-to-end ของ Python/FastAPI microservices สองบริการ — COJ (ข้อมูลศาลไทย) และ BDEX (ข้อมูลนิติบุคคล) — ครอบคลุม extraction, transformation และ scheduled processing เข้าสู่ credit decisioning workflows",
+        "นำการส่งมอบ backend ของผลิตภัณฑ์สินเชื่อผู้บริโภค Rabbit Cash (installment และ revolving) — รับช่วง codebase เดิม ส่งฟีเจอร์ขึ้น production ประสานงานกับ QA, PM, support และฝ่ายบริหาร และส่งมอบให้ทีมลูกค้า",
+        "ร่วมดูแล (~50%) pipelines สำหรับ bank-statement และ utility-bill extraction ที่รองรับ eKYC และ credit decisioning; มีส่วนร่วมใน AML screening และดูแลคอมโพเนนต์ ID OCR กับ face recognition บนแพลตฟอร์มหลัก",
+        "ตั้งค่าและดูแล production observability (Cloud Logging, Sentry, alerting, metrics dashboards) ของบริการที่รับผิดชอบ — รักษา <strong>uptime ~99%</strong> บนแพลตฟอร์มที่รองรับผู้ใช้งานรายวัน <strong>~40,000–60,000 คน</strong> (peak ใกล้ 80,000, sustained 20–40 RPS)",
+        "ประสานงาน production incident response กับ QA, PM, customer support และ CTO/ฝ่ายบริหาร; ทำให้ data-dependent flows ทนต่อ partner feed failures ด้วย retries, fallbacks และ staged rollouts"
       ]
     },
     {
@@ -191,26 +191,26 @@
   ],
   "education": [
     {
-      "degree_en": "Road to Data Engineer 3.0 · 2026 Edition — In progress",
-      "degree_th": "Road to Data Engineer 3.0 · 2026 Edition — กำลังเรียน",
+      "degree_en": "Road to Data Engineer 3.0 · 2026 Edition",
+      "degree_th": "Road to Data Engineer 3.0 · 2026 Edition",
       "institution": "DataTH",
       "location_en": "Online (Hybrid live)",
       "location_th": "ออนไลน์ (Hybrid live)",
       "startDate": "2026-05",
-      "endDate": null,
-      "note_en": "Live Sat 13:00–15:00 (16 May – 18 Jul 2026). Python, SQL, Spark, GCP, Airflow, BigQuery.",
-      "note_th": "Live เสาร์ 13:00–15:00 (16 พ.ค. – 18 ก.ค. 2026) · Python, SQL, Spark, GCP, Airflow, BigQuery"
+      "endDate": "2026-07",
+      "note_en": "Python, SQL, Spark, GCP, Airflow, BigQuery. Live cohort completed 19 July 2026.",
+      "note_th": "Python, SQL, Spark, GCP, Airflow, BigQuery · จบ Live cohort 19 ก.ค. 2026"
     },
     {
-      "degree_en": "Bachelor of Science (Biology)",
-      "degree_th": "วิทยาศาสตรบัณฑิต (ชีววิทยา)",
-      "institution": "Chiang Mai University",
-      "location_en": "Chiang Mai, Thailand",
-      "location_th": "เชียงใหม่ ประเทศไทย",
-      "startDate": "2012-06",
-      "endDate": "2016-05",
-      "note_en": null,
-      "note_th": null
+      "degree_en": "Anthropic Academy",
+      "degree_th": "Anthropic Academy",
+      "institution": "Anthropic",
+      "location_en": "Online",
+      "location_th": "ออนไลน์",
+      "startDate": "2025-01",
+      "endDate": "2026-06",
+      "note_en": "Claude 101, Claude Code 101, Claude Code in Action, Introduction to Agent Skills, Introduction to Subagents.",
+      "note_th": "Claude 101, Claude Code 101, Claude Code in Action, Introduction to Agent Skills, Introduction to Subagents."
     },
     {
       "degree_en": "Software Park Code Camp",
@@ -224,15 +224,15 @@
       "note_th": "หลักสูตรเต็มเวลา จันทร์–ศุกร์ (Full-stack, JavaScript) · ผู้ช่วยสอน (ก.พ.–ก.ย. 2020)"
     },
     {
-      "degree_en": "Anthropic Academy",
-      "degree_th": "Anthropic Academy",
-      "institution": "Anthropic",
-      "location_en": "Online",
-      "location_th": "ออนไลน์",
-      "startDate": "2025-01",
-      "endDate": "2026-06",
-      "note_en": "Claude 101, Claude Code 101, Claude Code in Action, Introduction to Agent Skills, Introduction to Subagents.",
-      "note_th": "Claude 101, Claude Code 101, Claude Code in Action, Introduction to Agent Skills, Introduction to Subagents."
+      "degree_en": "Bachelor of Science (Biology)",
+      "degree_th": "วิทยาศาสตรบัณฑิต (ชีววิทยา)",
+      "institution": "Chiang Mai University",
+      "location_en": "Chiang Mai, Thailand",
+      "location_th": "เชียงใหม่ ประเทศไทย",
+      "startDate": "2012-06",
+      "endDate": "2016-05",
+      "note_en": null,
+      "note_th": null
     }
   ],
   "heroCode": {
@@ -254,14 +254,14 @@
       "label_th": "ปีประสบการณ์"
     },
     {
-      "value": "40–80k",
-      "label_en": "daily users",
-      "label_th": "ผู้ใช้งาน/วัน"
+      "value": "Fintech",
+      "label_en": "production",
+      "label_th": "production"
     },
     {
-      "value": "6–7",
-      "label_en": "microservices",
-      "label_th": "microservices"
+      "value": "~40–60k",
+      "label_en": "DAU",
+      "label_th": "DAU"
     },
     {
       "value": "~99%",

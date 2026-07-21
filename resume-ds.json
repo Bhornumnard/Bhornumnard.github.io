@@ -56,8 +56,8 @@
     "availability_th": "พร้อมเริ่มทันที · รับสัญญา 6 เดือน / WFH hybrid ได้ · UTC+7"
   },
   "summary": {
-    "summary_en": "Software engineer with 5+ years in FinTech, strong in Python and SQL. At Uppass, built and owned backend services for data integration and crawlers (court records, business registry), co-owned bank-statement and utility-bill extraction, and contributed to eKYC features (AML, OCR, face recognition) on a live FinTech platform serving ~40k–80k daily users. Comfortable with production reliability, Linux shell, Docker, and cross-team work with product, QA, support, and business stakeholders. Currently in Road to Data Engineer 3.0 · 2026 Edition (DataTH): Python, SQL, Spark, GCP, Airflow, BigQuery. Available to start immediately on a 6-month contract.",
-    "summary_th": "วิศวกรซอฟต์แวร์ประสบการณ์กว่า 5 ปีใน FinTech เชี่ยวชาญ Python และ SQL ที่ Uppass สร้างและดูแล backend สำหรับ data integration และ crawlers (ข้อมูลศาล, ข้อมูลนิติบุคคล) ร่วมดูแล extraction ของ bank-statement และ utility-bill และมีส่วนร่วมในฟีเจอร์ eKYC (AML, OCR, face recognition) บนแพลตฟอร์ม FinTech ที่ใช้งานจริง รองรับผู้ใช้รายวัน ~40,000–80,000 คน คุ้นกับความเสถียรใน production, Linux shell, Docker และการทำงานร่วมกับ product, QA, support และฝ่ายธุรกิจ กำลังเรียน Road to Data Engineer 3.0 · 2026 Edition (DataTH): Python, SQL, Spark, GCP, Airflow, BigQuery พร้อมเริ่มสัญญา 6 เดือนได้ทันที"
+    "summary_en": "Software engineer with 5+ years in fintech, strong in Python and SQL. At UpPass, owned data-integration and crawler services (Thai court records, business registry) that call partner APIs, transform responses, and feed credit decisioning on a live platform (~40–60k daily users, peaks near 80k). Also co-owned bank-statement and utility-bill extraction (~50%), contributed to AML screening, and maintained ID OCR and face-recognition components. Comfortable with production reliability, Linux shell, Docker, and cross-team work with product, QA, support, and business stakeholders. Completed Road to Data Engineer 3.0 · 2026 Edition (DataTH): Python, SQL, Spark, GCP, Airflow, BigQuery. Available to start immediately on a 6-month contract.",
+    "summary_th": "วิศวกรซอฟต์แวร์ประสบการณ์กว่า 5 ปีใน fintech เชี่ยวชาญ Python และ SQL ที่ UpPass ดูแล data-integration และ crawler services (ข้อมูลศาลไทย, ข้อมูลนิติบุคคล) ที่เรียก partner APIs แปลงผลลัพธ์ และป้อนเข้า credit decisioning บนแพลตฟอร์มจริง (~40,000–60,000 ผู้ใช้/วัน, peak ใกล้ 80,000) รวมถึงร่วมดูแล (~50%) bank-statement และ utility-bill extraction มีส่วนร่วมใน AML screening และดูแล ID OCR กับ face recognition คุ้นกับความเสถียรใน production, Linux shell, Docker และงานข้ามทีมกับ product, QA, support และฝ่ายธุรกิจ จบ Road to Data Engineer 3.0 · 2026 Edition (DataTH): Python, SQL, Spark, GCP, Airflow, BigQuery พร้อมเริ่มสัญญา 6 เดือนได้ทันที"
   },
   "languages": [
     {
@@ -106,33 +106,33 @@
   ],
   "experience": [
     {
-      "role_en": "Software Engineer (Backend / Data Integrations)",
-      "role_th": "วิศวกรซอฟต์แวร์ (Backend / Data Integrations)",
-      "company": "Uppass",
+      "role_en": "Technical Support and Software Engineer",
+      "role_th": "Technical Support และวิศวกรซอฟต์แวร์",
+      "company": "UpPass",
       "location_en": "Bangkok, Thailand",
       "location_th": "กรุงเทพมหานคร ประเทศไทย",
       "startDate": "2022-04",
       "endDate": "2026-02",
-      "description_en": "Python backend for credit decisioning and partner data integrations on a production FinTech platform.",
-      "description_th": "Backend Python สำหรับ credit decisioning และการเชื่อมต่อข้อมูล partner บนแพลตฟอร์ม FinTech ระดับ production",
+      "description_en": "Python backend and production support for credit decisioning and partner data integrations on a live fintech platform.",
+      "description_th": "Backend Python และ production support สำหรับ credit decisioning และการเชื่อมต่อข้อมูล partner บนแพลตฟอร์ม fintech ที่ใช้งานจริง",
       "highlights_en": [
-        "Built Python backend services integrating <strong>5+ third-party providers</strong> for eKYC and credit decisioning; contributed to AML screening logic and maintained ID OCR and face-recognition features on the core platform.",
-        "Built and owned data-integration and crawler services (court records via COJ, business registry via BDEX) covering extraction, transformation, and scheduled batch processing into decisioning workflows.",
-        "Co-owned bank-statement and utility-bill extraction services (~50% ownership) supporting eKYC and credit decisioning flows.",
-        "Led backend delivery for Rabbit Cash financial features (installment and revolving flows), owning development-to-handover and coordinating with QA, PM, support, and leadership on 2–3 core services.",
-        "Kept core services at <strong>~99% uptime</strong> through Cloud Logging, Sentry, alerting, and metrics dashboards on a fintech platform serving <strong>40k–60k daily active users</strong> (peak <strong>~80k/day</strong>, <strong>~20–40 RPS</strong>); hardened data-dependent flows against partner feed failures via retries, fallbacks, and staged rollouts."
+        "Owned end-to-end delivery of two Python data-integration and crawler services — COJ (Thai court records) and BDEX (business registry) — covering extraction, transformation, and scheduled batch processing into decisioning workflows.",
+        "Co-owned (~50%) bank-statement and utility-bill extraction pipelines supporting eKYC and credit decisioning flows; contributed to AML screening logic and maintained ID OCR and face-recognition components used in identity verification.",
+        "Led backend delivery for Rabbit Cash consumer credit product (installment and revolving credit flows) — inherited codebase, shipped features to production, coordinated with QA, PM, support, and leadership, and handed off to the client team.",
+        "Integrated <strong>5+ third-party providers</strong> across compliance, identity, and financial data domains — designed retry and fallback logic to keep credit decisioning stable when partner feeds failed.",
+        "Set up and ran production observability (Cloud Logging, Sentry, alerting, metrics dashboards) maintaining <strong>~99% uptime</strong> on a platform serving <strong>~40–60k daily active users</strong> (peaks near 80k, sustained 20–40 RPS); coordinated incident response with QA, PM, support, and leadership."
       ],
       "highlights_th": [
-        "สร้าง Python backend services ที่ integrate <strong>ผู้ให้บริการ third-party กว่า 5 ราย</strong> สำหรับ eKYC และ credit decisioning; มีส่วนร่วมใน logic ของ AML screening และดูแลฟีเจอร์ ID OCR กับ face recognition บนแพลตฟอร์มหลัก",
-        "สร้างและดูแล data-integration และ crawler services (ข้อมูลศาลผ่าน COJ, ข้อมูลนิติบุคคลผ่าน BDEX) ครอบคลุม extraction, transformation และ scheduled batch processing เข้าสู่ decisioning workflows",
-        "ร่วมดูแลบริการ extraction ของ bank-statement และ utility-bill (~50% ownership) รองรับ eKYC และ credit decisioning flows",
-        "นำการส่งมอบ backend ของ Rabbit Cash (installment และ revolving) จนส่งมอบ และประสานงานกับ QA, PM, support และฝ่ายบริหารสำหรับบริการหลัก 2–3 บริการ",
-        "รักษา <strong>uptime ~99%</strong> ของบริการหลักด้วย Cloud Logging, Sentry, alerting และ metrics dashboards บนแพลตฟอร์ม fintech ที่รองรับผู้ใช้งานรายวัน <strong>40,000–60,000 คน</strong> (peak <strong>~80,000/วัน</strong>, <strong>~20–40 RPS</strong>); ทำให้ data-dependent flows ทนต่อ partner feed failures ด้วย retries, fallbacks และ staged rollouts"
+        "ดูแลการส่งมอบแบบ end-to-end ของ Python data-integration และ crawler services สองบริการ — COJ (ข้อมูลศาลไทย) และ BDEX (ข้อมูลนิติบุคคล) — ครอบคลุม extraction, transformation และ scheduled batch processing เข้าสู่ decisioning workflows",
+        "ร่วมดูแล (~50%) pipelines สำหรับ bank-statement และ utility-bill extraction ที่รองรับ eKYC และ credit decisioning; มีส่วนร่วมใน AML screening และดูแลคอมโพเนนต์ ID OCR กับ face recognition ที่ใช้ใน identity verification",
+        "นำการส่งมอบ backend ของผลิตภัณฑ์สินเชื่อผู้บริโภค Rabbit Cash (installment และ revolving) — รับช่วง codebase ส่งฟีเจอร์ขึ้น production ประสานงานกับ QA, PM, support และฝ่ายบริหาร และส่งมอบให้ทีมลูกค้า",
+        "Integrate <strong>ผู้ให้บริการ third-party กว่า 5 ราย</strong> ในด้าน compliance, identity และ financial data — ออกแบบ retry และ fallback เพื่อให้ credit decisioning เสถียรเมื่อ partner feeds ล้มเหลว",
+        "ตั้งค่าและดูแล production observability (Cloud Logging, Sentry, alerting, metrics dashboards) รักษา <strong>uptime ~99%</strong> บนแพลตฟอร์มที่รองรับผู้ใช้งานรายวัน <strong>~40,000–60,000 คน</strong> (peak ใกล้ 80,000, sustained 20–40 RPS); ประสานงาน incident response กับ QA, PM, support และฝ่ายบริหาร"
       ]
     },
     {
-      "role_en": "Software Engineer",
-      "role_th": "วิศวกรซอฟต์แวร์",
+      "role_en": "Software Engineer (Backend)",
+      "role_th": "วิศวกรซอฟต์แวร์ (Backend)",
       "company": "Sinwattana Crowdfunding",
       "location_en": "Bangkok, Thailand",
       "location_th": "กรุงเทพมหานคร ประเทศไทย",
@@ -171,15 +171,15 @@
   ],
   "education": [
     {
-      "degree_en": "Road to Data Engineer 3.0 · 2026 Edition — In progress",
-      "degree_th": "Road to Data Engineer 3.0 · 2026 Edition — กำลังเรียน",
+      "degree_en": "Road to Data Engineer 3.0 · 2026 Edition",
+      "degree_th": "Road to Data Engineer 3.0 · 2026 Edition",
       "institution": "DataTH",
       "location_en": "Online (Hybrid live)",
       "location_th": "ออนไลน์ (Hybrid live)",
       "startDate": "2026-05",
-      "endDate": null,
-      "note_en": "Live Sat 13:00–15:00 · 16 May – 18 Jul 2026 (DataTH). Python, SQL, Spark, GCP, Airflow, BigQuery, visualization; workshops each chapter.",
-      "note_th": "Live เสาร์ 13:00–15:00 · 16 พ.ค. – 18 ก.ค. 2026 (DataTH) · Python, SQL, Spark, GCP, Airflow, BigQuery, visualization · มี workshop ทุกบท"
+      "endDate": "2026-07",
+      "note_en": "Live Sat 13:00–15:00 · 16 May – 19 Jul 2026 (DataTH). Python, SQL, Spark, GCP, Airflow, BigQuery, visualization; workshops each chapter. Cohort completed 19 July 2026.",
+      "note_th": "Live เสาร์ 13:00–15:00 · 16 พ.ค. – 19 ก.ค. 2026 (DataTH) · Python, SQL, Spark, GCP, Airflow, BigQuery, visualization · มี workshop ทุกบท · จบ cohort 19 ก.ค. 2026"
     },
     {
       "degree_en": "Bachelor of Science (Biology)",
@@ -191,17 +191,6 @@
       "endDate": "2016-05",
       "note_en": null,
       "note_th": null
-    },
-    {
-      "degree_en": "Software Park Code Camp",
-      "degree_th": "Software Park Code Camp",
-      "institution": "Software Park Thailand",
-      "location_en": "Bangkok, Thailand",
-      "location_th": "กรุงเทพมหานคร ประเทศไทย",
-      "startDate": "2019-10",
-      "endDate": "2021-01",
-      "note_en": "Full-time Mon–Fri program (Full-stack, JavaScript). Teaching Assistant (Feb–Sep 2020).",
-      "note_th": "หลักสูตรเต็มเวลา จันทร์–ศุกร์ (Full-stack, JavaScript) · ผู้ช่วยสอน (ก.พ.–ก.ย. 2020)"
     }
   ],
   "heroCode": {
