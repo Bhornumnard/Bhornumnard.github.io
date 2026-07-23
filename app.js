@@ -212,12 +212,14 @@
         const role = t(job, "role");
         const loc = t(job, "location");
         const desc = t(job, "description");
+        const scope = t(job, "scope");
         const highlights = (locale === "th" ? job.highlights_th : job.highlights_en) || [];
         const bullets = highlights.map((h) => `<li>${h}</li>`).join("");
         const currentClass = index === 0 ? " job--current" : "";
         return `
           <article class="job${currentClass}">
             <h3 class="job-title">${role} at ${job.company}, ${loc}</h3>
+            ${scope ? `<p class="job-scope">${scope}</p>` : ""}
             <p class="job-date">${formatRange(job.startDate, job.endDate)}</p>
             ${desc ? `<p class="job-desc">${desc}</p>` : ""}
             <ul class="job-highlights">${bullets}</ul>

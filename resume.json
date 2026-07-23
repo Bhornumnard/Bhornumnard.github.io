@@ -13,7 +13,7 @@
     "skills_th": "ทักษะ",
     "profile_en": "Profile",
     "profile_th": "ประวัติโดยย่อ",
-    "employment_en": "Employment History",
+    "employment_en": "Experience",
     "employment_th": "ประสบการณ์ทำงาน",
     "education_en": "Education",
     "education_th": "การศึกษา",
@@ -38,8 +38,8 @@
   },
   "profile": {
     "fullName": "Bhornumnard Wanasrisun",
-    "title_en": "Software Engineer (Backend) — Python / FastAPI",
-    "title_th": "วิศวกรซอฟต์แวร์ (แบ็กเอนด์) — Python / FastAPI",
+    "title_en": "Software Engineer (Backend) — Python / Django / FastAPI",
+    "title_th": "วิศวกรซอฟต์แวร์ (Backend) — Python / Django / FastAPI",
     "location_en": "Lamphun, Thailand",
     "location_th": "ลำพูน ประเทศไทย",
     "phone": "+66(0)84-555-0485",
@@ -56,75 +56,50 @@
     "availability_th": "เปิดรับ remote · UTC+7 · ปรับเวลาได้ ±2–3 ชม. จากปกติ"
   },
   "summary": {
-    "summary_en": "Software engineer with 5+ years building Python/FastAPI microservices on production fintech platforms. Owned end-to-end delivery of data-integration and crawler services (Thai court records, business registry) and led backend delivery for a consumer credit product (Rabbit Cash) on a platform serving ~40–60k daily active users at ~99% uptime. Comfortable with production observability, on-call incident response, and cross-team delivery with QA, PM, support, and leadership. Uses AI-assisted development (Cursor, Claude, ChatGPT, Gemini) in day-to-day backend work. Open to remote roles in fintech, compliance tech, or data-adjacent backend positions. Based in UTC+7; adjustable by ±2–3h for meeting overlap.",
-    "summary_th": "วิศวกร Backend ประสบการณ์กว่า 5 ปีในการพัฒนา microservices ด้วย Python/FastAPI บนแพลตฟอร์ม fintech ระดับ production ดูแลการส่งมอบ data-integration และ crawler services (ข้อมูลศาลไทย, ข้อมูลนิติบุคคล) แบบ end-to-end และนำการส่งมอบ backend ของผลิตภัณฑ์สินเชื่อผู้บริโภค (Rabbit Cash) บนแพลตฟอร์มที่รองรับผู้ใช้งานรายวัน ~40,000–60,000 คน ที่ uptime ~99% คุ้นกับ production observability, การตอบสนองเหตุการณ์ และงานข้ามทีมกับ QA, PM, support และฝ่ายบริหาร ใช้ AI-assisted development (Cursor, Claude, ChatGPT, Gemini) ในงาน backend ประจำวัน เปิดรับตำแหน่ง remote ใน fintech, compliance tech หรือ backend ที่เกี่ยวข้องกับข้อมูล อยู่ใน UTC+7 และปรับเวลาได้ ±2–3 ชม. สำหรับ meeting"
+    "summary_en": "Backend software engineer with 5+ years in fintech, working across Python, Django, and FastAPI. Owned Thai court-records and business-registry data services end-to-end, and delivered the Rabbit Cash consumer credit product through client handoff. Scope covers backend delivery, production technical support, and third-party integrations on a 40–60k DAU platform at ~99% uptime. Currently upskilling toward data/AI engineering (R2DE 3.0, Anthropic Academy); open to remote fintech or compliance-tech roles.",
+    "summary_th": "วิศวกร Backend ประสบการณ์ 5+ ปีใน fintech ทำงานข้าม Python, Django และ FastAPI เป็นเจ้าของบริการข้อมูลศาลไทยและข้อมูลนิติบุคคลแบบ end-to-end และส่งมอบผลิตภัณฑ์สินเชื่อผู้บริโภค Rabbit Cash จนถึงส่งมอบลูกค้า ขอบเขตงานครอบคลุม backend delivery, technical support ระดับ production และการเชื่อมต่อ third-party บนแพลตฟอร์มที่มีผู้ใช้งานรายวัน 40–60k ที่ uptime ~99% กำลัง upskill สู่ data/AI engineering (R2DE 3.0, Anthropic Academy) เปิดรับตำแหน่ง remote ด้าน fintech หรือ compliance tech"
   },
   "languages": [],
   "skills": [
     {
-      "label": "Languages",
+      "label": "Production",
       "items": [
         "Python",
         "SQL",
+        "Django",
+        "FastAPI",
+        "MySQL",
+        "GCP",
+        "Cloud Functions",
+        "AWS",
+        "Linux shell",
+        "Git",
+        "Docker"
+      ]
+    },
+    {
+      "label": "Working Knowledge",
+      "items": [
+        "DRF",
         "JavaScript",
         "TypeScript",
-        "HTML",
-        "CSS"
-      ]
-    },
-    {
-      "label": "Frameworks",
-      "items": [
-        "FastAPI",
-        "Django",
-        "DRF",
-        "Node.js",
         "Nest",
-        "React",
-        "Redux"
+        "Sequelize",
+        "ClickUp"
       ]
     },
     {
-      "label": "Data & Storage",
+      "label": "Recent Training (R2DE 3.0 · 2026)",
       "items": [
-        "MySQL",
-        "MongoDB",
-        "Redis",
-        "Sequelize"
+        "Spark",
+        "Airflow",
+        "BigQuery"
       ]
     },
     {
-      "label": "Cloud",
+      "label": "Development Workflow",
       "items": [
-        "GCP",
-        "AWS",
-        "Azure"
-      ]
-    },
-    {
-      "label": "Shell / CLI",
-      "items": [
-        "Linux shell"
-      ]
-    },
-    {
-      "label": "AI-assisted Development",
-      "items": [
-        "Cursor",
-        "Claude",
-        "ChatGPT",
-        "Gemini"
-      ]
-    },
-    {
-      "label": "Tools",
-      "items": [
-        "Git",
-        "Docker",
-        "Postman",
-        "Nginx",
-        "ClickUp",
-        "MySQL Workbench"
+        "AI-assisted (Cursor + Claude Code)"
       ]
     }
   ],
@@ -132,47 +107,82 @@
     {
       "role_en": "Technical Support and Software Engineer",
       "role_th": "Technical Support และวิศวกรซอฟต์แวร์",
+      "scope_en": "Scope: Backend delivery on Python / Django / FastAPI + production support for a fintech platform (40–60k DAU)",
+      "scope_th": "Scope: Backend delivery บน Python / Django / FastAPI + production support ให้แพลตฟอร์ม fintech (ผู้ใช้งานรายวัน 40–60k)",
       "company": "UpPass",
       "location_en": "Bangkok, Thailand",
       "location_th": "กรุงเทพมหานคร ประเทศไทย",
       "startDate": "2022-04",
       "endDate": "2026-02",
-      "description_en": "Python/FastAPI backends and production support for credit decisioning and third-party integrations on a live fintech platform.",
-      "description_th": "Backend Python/FastAPI และ production support สำหรับ credit decisioning และการเชื่อมต่อ third-party บนแพลตฟอร์ม fintech ที่ใช้งานจริง",
+      "description_en": "Backend delivery on a live fintech platform — Django decision flows, FastAPI data services, billing, and customer technical support. Frequently reassigned across engineering and sales priorities to unblock shipping.",
+      "description_th": "Backend delivery บนแพลตฟอร์ม fintech ที่ใช้งานจริง — Django decision flows, FastAPI data services, billing และ technical support ลูกค้า ถูกโยกบ่อยข้าม priority ของ engineering และ sales เพื่อปลดบล็อกการ ship งาน",
       "highlights_en": [
-        "Owned end-to-end delivery of two Python/FastAPI microservices — COJ (Thai court records) and BDEX (business registry) — covering extraction, transformation, and scheduled processing into credit decisioning workflows.",
-        "Led backend delivery for Rabbit Cash consumer credit product (installment and revolving credit flows) — inherited existing codebase, shipped features to production, coordinated with QA, PM, support, and leadership, and handed off to the client team.",
-        "Co-owned (~50%) bank-statement and utility-bill extraction pipelines supporting eKYC and credit decisioning; contributed to AML screening logic and maintained ID OCR and face-recognition components on the core platform.",
-        "Set up and ran production observability (Cloud Logging, Sentry, alerting, metrics dashboards) across owned services — maintaining <strong>~99% uptime</strong> on a platform serving <strong>~40–60k daily active users</strong> (peaks near 80k, sustained 20–40 RPS).",
-        "Coordinated production incident response with QA, PM, customer support, and CTO/leadership; hardened data-dependent flows against partner feed failures via retries, fallbacks, and staged rollouts."
+        "<strong>Rotated</strong> across priority projects with frequent reassignments — stepped into blocked workstreams across engineering and sales (form schemas, demo setup, production go-lives) and unblocked delivery.",
+        "<strong>Developed and fixed</strong> decision-flow features on the core Django product — conditional logic routing users after form submission using eKYC scores and multiple internal data sources.",
+        "<strong>Owned</strong> two internal data services end-to-end — the Thai court records service (<strong>COJ</strong>) and the business registry service (<strong>BDEX</strong>) — covering extraction, transformation, and scheduled processing feeding decision flows.",
+        "<strong>Built and owned</strong> multiple Cloud Functions as service connectors across UpPass, and maintained teammates' Cloud Functions when needed.",
+        "<strong>Took over</strong> the <strong>Rabbit Cash</strong> consumer credit product (installment/revolving) mid-stream and <strong>delivered</strong> the backend through to client handoff as a separate customer engagement.",
+        "<strong>Implemented</strong> UpPass credit-coin billing (add/deduct) following a team design review — supported Stripe prepaid and post-usage billing.",
+        "<strong>Built</strong> the ingestion and OCR-parsing pipeline for bank-statement and utility-bill extraction alongside a teammate — pairing OCR with LLM-based field extraction for structured output.",
+        "<strong>Co-maintained</strong> the Data Acquisition and Publication service (<strong>DAP</strong>), an internal data source for partner integrations — added a rule to its AML screening checks.",
+        "<strong>Supported</strong> the data team on ID OCR and face-recognition components when platform issues required cross-team debugging.",
+        "<strong>Owned</strong> the technical-support loop for multiple UpPass customers — intake, investigation via logs and metrics, fix, and customer reply — coordinating with partner API providers when issues originated there.",
+        "<strong>Monitored</strong> production on customer True infrastructure (Cloud Logging, Sentry, alerting) with QA, PM, support, and leadership — peaks near 80k DAU at 20–40 RPS."
       ],
       "highlights_th": [
-        "ดูแลการส่งมอบแบบ end-to-end ของ Python/FastAPI microservices สองบริการ — COJ (ข้อมูลศาลไทย) และ BDEX (ข้อมูลนิติบุคคล) — ครอบคลุม extraction, transformation และ scheduled processing เข้าสู่ credit decisioning workflows",
-        "นำการส่งมอบ backend ของผลิตภัณฑ์สินเชื่อผู้บริโภค Rabbit Cash (installment และ revolving) — รับช่วง codebase เดิม ส่งฟีเจอร์ขึ้น production ประสานงานกับ QA, PM, support และฝ่ายบริหาร และส่งมอบให้ทีมลูกค้า",
-        "ร่วมดูแล (~50%) pipelines สำหรับ bank-statement และ utility-bill extraction ที่รองรับ eKYC และ credit decisioning; มีส่วนร่วมใน AML screening และดูแลคอมโพเนนต์ ID OCR กับ face recognition บนแพลตฟอร์มหลัก",
-        "ตั้งค่าและดูแล production observability (Cloud Logging, Sentry, alerting, metrics dashboards) ของบริการที่รับผิดชอบ — รักษา <strong>uptime ~99%</strong> บนแพลตฟอร์มที่รองรับผู้ใช้งานรายวัน <strong>~40,000–60,000 คน</strong> (peak ใกล้ 80,000, sustained 20–40 RPS)",
-        "ประสานงาน production incident response กับ QA, PM, customer support และ CTO/ฝ่ายบริหาร; ทำให้ data-dependent flows ทนต่อ partner feed failures ด้วย retries, fallbacks และ staged rollouts"
+        "<strong>สลับโปรเจกต์</strong> ตาม priority ที่ถูกโยกบ่อย — เข้าไปรับงานที่ติดขัดข้ามทีม engineering และ sales (form schema, setup demo, ขึ้น production จริง) และปลดบล็อกการส่งมอบ",
+        "<strong>พัฒนาและแก้</strong> feature decision flow บน core Django product — conditional logic แยกประเภท user หลังทำ form โดยใช้ eKYC score และ data sources ภายในหลายตัว",
+        "<strong>ดูแลเป็นเจ้าของ</strong> internal data services แบบ end-to-end สองบริการ — บริการข้อมูลศาลไทย (<strong>COJ</strong>) และบริการข้อมูลนิติบุคคล (<strong>BDEX</strong>) — ครอบคลุม extraction, transformation และ scheduled processing ป้อนเข้า decision flows",
+        "<strong>สร้างและเป็นเจ้าของ</strong> Cloud Functions หลายตัวเป็นตัวเชื่อม service ของ UpPass และ maintain CF ของเพื่อนร่วมทีมเมื่อจำเป็น",
+        "<strong>รับช่วงต่อ</strong> ผลิตภัณฑ์สินเชื่อผู้บริโภค <strong>Rabbit Cash</strong> (installment/revolving) กลางทาง และ<strong>ส่งมอบ</strong> backend จนถึงส่งมอบลูกค้า ในฐานะ engagement ลูกค้าแยกต่างหาก",
+        "<strong>Implement</strong> ระบบ credit-coin billing ของ UpPass (เพิ่ม/หัก) หลัง design review กับทีมแล้ว ship — รองรับ Stripe prepaid และ post-usage billing",
+        "<strong>สร้าง</strong> ingestion และ OCR-parsing pipeline สำหรับ bank-statement และ utility-bill extraction ร่วมกับเพื่อนร่วมทีม — ผสาน OCR กับการแกะ field แบบ LLM-based เพื่อให้ได้ structured output",
+        "<strong>ร่วมดูแล</strong> Data Acquisition and Publication service (<strong>DAP</strong>) ซึ่งเป็น data source ภายในสำหรับ partner integrate — เพิ่ม rule ให้ AML screening checks",
+        "<strong>สนับสนุน</strong>ทีม data เรื่องคอมโพเนนต์ ID OCR และ face-recognition เมื่อปัญหาบนแพลตฟอร์มต้อง debug ข้ามทีม",
+        "<strong>ดูแล</strong> technical-support loop ให้ลูกค้า UpPass หลายราย — รับเรื่อง, investigate ผ่าน logs และ metrics, แก้ และตอบกลับลูกค้า — ประสานกับ partner API provider เมื่อปัญหามาจากจุดนั้น",
+        "<strong>ติดตาม</strong> production บน infrastructure ลูกค้า True (Cloud Logging, Sentry, alerting) ร่วมกับ QA, PM, support และ leadership — peak ใกล้ 80,000 DAU ที่ 20–40 RPS"
       ]
     },
     {
       "role_en": "Software Engineer (Backend)",
       "role_th": "วิศวกรซอฟต์แวร์ (Backend)",
+      "scope_en": "Scope: Solo backend ownership of a Django crowdfunding platform — investor/fundraiser flows, payments, admin tooling",
+      "scope_th": "Scope: เป็นเจ้าของ backend คนเดียวของแพลตฟอร์ม crowdfunding บน Django — flow ผู้ลงทุน/ผู้ระดมทุน การชำระเงิน เครื่องมือ admin",
       "company": "Sinwattana Crowdfunding",
       "location_en": "Bangkok, Thailand",
       "location_th": "กรุงเทพมหานคร ประเทศไทย",
       "startDate": "2020-09",
       "endDate": "2022-03",
-      "description_en": "Backend delivery for investor/fundraiser journeys on a live crowdfunding product with payment and social integrations.",
-      "description_th": "พัฒนา backend สำหรับเส้นทางผู้ลงทุน/ผู้ระดมทุนบนผลิตภัณฑ์ crowdfunding ที่ใช้งานจริง พร้อมการ integrate การชำระเงินและ social login",
+      "description_en": "Solo backend engineer on a crowdfunding product — owned Django delivery end-to-end for investor/fundraiser journeys, payments, and admin tooling; flexed across product priorities as needed.",
+      "description_th": "Backend คนเดียวบนผลิตภัณฑ์ crowdfunding — เป็นเจ้าของงาน Django แบบ end-to-end สำหรับเส้นทางผู้ลงทุน/ผู้ระดมทุน การชำระเงิน และเครื่องมือ admin; ยืดหยุ่นสลับตาม priority ของ product ตามที่จำเป็น",
       "highlights_en": [
-        "Implemented investor/fundraiser flows, reservations, and internal admin tooling used in day-to-day operations.",
-        "Integrated payment and social-login providers via third-party APIs with production-grade error handling and rollout support.",
-        "Partnered with product and engineering on defect triage, releases, and incremental reliability improvements."
+        "<strong>Led backend alone</strong> — independently built (<strong>~80%</strong>) the investor/fundraiser flow, reservation system, and admin tooling, used across dozens of campaigns that raised tens of millions of THB.",
+        "<strong>Owned</strong> <strong>2C2P</strong> and <strong>Omise (Opn)</strong> payment gateways plus third-party social-login integrations end-to-end — production-grade error handling, staged rollout, and live support without a backend team behind me.",
+        "<strong>Flexed</strong> across product priorities with founders/product — triage, releases, and reliability work as the single backend owner, switching context as the business needed."
       ],
       "highlights_th": [
-        "พัฒนา flow สำหรับผู้ลงทุน/ผู้ระดมทุน ระบบจอง และเครื่องมือ admin ภายในที่ใช้งานในปฏิบัติการประจำวัน",
-        "Integrate ผู้ให้บริการชำระเงินและ social login ผ่าน third-party APIs พร้อม error handling ระดับ production และการสนับสนุน rollout",
-        "ร่วมมือกับทีม product และ engineering ในการ triage defect การ release และการปรับปรุงความเสถียรอย่างต่อเนื่อง"
+        "<strong>นำ backend คนเดียว</strong> — พัฒนาด้วยตนเอง (<strong>~80%</strong>) flow ผู้ลงทุน/ผู้ระดมทุน ระบบจอง และเครื่องมือ admin ใช้งานจริงบนแคมเปญหลักสิบแคมเปญ ซึ่งระดมทุนรวมหลักสิบล้านบาท",
+        "<strong>เป็นเจ้าของ</strong>การ integrate payment gateway <strong>2C2P</strong> และ <strong>Omise (Opn)</strong> รวมถึง social-login แบบ end-to-end — error handling ระดับ production, staged rollout และการซัพพอร์ตบน production โดยไม่มีทีม backend คอยรอง",
+        "<strong>ยืดหยุ่น</strong>สลับตาม priority ของ product กับ founders/product — triage, release และงานความเสถียรในฐานะ backend คนเดียว ตามที่ธุรกิจต้องการ"
+      ]
+    },
+    {
+      "role_en": "Teaching Assistant",
+      "role_th": "ผู้ช่วยสอน",
+      "scope_en": "Scope: Supported full-time bootcamp instruction in JavaScript, HTML/CSS, and React fundamentals",
+      "scope_th": "Scope: สนับสนุนการสอนหลักสูตรเต็มเวลา ด้าน JavaScript, HTML/CSS และพื้นฐาน React",
+      "company": "Software Park Code Camp",
+      "location_en": "Bangkok, Thailand",
+      "location_th": "กรุงเทพมหานคร ประเทศไทย",
+      "startDate": "2020-02",
+      "endDate": "2020-09",
+      "description_en": "Supported full-time bootcamp cohorts.",
+      "description_th": "สนับสนุนการสอนสำหรับรุ่นเรียนเต็มเวลา",
+      "highlights_en": [
+        "<strong>Supported</strong> instruction in HTML, CSS, JavaScript, React, Redux, and DOM fundamentals for full-time bootcamp cohorts."
+      ],
+      "highlights_th": [
+        "<strong>สนับสนุนการสอน</strong> HTML, CSS, JavaScript, React, Redux และพื้นฐาน DOM สำหรับรุ่นเรียนเต็มเวลา"
       ]
     }
   ],
@@ -185,8 +195,8 @@
       "location_th": "ออนไลน์ (Hybrid live)",
       "startDate": "2026-05",
       "endDate": "2026-07",
-      "note_en": "Python, SQL, Spark, GCP, Airflow, BigQuery. Live cohort completed 19 July 2026.",
-      "note_th": "Python, SQL, Spark, GCP, Airflow, BigQuery · จบ Live cohort 19 ก.ค. 2026"
+      "note_en": "Structured upskilling toward data/AI engineering — Python, SQL, Spark, GCP, Airflow, BigQuery. Live cohort completed 19 July 2026.",
+      "note_th": "Structured upskilling สู่สาย data/AI engineering — Python, SQL, Spark, GCP, Airflow, BigQuery · จบ Live cohort 19 ก.ค. 2026"
     },
     {
       "degree_en": "Anthropic Academy",
@@ -194,10 +204,10 @@
       "institution": "Anthropic",
       "location_en": "Online",
       "location_th": "ออนไลน์",
-      "startDate": "2025-01",
-      "endDate": "2026-06",
-      "note_en": "Claude 101, Claude Code 101, Claude Code in Action, Introduction to Agent Skills, Introduction to Subagents.",
-      "note_th": "Claude 101, Claude Code 101, Claude Code in Action, Introduction to Agent Skills, Introduction to Subagents."
+      "startDate": "2025-03",
+      "endDate": "2026-04",
+      "note_en": "Claude 101, Claude Code 101, Claude Code in Action, Introduction to Agent Skills, Introduction to Subagents, Claude API, MCP, Vertex AI — paired with hands-on practice in Cursor and self-directed research into effective AI-assisted development workflows.",
+      "note_th": "Claude 101, Claude Code 101, Claude Code in Action, Introduction to Agent Skills, Introduction to Subagents, Claude API, MCP, Vertex AI — ควบคู่กับฝึกใช้งานจริงใน Cursor และ self-directed research เรื่องการใช้ AI-assisted development ให้มีประสิทธิภาพ"
     },
     {
       "degree_en": "Software Park Code Camp",
@@ -206,9 +216,9 @@
       "location_en": "Bangkok, Thailand",
       "location_th": "กรุงเทพมหานคร ประเทศไทย",
       "startDate": "2019-10",
-      "endDate": "2021-01",
-      "note_en": "Full-time Mon–Fri program (Full-stack, JavaScript). Teaching Assistant (Feb–Sep 2020).",
-      "note_th": "หลักสูตรเต็มเวลา จันทร์–ศุกร์ (Full-stack, JavaScript) · ผู้ช่วยสอน (ก.พ.–ก.ย. 2020)"
+      "endDate": "2020-01",
+      "note_en": "Full-time Mon–Fri program (Full-stack, JavaScript).",
+      "note_th": "หลักสูตรเต็มเวลา จันทร์–ศุกร์ (Full-stack, JavaScript)"
     },
     {
       "degree_en": "Bachelor of Science (Biology)",

@@ -3,27 +3,29 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Bhornumnard Wanasrisun — Software Engineer (Backend), Python / FastAPI. Resume for HR and recruiters." />
-    <meta property="og:title" content="Bhornumnard Wanasrisun — Software Engineer (Backend)" />
-    <meta property="og:description" content="Software engineer(backend) with 5+ years building Python/FastAPI microservices on production fintech platforms." />
-    <meta property="og:url" content="https://bhornumnard.github.io" />
+    <meta
+      name="description"
+      content="Bhornumnard Wanasrisun — Software Engineer (Python), FinTech data integrations. Resume for HR and recruiters."
+    />
+    <meta
+      property="og:title"
+      content="Bhornumnard Wanasrisun — Software Engineer (Python) / FinTech Integrations"
+    />
+    <meta
+      property="og:description"
+      content="5+ years FinTech: Python/SQL backends that integrate and transform partner data for credit decisioning and eKYC."
+    />
+    <meta property="og:url" content="https://bhornumnard.github.io/index_ds_draft.html" />
     <meta property="og:type" content="website" />
-    <title>Bhornumnard Wanasrisun — Resume</title>
+    <title>Bhornumnard Wanasrisun — Data Resume</title>
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
+  <body data-resume-src="resume-ds.json">
     <header class="site-header" id="site-header">
       <div class="header-left">
         <span class="header-logo" id="header-logo">Bhornumnard Wanasrisun</span>
       </div>
       <div class="header-actions">
-        <div class="role-toggle" role="group" aria-label="Resume track">
-          <button type="button" class="role-btn active" data-role="backend" aria-pressed="true">Backend</button>
-          <button type="button" class="role-btn" data-role="data-engineering" aria-pressed="false">Data Eng</button>
-          <!-- AI track: show when resume-ai.json is ready
-          <button type="button" class="role-btn" data-role="ai" aria-pressed="false">AI</button>
-          -->
-        </div>
         <div class="lang-toggle" role="group" aria-label="Language">
           <button type="button" class="lang-btn active" data-lang="en" aria-pressed="true">EN</button>
           <button type="button" class="lang-btn" data-lang="th" aria-pressed="false">TH</button>
@@ -45,10 +47,14 @@
         <div class="hero-grid">
           <div class="hero-text">
             <h1 class="hero-name" id="hero-name">Bhornumnard Wanasrisun</h1>
-            <p class="hero-title" id="hero-title">Software Engineer (Backend) — Python / FastAPI</p>
+            <p class="hero-title" id="hero-title">
+              Software Engineer (Python) — FinTech Data Integrations
+            </p>
             <p class="hero-meta">
               <a class="hero-link" id="hero-phone" href="tel:+66845550485">+66 (0)84-555-0485</a>
-              <span class="hero-meta-gap" id="hero-location">Lamphun, Thailand · Open to remote · UTC+7 · ±2–3h from local hours</span>
+              <span class="hero-meta-gap" id="hero-location"
+                >Lamphun, Thailand · Available immediately · 6-month contract / WFH hybrid OK · UTC+7</span
+              >
             </p>
             <div class="hero-qr" id="qr-container" aria-label="QR Code">
               <canvas id="qr-canvas"></canvas>
@@ -62,7 +68,7 @@
                   <span class="code-dot code-dot--yellow"></span>
                   <span class="code-dot code-dot--green"></span>
                 </div>
-                <span class="code-filename" id="hero-code-filename">engineer.py</span>
+                <span class="code-filename" id="hero-code-filename">integrations.py</span>
               </div>
               <pre class="code-body"><code id="hero-code-body"></code></pre>
             </div>
@@ -90,8 +96,8 @@
         </aside>
 
         <div class="main-content">
-          <section class="card card--standard" id="section-profile">
-            <div class="card-titlebar">
+          <section class="card card--featured" id="section-profile">
+            <div class="card-titlebar card-titlebar--featured">
               <h2 class="card-title" id="label-profile">Profile</h2>
             </div>
             <div class="card-body">
@@ -99,8 +105,8 @@
             </div>
           </section>
 
-          <section class="card card--featured" id="section-employment">
-            <div class="card-titlebar card-titlebar--featured">
+          <section class="card card--standard" id="section-employment">
+            <div class="card-titlebar">
               <h2 class="card-title" id="label-employment">Experience</h2>
             </div>
             <div class="card-body">
@@ -119,6 +125,6 @@
     <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
     <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
-    <script src="app.js?v=20260723"></script>
+    <script src="app.js"></script>
   </body>
 </html>
