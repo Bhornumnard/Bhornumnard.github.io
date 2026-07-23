@@ -81,6 +81,13 @@
     return `${BASE_SITE_URL}#${role.hash}`;
   }
 
+  function shareUrl() {
+    if (document.body.dataset.resumeSrc) {
+      return data?.settings?.siteUrl || window.location.href.split("#")[0];
+    }
+    return roleShareUrl(currentRole);
+  }
+
   function syncRoleButtons() {
     document.querySelectorAll(".role-btn").forEach((btn) => {
       const active = btn.dataset.role === currentRole;
@@ -103,7 +110,8 @@
 
   function renderLabels() {
     document.getElementById("label-contacts").textContent = label("contacts");
-    document.getElementById("label-languages").textContent = label("languages");
+    const labelLanguages = document.getElementById("label-languages");
+    if (labelLanguages) labelLanguages.textContent = label("languages");
     document.getElementById("label-skills").textContent = label("skills");
     document.getElementById("label-profile").textContent = label("profile");
     document.getElementById("label-employment").textContent = label("employment");
@@ -155,7 +163,8 @@
 
   function renderLanguages() {
     const ul = document.getElementById("language-list");
-    ul.innerHTML = data.languages
+    if (!ul) return;
+    ul.innerHTML = (data.languages || [])
       .map(
         (lang) =>
           `<li class="settings-row"><span class="settings-label">${t(lang, "name")}</span><span class="settings-value">${t(lang, "level")}</span></li>`
@@ -307,7 +316,7 @@
       console.warn("QRCode library failed to load");
       return;
     }
-    const url = roleShareUrl(currentRole);
+    const url = shareUrl();
     try {
       await QRCode.toCanvas(canvas, url, {
         width: 72,
@@ -329,7 +338,7 @@
   }
 
   async function copyLink() {
-    const url = roleShareUrl(currentRole);
+    const url = shareUrl();
     try {
       await navigator.clipboard.writeText(url);
       showToast(label("copied"));
