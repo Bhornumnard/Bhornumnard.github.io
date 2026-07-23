@@ -114,6 +114,8 @@
     if (labelLanguages) labelLanguages.textContent = label("languages");
     document.getElementById("label-skills").textContent = label("skills");
     document.getElementById("label-profile").textContent = label("profile");
+    const labelKeySkills = document.getElementById("label-key-skills");
+    if (labelKeySkills) labelKeySkills.textContent = label("keySkills");
     document.getElementById("label-employment").textContent = label("employment");
     document.getElementById("label-education").textContent = label("education");
     document.getElementById("btn-download").textContent = label("downloadPdf");
@@ -128,9 +130,20 @@
     const phoneEl = document.getElementById("hero-phone");
     phoneEl.textContent = p.phoneDisplay || p.phone;
     phoneEl.href = p.phoneHref;
-    document.getElementById("hero-location").textContent = [t(p, "location"), t(p, "availability")]
-      .filter(Boolean)
-      .join(" · ");
+    const metaParts = [t(p, "location")];
+    if (p.linkedinUrl && p.linkedinLabel) {
+      metaParts.push(
+        `<a href="${p.linkedinUrl}" target="_blank" rel="noopener noreferrer">${p.linkedinLabel}</a>`
+      );
+    }
+    if (p.githubUrl && p.githubLabel) {
+      metaParts.push(
+        `<a href="${p.githubUrl}" target="_blank" rel="noopener noreferrer">${p.githubLabel}</a>`
+      );
+    }
+    const avail = t(p, "availability");
+    if (avail) metaParts.push(avail);
+    document.getElementById("hero-location").innerHTML = metaParts.join(" · ");
     document.getElementById("profile-text").textContent = t(data.summary, "summary");
 
     const roleName = ROLES[currentRole]?.label_en || "Backend";
@@ -290,6 +303,20 @@
     ].join("\n");
   }
 
+  function renderKeySkills() {
+    const section = document.getElementById("section-key-skills");
+    const lineEl = document.getElementById("key-skills-line");
+    if (!section || !lineEl) return;
+    const items = (data.keySkills && data.keySkills.items) || [];
+    if (!items.length) {
+      section.style.display = "none";
+      lineEl.innerHTML = "";
+      return;
+    }
+    section.style.removeProperty("display");
+    lineEl.innerHTML = items.map((item) => `<strong>${item}</strong>`).join(" · ");
+  }
+
   function render() {
     if (!data) return;
     renderLabels();
@@ -299,6 +326,7 @@
     renderContacts();
     renderLanguages();
     renderSkills();
+    renderKeySkills();
     renderExperience();
     renderEducation();
     syncRoleButtons();

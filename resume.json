@@ -13,6 +13,8 @@
     "skills_th": "ทักษะ",
     "profile_en": "Profile",
     "profile_th": "ประวัติโดยย่อ",
+    "keySkills_en": "Key Skills",
+    "keySkills_th": "ทักษะหลัก",
     "employment_en": "Experience",
     "employment_th": "ประสบการณ์ทำงาน",
     "education_en": "Education",
@@ -52,14 +54,28 @@
     "githubLabel": "github.com/Bhornumnard",
     "portfolioUrl": "https://bhornumnard.github.io#backend",
     "portfolioLabel": "bhornumnard.github.io",
-    "availability_en": "Open to remote · UTC+7 · ±2–3h from local hours",
-    "availability_th": "เปิดรับ remote · UTC+7 · ปรับเวลาได้ ±2–3 ชม. จากปกติ"
+    "availability_en": "Open to remote · UTC+7",
+    "availability_th": "เปิดรับ remote · UTC+7"
   },
   "summary": {
     "summary_en": "Backend software engineer with 5+ years in fintech, working across Python, Django, and FastAPI. Owned Thai court-records and business-registry data services end-to-end, and delivered the Rabbit Cash consumer credit product through client handoff. Scope covers backend delivery, production technical support, and third-party integrations on a 40–60k DAU platform at ~99% uptime. Currently upskilling toward data/AI engineering (R2DE 3.0, Anthropic Academy); open to remote fintech or compliance-tech roles.",
     "summary_th": "วิศวกร Backend ประสบการณ์ 5+ ปีใน fintech ทำงานข้าม Python, Django และ FastAPI เป็นเจ้าของบริการข้อมูลศาลไทยและข้อมูลนิติบุคคลแบบ end-to-end และส่งมอบผลิตภัณฑ์สินเชื่อผู้บริโภค Rabbit Cash จนถึงส่งมอบลูกค้า ขอบเขตงานครอบคลุม backend delivery, technical support ระดับ production และการเชื่อมต่อ third-party บนแพลตฟอร์มที่มีผู้ใช้งานรายวัน 40–60k ที่ uptime ~99% กำลัง upskill สู่ data/AI engineering (R2DE 3.0, Anthropic Academy) เปิดรับตำแหน่ง remote ด้าน fintech หรือ compliance tech"
   },
   "languages": [],
+  "keySkills": {
+    "items": [
+      "Python",
+      "FastAPI",
+      "Django",
+      "SQL",
+      "MySQL",
+      "GCP",
+      "Docker",
+      "Third-party API integrations",
+      "Production incident response"
+    ],
+    "tailorNote": "KEY SKILLS line นี้ควรปรับ keyword ทุกครั้งก่อนสมัครแต่ละที่ — เลือก 5-8 keyword ที่ตรงกับ JD มากที่สุดจาก Skills section เต็มด้านล่าง ไม่ใช้ keyword เดิมทุกใบสมัคร"
+  },
   "skills": [
     {
       "label": "Production",

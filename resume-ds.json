@@ -13,6 +13,8 @@
     "skills_th": "ทักษะ",
     "profile_en": "Profile",
     "profile_th": "ประวัติโดยย่อ",
+    "keySkills_en": "Key Skills",
+    "keySkills_th": "ทักษะหลัก",
     "employment_en": "Experience",
     "employment_th": "ประสบการณ์ทำงาน",
     "education_en": "Education",
@@ -52,14 +54,28 @@
     "githubLabel": "github.com/Bhornumnard",
     "portfolioUrl": "https://bhornumnard.github.io#data-engineering",
     "portfolioLabel": "bhornumnard.github.io",
-    "availability_en": "Available immediately · Open to permanent or contract · WFH hybrid OK · UTC+7",
-    "availability_th": "พร้อมเริ่มทันที · เปิดรับทั้งงานประจำและสัญญาจ้าง · WFH hybrid ได้ · UTC+7"
+    "availability_en": "Available immediately · Open to permanent or contract · UTC+7",
+    "availability_th": "พร้อมเริ่มทันที · เปิดรับทั้งงานประจำและสัญญาจ้าง · UTC+7"
   },
   "summary": {
     "summary_en": "Python/SQL engineer with 5+ years in fintech data integrations, working across Django and FastAPI. Owned Thai court-records and business-registry data services end-to-end, feeding results into decision flows and eKYC routing. Scope spans data pipelines, production support, and third-party integrations on a 40–60k DAU platform at ~99% uptime. Completed Road to Data Engineer 3.0 (Spark, Airflow, BigQuery); available immediately for permanent or contract roles.",
     "summary_th": "วิศวกร Python/SQL ประสบการณ์ 5+ ปีด้าน data integrations ใน fintech ทำงานข้าม Django และ FastAPI เป็นเจ้าของบริการข้อมูลศาลไทยและข้อมูลนิติบุคคลแบบ end-to-end ป้อนผลลัพธ์เข้า decision flows และ eKYC routing ขอบเขตงานครอบคลุม data pipelines, production support และการเชื่อมต่อ third-party บนแพลตฟอร์มที่มีผู้ใช้งานรายวัน 40–60k ที่ uptime ~99% จบ Road to Data Engineer 3.0 (Spark, Airflow, BigQuery) พร้อมเริ่มทันทีทั้งงานประจำหรือสัญญาจ้าง"
   },
   "languages": [],
+  "keySkills": {
+    "items": [
+      "Python",
+      "SQL",
+      "FastAPI",
+      "ETL/ELT pipelines",
+      "Data transformation",
+      "GCP",
+      "Airflow (R2DE)",
+      "BigQuery (R2DE)",
+      "Third-party API integrations"
+    ],
+    "tailorNote": "KEY SKILLS line นี้ควรปรับ keyword ทุกครั้งก่อนสมัครแต่ละที่ — เลือก 5-8 keyword ที่ตรงกับ JD มากที่สุดจาก Skills section เต็มด้านล่าง ไม่ใช้ keyword เดิมทุกใบสมัคร"
+  },
   "skills": [
     {
       "label": "Production",
