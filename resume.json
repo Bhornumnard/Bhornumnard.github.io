@@ -59,20 +59,7 @@
     "summary_en": "Software engineer with 5+ years building Python/FastAPI microservices on production fintech platforms. Owned end-to-end delivery of data-integration and crawler services (Thai court records, business registry) and led backend delivery for a consumer credit product (Rabbit Cash) on a platform serving ~40–60k daily active users at ~99% uptime. Comfortable with production observability, on-call incident response, and cross-team delivery with QA, PM, support, and leadership. Uses AI-assisted development (Cursor, Claude, ChatGPT, Gemini) in day-to-day backend work. Open to remote roles in fintech, compliance tech, or data-adjacent backend positions. Based in UTC+7; adjustable by ±2–3h for meeting overlap.",
     "summary_th": "วิศวกร Backend ประสบการณ์กว่า 5 ปีในการพัฒนา microservices ด้วย Python/FastAPI บนแพลตฟอร์ม fintech ระดับ production ดูแลการส่งมอบ data-integration และ crawler services (ข้อมูลศาลไทย, ข้อมูลนิติบุคคล) แบบ end-to-end และนำการส่งมอบ backend ของผลิตภัณฑ์สินเชื่อผู้บริโภค (Rabbit Cash) บนแพลตฟอร์มที่รองรับผู้ใช้งานรายวัน ~40,000–60,000 คน ที่ uptime ~99% คุ้นกับ production observability, การตอบสนองเหตุการณ์ และงานข้ามทีมกับ QA, PM, support และฝ่ายบริหาร ใช้ AI-assisted development (Cursor, Claude, ChatGPT, Gemini) ในงาน backend ประจำวัน เปิดรับตำแหน่ง remote ใน fintech, compliance tech หรือ backend ที่เกี่ยวข้องกับข้อมูล อยู่ใน UTC+7 และปรับเวลาได้ ±2–3 ชม. สำหรับ meeting"
   },
-  "languages": [
-    {
-      "name_en": "Thai",
-      "name_th": "ไทย",
-      "level_en": "Native",
-      "level_th": "เจ้าภาษา"
-    },
-    {
-      "name_en": "English",
-      "name_th": "อังกฤษ",
-      "level_en": "Professional Working Proficiency",
-      "level_th": "ใช้งานได้ในระดับมืออาชีพ"
-    }
-  ],
+  "languages": [],
   "skills": [
     {
       "label": "Languages",

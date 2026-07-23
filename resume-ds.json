@@ -59,20 +59,7 @@
     "summary_en": "Software engineer with 5+ years in fintech, strong in Python and SQL. At UpPass, owned data-integration and crawler services (Thai court records, business registry) that call partner APIs, transform responses, and feed credit decisioning on a live platform (~40–60k daily users, peaks near 80k). Also co-owned bank-statement and utility-bill extraction (~50%), contributed to AML screening, and maintained ID OCR and face-recognition components. Comfortable with production reliability, Linux shell, Docker, and cross-team work with product, QA, support, and business stakeholders. Completed Road to Data Engineer 3.0 · 2026 Edition (DataTH): Python, SQL, Spark, GCP, Airflow, BigQuery. Available to start immediately on a 6-month contract.",
     "summary_th": "วิศวกรซอฟต์แวร์ประสบการณ์กว่า 5 ปีใน fintech เชี่ยวชาญ Python และ SQL ที่ UpPass ดูแล data-integration และ crawler services (ข้อมูลศาลไทย, ข้อมูลนิติบุคคล) ที่เรียก partner APIs แปลงผลลัพธ์ และป้อนเข้า credit decisioning บนแพลตฟอร์มจริง (~40,000–60,000 ผู้ใช้/วัน, peak ใกล้ 80,000) รวมถึงร่วมดูแล (~50%) bank-statement และ utility-bill extraction มีส่วนร่วมใน AML screening และดูแล ID OCR กับ face recognition คุ้นกับความเสถียรใน production, Linux shell, Docker และงานข้ามทีมกับ product, QA, support และฝ่ายธุรกิจ จบ Road to Data Engineer 3.0 · 2026 Edition (DataTH): Python, SQL, Spark, GCP, Airflow, BigQuery พร้อมเริ่มสัญญา 6 เดือนได้ทันที"
   },
-  "languages": [
-    {
-      "name_en": "Thai",
-      "name_th": "ไทย",
-      "level_en": "Native",
-      "level_th": "เจ้าภาษา"
-    },
-    {
-      "name_en": "English",
-      "name_th": "อังกฤษ",
-      "level_en": "Professional Working Proficiency",
-      "level_th": "ใช้งานได้ในระดับมืออาชีพ"
-    }
-  ],
+  "languages": [],
   "skills": [
     {
       "label": "Core",

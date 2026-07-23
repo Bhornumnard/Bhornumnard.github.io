@@ -60,20 +60,7 @@
     "summary_en": "This AI Backend track is a placeholder. Content will be added later. For now, please use the Backend (#backend) or Data Engineering (#data-engineering) resume tracks.",
     "summary_th": "แทร็ก AI Backend เป็นหน้า placeholder เนื้อหาจะเพิ่มภายหลัง ตอนนี้กรุณาใช้เรซูเม่ Backend (#backend) หรือ Data Engineering (#data-engineering)"
   },
-  "languages": [
-    {
-      "name_en": "Thai",
-      "name_th": "ไทย",
-      "level_en": "Native",
-      "level_th": "เจ้าภาษา"
-    },
-    {
-      "name_en": "English",
-      "name_th": "อังกฤษ",
-      "level_en": "Professional Working Proficiency",
-      "level_th": "ใช้งานได้ในระดับมืออาชีพ"
-    }
-  ],
+  "languages": [],
   "skills": [
     {
       "label": "Coming soon",
