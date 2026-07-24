@@ -66,12 +66,12 @@
     "items": [
       "Python",
       "SQL",
-      "FastAPI",
-      "ETL/ELT pipelines",
-      "Data transformation",
+      "Data modeling & pipeline design",
+      "Multi-source data ingestion & routing",
+      "Structured & unstructured storage (MySQL, GCP Datastore)",
+      "ETL/ELT",
+      "BigQuery",
       "GCP",
-      "Airflow (R2DE)",
-      "BigQuery (R2DE)",
       "Third-party API integrations"
     ],
     "tailorNote": "KEY SKILLS line นี้ควรปรับ keyword ทุกครั้งก่อนสมัครแต่ละที่ — เลือก 5-8 keyword ที่ตรงกับ JD มากที่สุดจาก Skills section เต็มด้านล่าง ไม่ใช้ keyword เดิมทุกใบสมัคร"
@@ -85,8 +85,8 @@
         "Django",
         "FastAPI",
         "MySQL",
-        "GCP",
-        "Cloud Functions",
+        "GCP Datastore",
+        "GCP Cloud Functions",
         "AWS",
         "Linux shell",
         "Git",
@@ -123,7 +123,7 @@
       "highlights_en": [
         "<strong>Rotated</strong> across priority projects with frequent reassignments — stepped into blocked workstreams across engineering and sales (form schemas, demo setup, production go-lives) and unblocked delivery.",
         "<strong>Developed and fixed</strong> decision-flow features on the core Django product — conditional logic routing users after form submission using eKYC scores and multiple internal data sources.",
-        "<strong>Owned</strong> two internal data-source services end-to-end — the Thai court records service (<strong>COJ</strong>) and the business registry service (<strong>BDEX</strong>) — extraction, transformation, and scheduled processing feeding decision flows.",
+        "<strong>Owned</strong> two internal data-source services end-to-end — the Thai court records service (<strong>COJ</strong>) and the business registry service (<strong>BDEX</strong>) — extraction, transformation, and scheduled processing into GCP Datastore feeding decision flows.",
         "<strong>Built and owned</strong> multiple Cloud Functions as service connectors across UpPass, and maintained teammates' Cloud Functions when needed.",
         "<strong>Took over</strong> the <strong>Rabbit Cash</strong> consumer credit product (installment/revolving) mid-stream and <strong>delivered</strong> the backend through to client handoff as a separate customer engagement.",
         "<strong>Implemented</strong> UpPass credit-coin billing (add/deduct) following a team design review — supported Stripe prepaid and post-usage billing.",
@@ -136,7 +136,7 @@
       "highlights_th": [
         "<strong>สลับโปรเจกต์</strong> ตาม priority ที่ถูกโยกบ่อย — เข้าไปรับงานที่ติดขัดข้ามทีม engineering และ sales (form schema, setup demo, ขึ้น production จริง) และปลดบล็อกการส่งมอบ",
         "<strong>พัฒนาและแก้</strong> feature decision flow บน core Django product — conditional logic แยกประเภท user หลังทำ form โดยใช้ eKYC score และ data sources ภายในหลายตัว",
-        "<strong>ดูแลเป็นเจ้าของ</strong> internal data-source services แบบ end-to-end สองบริการ — บริการข้อมูลศาลไทย (<strong>COJ</strong>) และบริการข้อมูลนิติบุคคล (<strong>BDEX</strong>) — extraction, transformation และ scheduled processing ป้อนเข้า decision flows",
+        "<strong>ดูแลเป็นเจ้าของ</strong> internal data-source services แบบ end-to-end สองบริการ — บริการข้อมูลศาลไทย (<strong>COJ</strong>) และบริการข้อมูลนิติบุคคล (<strong>BDEX</strong>) — extraction, transformation และ scheduled processing เข้า GCP Datastore ป้อนเข้า decision flows",
         "<strong>สร้างและเป็นเจ้าของ</strong> Cloud Functions หลายตัวเป็นตัวเชื่อม service ของ UpPass และ maintain CF ของเพื่อนร่วมทีมเมื่อจำเป็น",
         "<strong>รับช่วงต่อ</strong> ผลิตภัณฑ์สินเชื่อผู้บริโภค <strong>Rabbit Cash</strong> (installment/revolving) กลางทาง และ<strong>ส่งมอบ</strong> backend จนถึงส่งมอบลูกค้า ในฐานะ engagement ลูกค้าแยกต่างหาก",
         "<strong>Implement</strong> ระบบ credit-coin billing ของ UpPass (เพิ่ม/หัก) หลัง design review กับทีมแล้ว ship — รองรับ Stripe prepaid และ post-usage billing",

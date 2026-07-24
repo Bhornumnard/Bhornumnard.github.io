@@ -14,7 +14,7 @@ Python/SQL engineer with 5+ years in fintech data integrations, working across D
 
 <!-- KEY SKILLS line นี้ควรปรับ keyword ทุกครั้งก่อนสมัครแต่ละที่ — เลือก 5-8 keyword ที่ตรงกับ JD มากที่สุดจาก Skills section เต็มด้านล่าง ไม่ใช้ keyword เดิมทุกใบสมัคร -->
 
-**Python** · **SQL** · **FastAPI** · **ETL/ELT pipelines** · **Data transformation** · **GCP** · **Airflow (R2DE)** · **BigQuery (R2DE)** · **Third-party API integrations**
+**Python** · **SQL** · **Data modeling & pipeline design** · **Multi-source data ingestion & routing** · **Structured & unstructured storage (MySQL, GCP Datastore)** · **ETL/ELT** · **GCP** · **Third-party API integrations**
 
 ## Experience
 
@@ -28,7 +28,7 @@ Backend delivery on a live fintech platform — Django decision flows, FastAPI d
 
 - Rotated across priority projects with frequent reassignments — stepped into blocked workstreams across engineering and sales (form schemas, demo setup, production go-lives) and unblocked delivery.
 - Developed and fixed decision-flow features on the core Django product — conditional logic routing users after form submission using eKYC scores and multiple internal data sources.
-- Owned two internal data-source services end-to-end — the Thai court records service (COJ) and the business registry service (BDEX) — extraction, transformation, and scheduled processing feeding decision flows.
+- Owned two internal data-source services end-to-end — the Thai court records service (COJ) and the business registry service (BDEX) — extraction, transformation, and scheduled processing into GCP Datastore feeding decision flows.
 - Built and owned multiple Cloud Functions as service connectors across UpPass, and maintained teammates' Cloud Functions when needed.
 - Took over the Rabbit Cash consumer credit product (installment/revolving) mid-stream and delivered the backend through to client handoff as a separate customer engagement.
 - Implemented UpPass credit-coin billing (add/deduct) following a team design review — supported Stripe prepaid and post-usage billing.
@@ -88,7 +88,7 @@ Chiang Mai University · Chiang Mai, Thailand
 
 ### Production
 
-Python, SQL, Django, FastAPI, MySQL, GCP, Cloud Functions, AWS, Linux shell, Git, Docker, ETL/ELT, Data pipelines, Batch processing, Third-party API integrations, Data transform for decisioning/eKYC
+Python, SQL, Django, FastAPI, MySQL, GCP Datastore, GCP Cloud Functions, AWS, Linux shell, Git, Docker, ETL/ELT, Data pipelines, Batch processing, Third-party API integrations, Data transform for decisioning/eKYC
 
 ### Working Knowledge
 
