@@ -58,8 +58,8 @@
     "availability_th": "พร้อมเริ่มทันที · เปิดรับทั้งงานประจำและสัญญาจ้าง · UTC+7"
   },
   "summary": {
-    "summary_en": "Python/SQL engineer with 5+ years in fintech data integrations, working across Django and FastAPI. Owned Thai court-records and business-registry data services end-to-end, feeding results into decision flows and eKYC routing. Scope spans data pipelines, production support, and third-party integrations on a 40–60k DAU platform at ~99% uptime. Completed Road to Data Engineer 3.0 (Spark, Airflow, BigQuery); available immediately for permanent or contract roles.",
-    "summary_th": "วิศวกร Python/SQL ประสบการณ์ 5+ ปีด้าน data integrations ใน fintech ทำงานข้าม Django และ FastAPI เป็นเจ้าของบริการข้อมูลศาลไทยและข้อมูลนิติบุคคลแบบ end-to-end ป้อนผลลัพธ์เข้า decision flows และ eKYC routing ขอบเขตงานครอบคลุม data pipelines, production support และการเชื่อมต่อ third-party บนแพลตฟอร์มที่มีผู้ใช้งานรายวัน 40–60k ที่ uptime ~99% จบ Road to Data Engineer 3.0 (Spark, Airflow, BigQuery) พร้อมเริ่มทันทีทั้งงานประจำหรือสัญญาจ้าง"
+    "summary_en": "Python/SQL engineer specializing in data pipelines and ETL-driven integrations, with 5+ years in fintech, working across Django and FastAPI. Delivered Thai court-records and business-registry data services end-to-end, feeding results into decision flows and eKYC routing. Scope spans data pipelines, production support, and third-party integrations on a 40–60k DAU platform at ~99% uptime. Completed Road to Data Engineer 3.0 (Spark, Airflow, BigQuery); available immediately for permanent or contract roles.",
+    "summary_th": "วิศวกร Python/SQL ที่เชี่ยวชาญ data pipelines และ ETL-driven integrations ประสบการณ์ 5+ ปีใน fintech ทำงานข้าม Django และ FastAPI ส่งมอบบริการข้อมูลศาลไทยและข้อมูลนิติบุคคลแบบ end-to-end ป้อนผลลัพธ์เข้า decision flows และ eKYC routing ขอบเขตงานครอบคลุม data pipelines, production support และการเชื่อมต่อ third-party บนแพลตฟอร์มที่มีผู้ใช้งานรายวัน 40–60k ที่ uptime ~99% จบ Road to Data Engineer 3.0 (Spark, Airflow, BigQuery) พร้อมเริ่มทันทีทั้งงานประจำหรือสัญญาจ้าง"
   },
   "languages": [],
   "keySkills": {
@@ -70,6 +70,7 @@
       "Multi-source data ingestion & routing",
       "Structured & unstructured storage (MySQL, GCP Datastore)",
       "ETL/ELT",
+      "CI/CD (GitLab CI)",
       "BigQuery",
       "GCP",
       "Third-party API integrations"
@@ -80,22 +81,12 @@
     {
       "label": "Production",
       "items": [
-        "Python",
-        "SQL",
-        "Django",
-        "FastAPI",
-        "MySQL",
-        "GCP Datastore",
-        "GCP Cloud Functions",
-        "AWS",
-        "Linux shell",
-        "Git",
-        "Docker",
-        "ETL/ELT",
-        "Data pipelines",
-        "Batch processing",
-        "Third-party API integrations",
-        "Data transform for decisioning/eKYC"
+        "LANGUAGES: Python, SQL",
+        "FRAMEWORKS: Django, FastAPI",
+        "DATABASES & STORAGE: MySQL, GCP Datastore",
+        "CLOUD: GCP, GCP Cloud Functions, AWS",
+        "DATA ENGINEERING: ETL/ELT, Data pipelines, Batch processing, CI/CD (GitLab CI, GitHub Actions), Data transform for decisioning/eKYC, Third-party API integrations",
+        "OPS/TOOLS: Linux shell, Git, Docker"
       ]
     },
     {
@@ -123,27 +114,23 @@
       "highlights_en": [
         "<strong>Rotated</strong> across priority projects with frequent reassignments — stepped into blocked workstreams across engineering and sales (form schemas, demo setup, production go-lives) and unblocked delivery.",
         "<strong>Developed and fixed</strong> decision-flow features on the core Django product — conditional logic routing users after form submission using eKYC scores and multiple internal data sources.",
-        "<strong>Owned</strong> two internal data-source services end-to-end — the Thai court records service (<strong>COJ</strong>) and the business registry service (<strong>BDEX</strong>) — extraction, transformation, and scheduled processing into GCP Datastore feeding decision flows.",
-        "<strong>Built and owned</strong> multiple Cloud Functions as service connectors across UpPass, and maintained teammates' Cloud Functions when needed.",
-        "<strong>Took over</strong> the <strong>Rabbit Cash</strong> consumer credit product (installment/revolving) mid-stream and <strong>delivered</strong> the backend through to client handoff as a separate customer engagement.",
-        "<strong>Implemented</strong> UpPass credit-coin billing (add/deduct) following a team design review — supported Stripe prepaid and post-usage billing.",
-        "<strong>Built</strong> the ingestion and OCR-parsing pipeline for bank-statement and utility-bill extraction alongside a teammate — pairing OCR with LLM-based field extraction for structured output.",
+        "<strong>Designed and delivered</strong> two internal data-source services end-to-end — the Thai court records service (<strong>COJ</strong>), a crawler triggered by upstream source data updates, and the business registry service (<strong>BDEX</strong>), integrated via partner APIs (including <strong>BOL</strong>) and cached per user request — extraction, transformation, and processing into GCP Datastore feeding decision flows.",
+        "<strong>Designed and built</strong> the GitLab CI/CD pipeline for the <strong>BDEX</strong> service, automating deployment for the pipeline.",
+        "<strong>Developed and maintained</strong> 4+ Cloud Functions as service connectors across UpPass, and maintained teammates' Cloud Functions when needed.",
+        "<strong>Built</strong> the ingestion and OCR-parsing pipeline for bank-statement and utility-bill extraction alongside a teammate — pairing OCR with LLM-based field extraction for structured output, and integrating an external verification API (<strong>Asia Verify</strong>) for international bank statements; maintained and resolved GitLab CI/CD pipeline issues supporting its deployment.",
         "<strong>Co-maintained</strong> the Data Acquisition and Publication service (<strong>DAP</strong>), an internal data source for partner integrations — added a rule to its AML screening checks.",
-        "<strong>Supported</strong> the data team on ID OCR and face-recognition components when platform issues required cross-team debugging.",
-        "<strong>Owned</strong> the technical-support loop for multiple UpPass customers — intake, investigation via logs and metrics, fix, and customer reply — coordinating with partner API providers when issues originated there.",
-        "<strong>Monitored</strong> production on customer True infrastructure (Cloud Logging, Sentry, alerting) with QA, PM, support, and leadership — peaks near 80k DAU at 20–40 RPS."
+        "<strong>Managed</strong> the technical-support loop for multiple UpPass customers — intake, investigation via logs and metrics, fix, and customer reply — coordinating with partner API providers when issues originated there.",
+        "<strong>Monitored</strong> production on client infrastructure at True (Cloud Logging, Sentry, alerting) with QA, PM, support, and leadership — peaks near 80k DAU at 20–40 RPS."
       ],
       "highlights_th": [
         "<strong>สลับโปรเจกต์</strong> ตาม priority ที่ถูกโยกบ่อย — เข้าไปรับงานที่ติดขัดข้ามทีม engineering และ sales (form schema, setup demo, ขึ้น production จริง) และปลดบล็อกการส่งมอบ",
         "<strong>พัฒนาและแก้</strong> feature decision flow บน core Django product — conditional logic แยกประเภท user หลังทำ form โดยใช้ eKYC score และ data sources ภายในหลายตัว",
-        "<strong>ดูแลเป็นเจ้าของ</strong> internal data-source services แบบ end-to-end สองบริการ — บริการข้อมูลศาลไทย (<strong>COJ</strong>) และบริการข้อมูลนิติบุคคล (<strong>BDEX</strong>) — extraction, transformation และ scheduled processing เข้า GCP Datastore ป้อนเข้า decision flows",
-        "<strong>สร้างและเป็นเจ้าของ</strong> Cloud Functions หลายตัวเป็นตัวเชื่อม service ของ UpPass และ maintain CF ของเพื่อนร่วมทีมเมื่อจำเป็น",
-        "<strong>รับช่วงต่อ</strong> ผลิตภัณฑ์สินเชื่อผู้บริโภค <strong>Rabbit Cash</strong> (installment/revolving) กลางทาง และ<strong>ส่งมอบ</strong> backend จนถึงส่งมอบลูกค้า ในฐานะ engagement ลูกค้าแยกต่างหาก",
-        "<strong>Implement</strong> ระบบ credit-coin billing ของ UpPass (เพิ่ม/หัก) หลัง design review กับทีมแล้ว ship — รองรับ Stripe prepaid และ post-usage billing",
-        "<strong>สร้าง</strong> ingestion และ OCR-parsing pipeline สำหรับ bank-statement และ utility-bill extraction ร่วมกับเพื่อนร่วมทีม — ผสาน OCR กับการแกะ field แบบ LLM-based เพื่อให้ได้ structured output",
+        "<strong>ออกแบบและส่งมอบ</strong> internal data-source services แบบ end-to-end สองบริการ — บริการข้อมูลศาลไทย (<strong>COJ</strong>) เป็น crawler ที่ trigger ตามการอัปเดตข้อมูลต้นทาง และบริการข้อมูลนิติบุคคล (<strong>BDEX</strong>) ที่ integrate ผ่าน partner APIs (รวม <strong>BOL</strong>) และ cache ตาม user request — extraction, transformation และ processing เข้า GCP Datastore ป้อนเข้า decision flows",
+        "<strong>ออกแบบและสร้าง</strong> GitLab CI/CD pipeline สำหรับบริการ <strong>BDEX</strong> เพื่อ automate การ deploy pipeline",
+        "<strong>พัฒนาและดูแล</strong> Cloud Functions 4+ ตัวเป็นตัวเชื่อม service ของ UpPass และ maintain CF ของเพื่อนร่วมทีมเมื่อจำเป็น",
+        "<strong>สร้าง</strong> ingestion และ OCR-parsing pipeline สำหรับ bank-statement และ utility-bill extraction ร่วมกับเพื่อนร่วมทีม — ผสาน OCR กับการแกะ field แบบ LLM-based เพื่อให้ได้ structured output และ integrate verification API ภายนอก (<strong>Asia Verify</strong>) สำหรับ international bank statements; ดูแลและแก้ปัญหา GitLab CI/CD pipeline ที่รองรับการ deploy",
         "<strong>ร่วมดูแล</strong> Data Acquisition and Publication service (<strong>DAP</strong>) ซึ่งเป็น data source ภายในสำหรับ partner integrate — เพิ่ม rule ให้ AML screening checks",
-        "<strong>สนับสนุน</strong>ทีม data เรื่องคอมโพเนนต์ ID OCR และ face-recognition เมื่อปัญหาบนแพลตฟอร์มต้อง debug ข้ามทีม",
-        "<strong>ดูแล</strong> technical-support loop ให้ลูกค้า UpPass หลายราย — รับเรื่อง, investigate ผ่าน logs และ metrics, แก้ และตอบกลับลูกค้า — ประสานกับ partner API provider เมื่อปัญหามาจากจุดนั้น",
+        "<strong>จัดการ</strong> technical-support loop ให้ลูกค้า UpPass หลายราย — รับเรื่อง, investigate ผ่าน logs และ metrics, แก้ และตอบกลับลูกค้า — ประสานกับ partner API provider เมื่อปัญหามาจากจุดนั้น",
         "<strong>ติดตาม</strong> production บน infrastructure ลูกค้า True (Cloud Logging, Sentry, alerting) ร่วมกับ QA, PM, support และฝ่ายบริหาร — peak ใกล้ 80,000 DAU ที่ 20–40 RPS"
       ]
     },
@@ -157,16 +144,16 @@
       "location_th": "กรุงเทพมหานคร ประเทศไทย",
       "startDate": "2020-09",
       "endDate": "2022-03",
-      "description_en": "Solo backend engineer on a crowdfunding product — owned delivery end-to-end for investor/fundraiser journeys, payments, and admin tooling; flexed across product priorities as needed.",
+      "description_en": "Solo backend engineer on a crowdfunding product — Owned delivery end-to-end for investor/fundraiser journeys, payments, and admin tooling; flexed across product priorities as needed.",
       "description_th": "Backend คนเดียวบนผลิตภัณฑ์ crowdfunding — เป็นเจ้าของงานแบบ end-to-end สำหรับเส้นทางผู้ลงทุน/ผู้ระดมทุน การชำระเงิน และเครื่องมือ admin; ยืดหยุ่นสลับตาม priority ของ product ตามที่จำเป็น",
       "highlights_en": [
         "<strong>Led backend alone</strong> — independently built investor/fundraiser flows, reservations, and internal admin tooling used in day-to-day operations.",
-        "<strong>Owned</strong> payment and social-login integrations end-to-end via third-party APIs — production error handling, rollout, and live support without a backend team behind me.",
+        "<strong>Delivered</strong> payment and social-login integrations end-to-end via third-party APIs — production error handling, rollout, and live support without a backend team behind me.",
         "<strong>Flexed</strong> across product priorities with founders/product — triage, releases, and reliability work as the single backend owner, switching context as the business needed."
       ],
       "highlights_th": [
         "<strong>นำ backend คนเดียว</strong> — พัฒนาด้วยตนเอง flow ผู้ลงทุน/ผู้ระดมทุน ระบบจอง และเครื่องมือ admin ที่ใช้ในงานประจำวัน",
-        "<strong>เป็นเจ้าของ</strong>การ integrate payment และ social login แบบ end-to-end ผ่าน third-party APIs — error handling ระดับ production, rollout และการซัพพอร์ตบน production โดยไม่มีทีม backend คอยรอง",
+        "<strong>ส่งมอบ</strong>การ integrate payment และ social login แบบ end-to-end ผ่าน third-party APIs — error handling ระดับ production, rollout และการซัพพอร์ตบน production โดยไม่มีทีม backend คอยรอง",
         "<strong>ยืดหยุ่น</strong>สลับตาม priority ของ product กับ founders/product — triage, release และงานความเสถียรในฐานะ backend คนเดียว ตามที่ธุรกิจต้องการ"
       ]
     },

@@ -201,7 +201,10 @@
           pills = cat.items;
         }
         const pillHtml = pills
-          .map((item) => `<span class="skill-pill">${item}</span>`)
+          .map((item) => {
+            const isRow = /^[A-Z0-9 &/()]+:/.test(item);
+            return `<span class="skill-pill${isRow ? " skill-pill--row" : ""}">${item}</span>`;
+          })
           .join("");
         return `<div class="skill-category"><div class="skill-category-label">${cat.label}</div><div class="skill-pills">${pillHtml}</div></div>`;
       })
