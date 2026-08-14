@@ -72,8 +72,8 @@
     "portfolioLabel": "bhornumnard.github.io",
     "availability_en": "Available immediately · Open to permanent or contract · UTC+7",
     "availability_th": "พร้อมเริ่มทันที · เปิดรับทั้งงานประจำและสัญญาจ้าง · UTC+7",
-    "pitch_en": "Backend engineer with 5+ years shipping Python services on fintech production. Now moving into data engineering and event-driven systems.",
-    "pitch_th": "วิศวกร Backend ประสบการณ์ 5+ ปี ส่ง Python services บน fintech production ตอนนี้ขยับไป data engineering และระบบ event-driven"
+    "pitch_en": "Backend software engineer with 5.5 years shipping Python (Django/FastAPI) services in fintech production — owned data-integration services (court records, business registry crawlers) and OCR/LLM extraction pipelines feeding eKYC decision flows. Now formalizing a data engineering track through R2DE 3.0 (Airflow, BigQuery, dbt, GCP) to bridge backend delivery with analytical pipeline design.",
+    "pitch_th": "วิศวกรซอฟต์แวร์ Backend ประสบการณ์ 5.5 ปี ส่ง Python (Django/FastAPI) services บน fintech production — เป็นเจ้าของ data-integration services (ข้อมูลศาล, crawler ทะเบียนธุรกิจ) และ OCR/LLM extraction pipelines ที่ป้อนเข้า eKYC decision flows ตอนนี้ formalize สาย data engineering ผ่าน R2DE 3.0 (Airflow, BigQuery, dbt, GCP) เพื่อเชื่อม backend delivery กับ analytical pipeline design"
   },
   "summary": {
     "summary_en": "Python/SQL engineer specializing in data pipelines and ETL-driven integrations, with 5+ years in fintech, working across Django and FastAPI. Delivered Thai court-records and business-registry data services end-to-end, feeding results into decision flows and eKYC routing. Scope spans data pipelines, production support, and third-party integrations on a 40–60k DAU platform at ~99% uptime. Completed Road to Data Engineer 3.0 (Spark, Airflow, BigQuery); available immediately for permanent or contract roles.",
