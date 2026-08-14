@@ -3,19 +3,25 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Bhornumnard Wanasrisun — Software Engineer (Backend), Python / FastAPI. Resume for HR and recruiters." />
-    <meta property="og:title" content="Bhornumnard Wanasrisun — Software Engineer (Backend)" />
-    <meta property="og:description" content="Software engineer(backend) with 5+ years building Python/FastAPI microservices on production fintech platforms." />
+    <meta name="description" content="Bhornumnard Wanasrisun — Backend engineer, 5+ years fintech production. Resume, writing, and projects." />
+    <meta property="og:title" content="Bhornumnard Wanasrisun" />
+    <meta property="og:description" content="Backend engineer with 5+ years shipping Python services on fintech production. Now moving into data engineering and event-driven systems." />
     <meta property="og:url" content="https://bhornumnard.github.io" />
     <meta property="og:type" content="website" />
-    <title>Bhornumnard Wanasrisun — Resume</title>
-    <link rel="stylesheet" href="style.css?v=20260724b" />
+    <title>Bhornumnard Wanasrisun</title>
+    <link rel="stylesheet" href="style.css?v=20260814f" />
   </head>
-  <body>
+  <body data-view="home">
     <header class="site-header" id="site-header">
       <div class="header-left">
-        <span class="header-logo" id="header-logo">Bhornumnard Wanasrisun</span>
+        <button type="button" class="header-logo" id="header-logo" data-view="home">Bhornumnard Wanasrisun</button>
       </div>
+      <nav class="page-nav" role="navigation" aria-label="Page">
+        <button type="button" class="page-nav-btn active" data-view="home" id="tab-home" aria-pressed="true">Home</button>
+        <button type="button" class="page-nav-btn" data-view="resume" id="tab-resume" aria-pressed="false">Resume</button>
+        <button type="button" class="page-nav-btn" data-view="blog" id="tab-blog" aria-pressed="false">Blog</button>
+        <button type="button" class="page-nav-btn" data-view="project" id="tab-project" aria-pressed="false">Project</button>
+      </nav>
       <div class="header-actions">
         <div class="role-toggle" role="group" aria-label="Resume track">
           <button type="button" class="role-btn active" data-role="backend" aria-pressed="true">Backend</button>
@@ -45,11 +51,14 @@
         <div class="hero-grid">
           <div class="hero-text">
             <h1 class="hero-name" id="hero-name">Bhornumnard Wanasrisun</h1>
-            <p class="hero-title" id="hero-title">Software Engineer (Backend) — Python / FastAPI</p>
-            <p class="hero-meta">
+            <p class="hero-title" id="hero-title">Software Engineer (Backend) — Python / PostgreSQL / AWS</p>
+            <p class="hero-pitch" id="hero-pitch"></p>
+            <p class="hero-meta hero-meta--resume" id="hero-meta-resume">
               <a class="hero-link" id="hero-phone" href="tel:+66845550485">+66 (0)84-555-0485</a>
               <span class="hero-meta-gap" id="hero-location">Lamphun, Thailand · linkedin.com/in/bhornumnard-wanasrisun · github.com/Bhornumnard · Open to remote · UTC+7</span>
             </p>
+            <p class="hero-meta hero-meta--home" id="hero-home-meta"></p>
+            <div class="hero-cta" id="hero-cta"></div>
             <div class="hero-qr" id="qr-container" aria-label="QR Code">
               <canvas id="qr-canvas"></canvas>
             </div>
@@ -71,6 +80,27 @@
       </section>
 
       <section class="metrics" id="metrics" aria-label="Key metrics"></section>
+
+      <section class="home-board" id="section-home">
+        <div class="home-preview">
+          <div class="home-preview-head">
+            <h2 class="section-title" id="label-latest-writing">Latest writing</h2>
+            <button type="button" class="home-preview-more" data-view="blog" id="btn-more-blog">Blog ›</button>
+          </div>
+          <div class="showcase-grid" id="home-writing-grid"></div>
+        </div>
+        <div class="home-preview">
+          <div class="home-preview-head">
+            <h2 class="section-title" id="label-latest-work">Latest work</h2>
+            <button type="button" class="home-preview-more" data-view="project" id="btn-more-project">Project ›</button>
+          </div>
+          <div class="showcase-grid" id="home-project-grid"></div>
+        </div>
+        <div class="home-footer">
+          <p class="home-cta-note" id="home-cta-note"></p>
+          <p class="home-contact" id="home-contact"></p>
+        </div>
+      </section>
 
       <div class="resume-body">
         <aside class="sidebar">
@@ -124,11 +154,15 @@
           </section>
         </div>
       </div>
+
+      <section class="showcase" id="section-showcase">
+        <div class="showcase-grid" id="showcase-grid"></div>
+      </section>
     </main>
 
     <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
     <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
-    <script src="app.js?v=20260724b"></script>
+    <script src="app.js?v=20260814f"></script>
   </body>
 </html>

@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&family=Noto+Sans+Thai:wght@400;500;600;700&display=swap");
+
 *,
 *::before,
 *::after {
@@ -14,7 +16,8 @@
   --header-bg: rgba(250, 250, 250, 0.85);
   --shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
   --radius: 12px;
-  --font: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans Thai", sans-serif;
+  /* Noto first: system fonts drop Thai combining marks (สระ) in print/PDF for mixed EN+TH text */
+  --font: "Noto Sans Thai", "Noto Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 
 html {
@@ -72,12 +75,89 @@ a:hover {
 }
 
 .header-logo {
+  border: none;
+  background: transparent;
+  padding: 0;
+  font-family: inherit;
   font-size: 14px;
   font-weight: 600;
   letter-spacing: 0.02em;
+  color: inherit;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  cursor: pointer;
+  text-align: left;
+}
+
+.page-nav {
+  display: flex;
+  background: var(--border);
+  border-radius: 999px;
+  padding: 2px;
+  flex-shrink: 0;
+}
+
+.page-nav-btn {
+  border: none;
+  background: transparent;
+  color: var(--text-muted);
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 6px 10px;
+  border-radius: 999px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.2s, color 0.2s;
+}
+
+.page-nav-btn.active {
+  background: var(--surface);
+  color: var(--text);
+  box-shadow: var(--shadow);
+}
+
+body[data-view]:not([data-view="resume"]) .role-toggle,
+body[data-view]:not([data-view="resume"]) #btn-download {
+  display: none !important;
+}
+
+body[data-view="blog"] .hero,
+body[data-view="project"] .hero,
+body[data-view="blog"] .metrics,
+body[data-view="project"] .metrics {
+  display: none !important;
+}
+
+body[data-view]:not([data-view="resume"]) .resume-body {
+  display: none !important;
+}
+
+#section-home,
+#section-showcase {
+  display: none;
+}
+
+body[data-view="home"] #section-home {
+  display: block;
+}
+
+body[data-view="blog"] #section-showcase,
+body[data-view="project"] #section-showcase {
+  display: block;
+}
+
+body[data-view="home"] .hero-title,
+body[data-view="home"] .hero-meta--resume,
+body[data-view="home"] .hero-qr {
+  display: none !important;
+}
+
+body:not([data-view="home"]) .hero-pitch,
+body:not([data-view="home"]) .hero-meta--home,
+body:not([data-view="home"]) .hero-cta {
+  display: none !important;
 }
 
 .header-actions {
@@ -217,6 +297,22 @@ a:hover {
   font-weight: 500;
   color: var(--text);
   line-height: 1.5;
+}
+
+.hero-pitch {
+  margin: 0 0 16px;
+  max-width: 36em;
+  font-size: clamp(1rem, 2vw, 1.125rem);
+  font-weight: 500;
+  color: var(--text);
+  line-height: 1.55;
+}
+
+.hero-cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 20px;
 }
 
 .hero-meta {
@@ -653,6 +749,136 @@ a:hover {
   font-size: 14px;
 }
 
+/* Blog / Project showcase (homepage only; hidden in print) */
+.showcase {
+  margin-top: 8px;
+}
+
+.showcase-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+a.showcase-card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 20px 22px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  color: var(--text);
+  text-decoration: none;
+  transition: box-shadow 0.2s, transform 0.15s;
+}
+
+a.showcase-card:hover {
+  text-decoration: none;
+  box-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.04),
+    0 8px 24px rgba(0, 0, 0, 0.07);
+  transform: translateY(-1px);
+}
+
+.showcase-card-venue {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.showcase-card-title {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.4;
+  color: var(--text);
+}
+
+.showcase-card-summary {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--text-muted);
+  flex: 1;
+}
+
+.showcase-card .skill-pills {
+  margin-top: 4px;
+}
+
+.showcase-card-cta {
+  margin-top: 4px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--accent);
+}
+
+.home-board {
+  margin-top: 8px;
+}
+
+.home-preview {
+  margin-bottom: 32px;
+}
+
+.home-preview-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.home-preview-head .section-title {
+  margin: 0;
+}
+
+.home-preview-more {
+  border: none;
+  background: transparent;
+  padding: 0;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--accent);
+  cursor: pointer;
+}
+
+.home-preview-more:hover {
+  text-decoration: underline;
+}
+
+.home-footer {
+  padding: 28px 0 8px;
+  border-top: 1px solid var(--border);
+  text-align: center;
+}
+
+.home-cta-note {
+  margin: 0 0 8px;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--text);
+}
+
+.home-contact {
+  margin: 0;
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+.home-contact a {
+  color: var(--text-muted);
+}
+
+.home-contact a:hover {
+  color: var(--accent);
+}
+
 /* Toast */
 .toast {
   position: fixed;
@@ -690,6 +916,12 @@ a:hover {
   .header-left {
     order: 1;
     flex: 1 1 auto;
+  }
+
+  .page-nav {
+    order: 3;
+    flex: 1 1 100%;
+    justify-content: center;
   }
 
   .header-actions {
@@ -779,6 +1011,14 @@ a:hover {
     margin-right: -4px;
     padding: 12px;
   }
+
+  .showcase {
+    margin-top: 0;
+  }
+
+  .showcase-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* Print / PDF */
@@ -790,6 +1030,7 @@ a:hover {
 
   body {
     background: #fff;
+    font-family: "Noto Sans Thai", "Noto Sans", sans-serif;
     font-size: 10.5pt;
     color: #1d1d1f;
     -webkit-print-color-adjust: exact;
@@ -797,6 +1038,17 @@ a:hover {
   }
 
   .site-header {
+    display: none !important;
+  }
+
+  .showcase {
+    display: none !important;
+  }
+
+  .home-board,
+  .hero-cta,
+  .hero-pitch,
+  .hero-meta--home {
     display: none !important;
   }
 
@@ -929,6 +1181,17 @@ a:hover {
     font-weight: 700;
   }
 
+  .key-skills-note {
+    margin: 4pt 0 0;
+    font-size: 8.5pt;
+    line-height: 1.4;
+    color: #1d1d1f;
+  }
+
+  #section-certifications {
+    break-inside: avoid;
+  }
+
   .skill-category {
     margin-bottom: 7pt;
   }
@@ -1046,6 +1309,15 @@ a:hover {
 
   #section-education {
     break-inside: avoid;
+  }
+
+  #section-writing {
+    break-inside: avoid;
+  }
+
+  #section-writing .writing-item {
+    margin-bottom: 0;
+    padding-bottom: 0;
   }
 
   a {

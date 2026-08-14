@@ -32,6 +32,7 @@
   let currentRole = "backend";
   let locale = localStorage.getItem(LOCALE_KEY) || "en";
   let eventsBound = false;
+  let pageView = "home";
 
   const MONTHS_EN = [
     "January", "February", "March", "April", "May", "June",
@@ -69,11 +70,29 @@
 
   function parseRoleFromHash() {
     const raw = (window.location.hash || "").replace(/^#/, "").toLowerCase();
+    if (raw === "home" || raw === "blog" || raw === "project" || raw === "projects") {
+      return currentRole || "backend";
+    }
     if (!raw || raw === "backend") return "backend";
     if (raw === "data-engineering" || raw === "data" || raw === "de") return "data-engineering";
     // AI track hidden until ready — treat #ai as backend for public visitors
     if (raw === "ai" || raw === "ai-backend") return "backend";
     return "backend";
+  }
+
+  function parsePageViewFromHash() {
+    const raw = (window.location.hash || "").replace(/^#/, "").toLowerCase();
+    if (!raw || raw === "home") return "home";
+    if (raw === "blog") return "blog";
+    if (raw === "project" || raw === "projects") return "project";
+    return "resume";
+  }
+
+  function pageShareUrl(view) {
+    if (view === "home") return BASE_SITE_URL;
+    if (view === "blog") return `${BASE_SITE_URL}#blog`;
+    if (view === "project") return `${BASE_SITE_URL}#project`;
+    return roleShareUrl(currentRole);
   }
 
   function roleShareUrl(roleId) {
@@ -85,7 +104,7 @@
     if (document.body.dataset.resumeSrc) {
       return data?.settings?.siteUrl || window.location.href.split("#")[0];
     }
-    return roleShareUrl(currentRole);
+    return pageShareUrl(pageView);
   }
 
   function syncRoleButtons() {
@@ -118,6 +137,18 @@
     if (labelKeySkills) labelKeySkills.textContent = label("keySkills");
     document.getElementById("label-employment").textContent = label("employment");
     document.getElementById("label-education").textContent = label("education");
+    const labelWriting = document.getElementById("label-writing");
+    if (labelWriting) labelWriting.textContent = label("writing");
+    const tabHome = document.getElementById("tab-home");
+    if (tabHome) tabHome.textContent = label("home");
+    const tabResume = document.getElementById("tab-resume");
+    if (tabResume) tabResume.textContent = label("resume");
+    const tabBlog = document.getElementById("tab-blog");
+    if (tabBlog) tabBlog.textContent = label("blog");
+    const tabProject = document.getElementById("tab-project");
+    if (tabProject) tabProject.textContent = label("projects");
+    const labelCertifications = document.getElementById("label-certifications");
+    if (labelCertifications) labelCertifications.textContent = label("certifications");
     document.getElementById("btn-download").textContent = label("downloadPdf");
     document.getElementById("btn-copy").textContent = label("copyLink");
   }
@@ -147,7 +178,15 @@
     document.getElementById("profile-text").textContent = t(data.summary, "summary");
 
     const roleName = ROLES[currentRole]?.label_en || "Backend";
-    document.title = `${p.fullName} — ${roleName} Resume`;
+    if (pageView === "home") {
+      document.title = p.fullName;
+    } else if (pageView === "blog") {
+      document.title = `${p.fullName} — Blog`;
+    } else if (pageView === "project") {
+      document.title = `${p.fullName} — Project`;
+    } else {
+      document.title = `${p.fullName} — ${roleName} Resume`;
+    }
   }
 
   function renderContacts() {
@@ -269,6 +308,203 @@
       .join("");
   }
 
+  function renderWriting() {
+    const section = document.getElementById("section-writing");
+    const container = document.getElementById("writing-container");
+    if (!section || !container) return;
+    const list = data.writing || [];
+    if (!list.length) {
+      section.style.display = "none";
+      container.innerHTML = "";
+      return;
+    }
+    section.style.removeProperty("display");
+    container.innerHTML = list
+      .map((item) => {
+        const title = t(item, "title");
+        const venue = t(item, "venue");
+        const summary = t(item, "summary");
+        const urlLabel = t(item, "urlLabel") || item.urlLabel;
+        const link =
+          item.url && urlLabel
+            ? `<a href="${item.url}" target="_blank" rel="noopener noreferrer">${urlLabel}</a>`
+            : "";
+        const noteParts = [summary, link].filter(Boolean);
+        return `
+          <article class="edu-item writing-item">
+            <h3 class="edu-degree">${title}${venue ? `, ${venue}` : ""}</h3>
+            ${noteParts.length ? `<p class="edu-note">${noteParts.join(" ")}</p>` : ""}
+          </article>`;
+      })
+      .join("");
+  }
+
+  function renderCertifications() {
+    const section = document.getElementById("section-certifications");
+    const container = document.getElementById("certifications-container");
+    if (!section || !container) return;
+    const list = data.certifications || [];
+    if (!list.length) {
+      section.style.display = "none";
+      container.innerHTML = "";
+      return;
+    }
+    section.style.removeProperty("display");
+    container.innerHTML = list
+      .map((item) => {
+        const title = t(item, "title");
+        const meta = t(item, "meta");
+        const summary = t(item, "summary");
+        return `
+          <article class="edu-item">
+            <h3 class="edu-degree">${title}</h3>
+            ${meta ? `<p class="edu-meta">${meta}</p>` : ""}
+            ${summary ? `<p class="edu-note">${summary}</p>` : ""}
+          </article>`;
+      })
+      .join("");
+  }
+
+  function showcaseList(view) {
+    if (view === "project") return data.projects || [];
+    return data.writing || [];
+  }
+
+  function renderShowcaseCard(item) {
+    const title = t(item, "title");
+    const venue = t(item, "venue");
+    const summary = t(item, "summary");
+    const cta = t(item, "urlLabel") || item.urlLabel || (locale === "th" ? "เปิดลิงก์" : "View");
+    const tags = (item.tags || [])
+      .map((tag) => `<span class="skill-pill">${tag}</span>`)
+      .join("");
+    return `
+      <a class="showcase-card" href="${item.url}" target="_blank" rel="noopener noreferrer">
+        ${venue ? `<span class="showcase-card-venue">${venue}</span>` : ""}
+        <h3 class="showcase-card-title">${title}</h3>
+        ${summary ? `<p class="showcase-card-summary">${summary}</p>` : ""}
+        ${tags ? `<div class="skill-pills">${tags}</div>` : ""}
+        <span class="showcase-card-cta">${cta} ›</span>
+      </a>`;
+  }
+
+  function syncPageNav() {
+    document.querySelectorAll(".page-nav-btn").forEach((btn) => {
+      const active = btn.dataset.view === pageView;
+      btn.classList.toggle("active", active);
+      btn.setAttribute("aria-pressed", String(active));
+    });
+  }
+
+  function applyPageView(view, opts) {
+    const nav = document.querySelector(".page-nav");
+    if (!nav) return;
+    const blog = (data && data.writing) || [];
+    const projects = (data && data.projects) || [];
+    let next = view;
+    if (next !== "home" && next !== "resume" && next !== "blog" && next !== "project") {
+      next = "home";
+    }
+    if (next === "blog" && !blog.length) next = "home";
+    if (next === "project" && !projects.length) next = "home";
+    pageView = next;
+    document.body.dataset.view = pageView;
+    syncPageNav();
+    const blogBtn = document.getElementById("tab-blog");
+    const projectBtn = document.getElementById("tab-project");
+    if (blogBtn) blogBtn.style.display = blog.length ? "" : "none";
+    if (projectBtn) projectBtn.style.display = projects.length ? "" : "none";
+    const grid = document.getElementById("showcase-grid");
+    if (grid && (pageView === "blog" || pageView === "project")) {
+      grid.innerHTML = showcaseList(pageView).map(renderShowcaseCard).join("");
+    }
+    if (data && data.profile) {
+      const p = data.profile;
+      const roleName = ROLES[currentRole]?.label_en || "Backend";
+      if (pageView === "home") document.title = p.fullName;
+      else if (pageView === "blog") document.title = `${p.fullName} — Blog`;
+      else if (pageView === "project") document.title = `${p.fullName} — Project`;
+      else document.title = `${p.fullName} — ${roleName} Resume`;
+    }
+    if (opts && opts.updateQr) initQr();
+  }
+
+  function setPageView(view) {
+    const nextHash =
+      view === "home"
+        ? "home"
+        : view === "blog"
+          ? "blog"
+          : view === "project"
+            ? "project"
+            : (ROLES[currentRole] || ROLES.backend).hash;
+    const currentHash = (window.location.hash || "").replace(/^#/, "");
+    if (currentHash === nextHash) {
+      applyPageView(view, { updateQr: true });
+      return;
+    }
+    window.location.hash = nextHash;
+  }
+
+  function renderHome() {
+    const section = document.getElementById("section-home");
+    if (!section || !data) return;
+    const p = data.profile;
+    const pitchEl = document.getElementById("hero-pitch");
+    if (pitchEl) pitchEl.textContent = t(p, "pitch");
+    const homeMeta = document.getElementById("hero-home-meta");
+    if (homeMeta) {
+      homeMeta.textContent = [t(p, "location"), t(p, "availability")].filter(Boolean).join(" · ");
+    }
+    const cta = document.getElementById("hero-cta");
+    if (cta) {
+      cta.innerHTML =
+        `<button type="button" class="btn" data-view="resume">${label("viewResume")}</button>` +
+        `<button type="button" class="btn btn-secondary" data-view="blog">${label("blog")}</button>` +
+        `<button type="button" class="btn btn-secondary" data-view="project">${label("projects")}</button>`;
+    }
+    const writingHead = document.getElementById("label-latest-writing");
+    if (writingHead) writingHead.textContent = label("latestWriting");
+    const workHead = document.getElementById("label-latest-work");
+    if (workHead) workHead.textContent = label("latestWork");
+    const moreBlog = document.getElementById("btn-more-blog");
+    if (moreBlog) moreBlog.textContent = label("blog") + " ›";
+    const moreProject = document.getElementById("btn-more-project");
+    if (moreProject) moreProject.textContent = label("projects") + " ›";
+    const writingGrid = document.getElementById("home-writing-grid");
+    if (writingGrid) {
+      writingGrid.innerHTML = (data.writing || []).map(renderShowcaseCard).join("");
+    }
+    const projectGrid = document.getElementById("home-project-grid");
+    if (projectGrid) {
+      projectGrid.innerHTML = (data.projects || []).map(renderShowcaseCard).join("");
+    }
+    const note = document.getElementById("home-cta-note");
+    if (note) note.textContent = label("homeCta");
+    const contact = document.getElementById("home-contact");
+    if (contact) {
+      const links = [];
+      if (p.email) links.push(`<a href="mailto:${p.email}">${p.email}</a>`);
+      if (p.linkedinUrl) {
+        links.push(
+          `<a href="${p.linkedinUrl}" target="_blank" rel="noopener noreferrer">LinkedIn</a>`
+        );
+      }
+      if (p.githubUrl) {
+        links.push(
+          `<a href="${p.githubUrl}" target="_blank" rel="noopener noreferrer">GitHub</a>`
+        );
+      }
+      contact.innerHTML = links.join(" · ");
+    }
+  }
+
+  function renderShowcase() {
+    const section = document.getElementById("section-showcase");
+    if (!section) return;
+    applyPageView(pageView);
+  }
+
   function renderMetrics() {
     const container = document.getElementById("metrics");
     if (!container || !data.metrics) return;
@@ -309,15 +545,22 @@
   function renderKeySkills() {
     const section = document.getElementById("section-key-skills");
     const lineEl = document.getElementById("key-skills-line");
+    const noteEl = document.getElementById("key-skills-note");
     if (!section || !lineEl) return;
     const items = (data.keySkills && data.keySkills.items) || [];
+    const note = data.keySkills ? t(data.keySkills, "note") : "";
     if (!items.length) {
       section.style.display = "none";
       lineEl.innerHTML = "";
+      if (noteEl) noteEl.innerHTML = "";
       return;
     }
     section.style.removeProperty("display");
     lineEl.innerHTML = items.map((item) => `<strong>${item}</strong>`).join(" · ");
+    if (noteEl) {
+      noteEl.textContent = note || "";
+      noteEl.style.display = note ? "" : "none";
+    }
   }
 
   function render() {
@@ -332,6 +575,10 @@
     renderKeySkills();
     renderExperience();
     renderEducation();
+    renderCertifications();
+    renderWriting();
+    renderHome();
+    renderShowcase();
     syncRoleButtons();
   }
 
@@ -397,6 +644,9 @@
   }
 
   function onHashChange() {
+    const nextView = parsePageViewFromHash();
+    applyPageView(nextView, { updateQr: true });
+    if (nextView !== "resume") return;
     const next = parseRoleFromHash();
     if (next === currentRole) {
       syncRoleButtons();
@@ -423,6 +673,15 @@
           showLoadError();
         });
       });
+    });
+    document.querySelectorAll(".page-nav-btn").forEach((btn) => {
+      btn.addEventListener("click", () => setPageView(btn.dataset.view));
+    });
+    document.addEventListener("click", (e) => {
+      const trigger = e.target.closest("#hero-cta [data-view], .home-preview-more[data-view], #header-logo[data-view]");
+      if (!trigger) return;
+      e.preventDefault();
+      setPageView(trigger.dataset.view);
     });
     document.getElementById("btn-download").addEventListener("click", downloadPdf);
     document.getElementById("btn-copy").addEventListener("click", copyLink);
@@ -477,6 +736,7 @@
       return;
     }
     currentRole = parseRoleFromHash();
+    pageView = parsePageViewFromHash();
     await loadRole(currentRole);
   }
 

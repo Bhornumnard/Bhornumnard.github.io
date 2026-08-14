@@ -19,6 +19,22 @@
     "employment_th": "ประสบการณ์ทำงาน",
     "education_en": "Education",
     "education_th": "การศึกษา",
+    "resume_en": "Resume",
+    "resume_th": "Resume",
+    "home_en": "Home",
+    "home_th": "Home",
+    "blog_en": "Blog",
+    "blog_th": "Blog",
+    "projects_en": "Project",
+    "projects_th": "Project",
+    "viewResume_en": "View Resume",
+    "viewResume_th": "ดู Resume",
+    "latestWriting_en": "Latest writing",
+    "latestWriting_th": "งานเขียนล่าสุด",
+    "latestWork_en": "Latest work",
+    "latestWork_th": "งานล่าสุด",
+    "homeCta_en": "Open to remote Backend / Data Eng roles",
+    "homeCta_th": "เปิดรับงาน remote สาย Backend / Data Eng",
     "present_en": "Present",
     "present_th": "ปัจจุบัน",
     "downloadPdf_en": "Download PDF",
@@ -40,8 +56,8 @@
   },
   "profile": {
     "fullName": "Bhornumnard Wanasrisun",
-    "title_en": "Software Engineer (Backend) — Python / Django / FastAPI",
-    "title_th": "วิศวกรซอฟต์แวร์ (Backend) — Python / Django / FastAPI",
+    "title_en": "Software Engineer (Backend) — Python / PostgreSQL / AWS",
+    "title_th": "วิศวกรซอฟต์แวร์ (Backend) — Python / PostgreSQL / AWS",
     "location_en": "Lamphun, Thailand",
     "location_th": "ลำพูน ประเทศไทย",
     "phone": "+66(0)84-555-0485",
@@ -55,21 +71,22 @@
     "portfolioUrl": "https://bhornumnard.github.io#backend",
     "portfolioLabel": "bhornumnard.github.io",
     "availability_en": "Open to remote · UTC+7",
-    "availability_th": "เปิดรับ remote · UTC+7"
+    "availability_th": "เปิดรับ remote · UTC+7",
+    "pitch_en": "Backend engineer with 5+ years shipping Python services on fintech production. Now moving into data engineering and event-driven systems.",
+    "pitch_th": "วิศวกร Backend ประสบการณ์ 5+ ปี ส่ง Python services บน fintech production ตอนนี้ขยับไป data engineering และระบบ event-driven"
   },
   "summary": {
-    "summary_en": "Backend software engineer with 5+ years in fintech, working across Python, Django, and FastAPI. Owned Thai court-records and business-registry data services end-to-end, and delivered the Rabbit Cash consumer credit product through client handoff. Scope covers backend delivery, production technical support, and third-party integrations on a 40–60k DAU platform at ~99% uptime. Currently upskilling toward data/AI engineering (R2DE 3.0, Anthropic Academy); open to remote fintech or compliance-tech roles.",
-    "summary_th": "วิศวกร Backend ประสบการณ์ 5+ ปีใน fintech ทำงานข้าม Python, Django และ FastAPI เป็นเจ้าของบริการข้อมูลศาลไทยและข้อมูลนิติบุคคลแบบ end-to-end และส่งมอบผลิตภัณฑ์สินเชื่อผู้บริโภค Rabbit Cash จนถึงส่งมอบลูกค้า ขอบเขตงานครอบคลุม backend delivery, technical support ระดับ production และการเชื่อมต่อ third-party บนแพลตฟอร์มที่มีผู้ใช้งานรายวัน 40–60k ที่ uptime ~99% กำลัง upskill สู่ data/AI engineering (R2DE 3.0, Anthropic Academy) เปิดรับตำแหน่ง remote ด้าน fintech หรือ compliance tech"
+    "summary_en": "Backend engineer with 5+ years shipping Python services (Django, FastAPI) on production platforms. Strong SQL on PostgreSQL; production experience on AWS and GCP with Dockerized services. Owned end-to-end data services with scheduled/async processing, third-party integrations, retries-minded failure handling, and live incident response on a 40–60k DAU platform (~99% uptime). Occasional small JavaScript form/config tweaks when product work required it. Communicates clearly in English across engineering and customer support loops. Open to backend roles centered on Python, cloud, and reliable distributed workflows.",
+    "summary_th": "วิศวกร Backend ประสบการณ์ 5+ ปี ส่งมอบ Python services (Django, FastAPI) บนแพลตฟอร์ม production แข็งด้าน SQL บน PostgreSQL; มีประสบการณ์ production บน AWS และ GCP พร้อม Dockerized services เป็นเจ้าของ data services แบบ end-to-end ที่ใช้ scheduled/async processing, third-party integrations, failure handling แนว retries และการตอบสนอง incident บนแพลตฟอร์ม 40–60k DAU (uptime ~99%) แตะ JavaScript เป็นครั้งคราวสำหรับแก้ form/config เล็กน้อยเมื่องาน product ต้องการ สื่อสารภาษาอังกฤษได้ชัดเจนข้ามทีม engineering และ customer support เปิดรับตำแหน่ง backend ที่เน้น Python, cloud และ distributed workflows ที่เชื่อถือได้"
   },
   "languages": [],
   "keySkills": {
     "items": [
       "Python",
-      "FastAPI",
       "Django",
-      "SQL",
-      "MySQL",
-      "GCP",
+      "FastAPI",
+      "PostgreSQL",
+      "AWS",
       "Docker",
       "Third-party API integrations",
       "Production incident response"
@@ -82,15 +99,15 @@
       "items": [
         "Python",
         "SQL",
+        "PostgreSQL",
         "Django",
         "FastAPI",
-        "MySQL",
+        "AWS",
         "GCP",
         "Cloud Functions",
-        "AWS",
+        "Docker",
         "Linux shell",
-        "Git",
-        "Docker"
+        "Git"
       ]
     },
     {
@@ -101,6 +118,7 @@
         "TypeScript",
         "Nest",
         "Sequelize",
+        "MySQL",
         "ClickUp"
       ]
     },
@@ -246,6 +264,58 @@
       "endDate": "2016-05",
       "note_en": null,
       "note_th": null
+    }
+  ],
+  "writing": [
+    {
+      "title_en": "Kafka จากศูนย์ถึงโปรดักชัน — Ep.2: Replication, ISR และ Delivery Semantics",
+      "title_th": "Kafka จากศูนย์ถึงโปรดักชัน — Ep.2: Replication, ISR และ Delivery Semantics",
+      "venue_en": "Medium",
+      "venue_th": "Medium",
+      "summary_en": "How Kafka stays durable in production — replication, in-sync replicas (ISR), and at-most-once / at-least-once / exactly-once delivery.",
+      "summary_th": "Kafka คงทนในโปรดักชันได้อย่างไร — replication, in-sync replicas (ISR) และ delivery semantics แบบ at-most-once / at-least-once / exactly-once",
+      "url": "https://medium.com/@bhornumnard.w/series-kafka-\u0e08\u0e32\u0e01\u0e28\u0e39\u0e19\u0e22\u0e4c\u0e16\u0e36\u0e07\u0e42\u0e1b\u0e23\u0e14\u0e31\u0e01\u0e0a\u0e31\u0e19-ep-2-replication-isr-\u0e41\u0e25\u0e30-delivery-semantics-31ec099e6f97",
+      "urlLabel_en": "Read on Medium",
+      "urlLabel_th": "อ่านบน Medium",
+      "tags": ["Kafka", "ISR", "Delivery semantics"]
+    },
+    {
+      "title_en": "Kafka จากศูนย์ถึงโปรดักชัน — Ep.1: จาก Queue สู่ Pub/Sub",
+      "title_th": "Kafka จากศูนย์ถึงโปรดักชัน — Ep.1: จาก Queue สู่ Pub/Sub",
+      "venue_en": "Medium",
+      "venue_th": "Medium",
+      "summary_en": "Why Kafka is not just a queue — pub/sub, topics, partitions, and how producers and consumers actually work.",
+      "summary_th": "ทำไม Kafka ไม่ใช่แค่ queue — pub/sub, topics, partitions และวิธีที่ producer/consumer ทำงานจริง",
+      "url": "https://medium.com/@bhornumnard.w/series-kafka-\u0e08\u0e32\u0e01\u0e28\u0e39\u0e19\u0e22\u0e4c\u0e16\u0e36\u0e07\u0e42\u0e1b\u0e23\u0e14\u0e31\u0e01\u0e0a\u0e31\u0e19-ep-1-\u0e23\u0e39\u0e49\u0e08\u0e31\u0e01-kafka-\u0e01\u0e31\u0e19\u0e40\u0e16\u0e2d\u0e30-\u0e08\u0e32\u0e01-queue-\u0e2a\u0e39\u0e48-pub-sub-9a37c711a254",
+      "urlLabel_en": "Read on Medium",
+      "urlLabel_th": "อ่านบน Medium",
+      "tags": ["Kafka", "Pub/Sub"]
+    }
+  ],
+  "projects": [
+    {
+      "title_en": "Data Pipeline CI/CD — GitHub Actions",
+      "title_th": "Data Pipeline CI/CD — GitHub Actions",
+      "venue_en": "GitHub",
+      "venue_th": "GitHub",
+      "summary_en": "Airflow DAGs with local Docker Compose (Composer 3 / Airflow 3.x) and GitHub Actions that validate syntax then sync DAGs to GCS for Cloud Composer.",
+      "summary_th": "Airflow DAGs พร้อม Docker Compose ในเครื่อง (Composer 3 / Airflow 3.x) และ GitHub Actions ที่ตรวจ syntax แล้ว sync DAG ไป GCS สำหรับ Cloud Composer",
+      "url": "https://github.com/Bhornumnard/datapipeline_cicd_github",
+      "urlLabel_en": "View on GitHub",
+      "urlLabel_th": "ดูบน GitHub",
+      "tags": ["Airflow", "Docker", "GitHub Actions", "GCP"]
+    },
+    {
+      "title_en": "Data Pipeline CI/CD — GitLab CI",
+      "title_th": "Data Pipeline CI/CD — GitLab CI",
+      "venue_en": "GitLab",
+      "venue_th": "GitLab",
+      "summary_en": "Same data-pipeline workshop path on GitLab — CI to validate and deploy Airflow DAGs, mirroring the GitHub Actions flow.",
+      "summary_th": "เส้นทาง workshop data pipeline บน GitLab — CI ตรวจและ deploy Airflow DAGs สอดคล้องกับโฟลว์ GitHub Actions",
+      "url": "https://gitlab.com/Bhornumnard/datapipelin-cicd-gitlab",
+      "urlLabel_en": "View on GitLab",
+      "urlLabel_th": "ดูบน GitLab",
+      "tags": ["Airflow", "GitLab CI", "GCP"]
     }
   ],
   "heroCode": {
