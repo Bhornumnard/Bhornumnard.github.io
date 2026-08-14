@@ -24,15 +24,15 @@
     "home_en": "Home",
     "home_th": "Home",
     "blog_en": "Blog",
-    "blog_th": "Blog",
+    "blog_th": "บทความ",
     "projects_en": "Project",
-    "projects_th": "Project",
+    "projects_th": "โปรเจกต์",
     "viewResume_en": "View Resume",
     "viewResume_th": "ดู Resume",
-    "latestWriting_en": "Latest writing",
-    "latestWriting_th": "งานเขียนล่าสุด",
-    "latestWork_en": "Latest work",
-    "latestWork_th": "งานล่าสุด",
+    "latestWriting_en": "Latest Writing",
+    "latestWriting_th": "บทความล่าสุด",
+    "latestWork_en": "Latest Work",
+    "latestWork_th": "ผลงานล่าสุด",
     "homeCta_en": "Open to remote Backend / Data Eng roles",
     "homeCta_th": "เปิดรับงาน remote สาย Backend / Data Eng",
     "present_en": "Present",
@@ -268,7 +268,7 @@
   ],
   "writing": [
     {
-      "title_en": "Kafka จากศูนย์ถึงโปรดักชัน — Ep.2: Replication, ISR และ Delivery Semantics",
+      "title_en": "Kafka From Zero to Production — Ep. 2: Replication, ISR, and Delivery Semantics",
       "title_th": "Kafka จากศูนย์ถึงโปรดักชัน — Ep.2: Replication, ISR และ Delivery Semantics",
       "venue_en": "Medium",
       "venue_th": "Medium",
@@ -280,7 +280,7 @@
       "tags": ["Kafka", "ISR", "Delivery semantics"]
     },
     {
-      "title_en": "Kafka จากศูนย์ถึงโปรดักชัน — Ep.1: จาก Queue สู่ Pub/Sub",
+      "title_en": "Kafka From Zero to Production — Ep. 1: From Queue to Pub/Sub",
       "title_th": "Kafka จากศูนย์ถึงโปรดักชัน — Ep.1: จาก Queue สู่ Pub/Sub",
       "venue_en": "Medium",
       "venue_th": "Medium",
@@ -333,23 +333,27 @@
   "metrics": [
     {
       "value": "5+",
-      "label_en": "years exp",
+      "icon": "years",
+      "label_en": "Years Experience",
       "label_th": "ปีประสบการณ์"
     },
     {
       "value": "Fintech",
-      "label_en": "production",
-      "label_th": "production"
+      "icon": "domain",
+      "label_en": "Production Domain",
+      "label_th": "โดเมน"
     },
     {
       "value": "~40–60k",
+      "icon": "dau",
       "label_en": "DAU",
       "label_th": "DAU"
     },
     {
       "value": "~99%",
-      "label_en": "uptime",
-      "label_th": "uptime"
+      "icon": "uptime",
+      "label_en": "Uptime",
+      "label_th": "Uptime"
     }
   ]
 }

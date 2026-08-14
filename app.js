@@ -70,7 +70,7 @@
 
   function parseRoleFromHash() {
     const raw = (window.location.hash || "").replace(/^#/, "").toLowerCase();
-    if (raw === "home" || raw === "blog" || raw === "project" || raw === "projects") {
+    if (raw === "home" || raw === "blog" || raw === "project" || raw === "projects" || raw === "writing" || raw === "work") {
       return currentRole || "backend";
     }
     if (!raw || raw === "backend") return "backend";
@@ -82,7 +82,7 @@
 
   function parsePageViewFromHash() {
     const raw = (window.location.hash || "").replace(/^#/, "").toLowerCase();
-    if (!raw || raw === "home") return "home";
+    if (!raw || raw === "home" || raw === "writing" || raw === "work") return "home";
     if (raw === "blog") return "blog";
     if (raw === "project" || raw === "projects") return "project";
     return "resume";
@@ -155,8 +155,16 @@
 
   function renderProfile() {
     const p = data.profile;
-    document.getElementById("header-logo").textContent = p.fullName;
-    document.getElementById("hero-name").textContent = p.fullName;
+    const headerLogo = document.getElementById("header-logo");
+    if (headerLogo) headerLogo.textContent = p.fullName;
+    const nameEl = document.getElementById("hero-name");
+    if (nameEl) {
+      if (pageView === "home") {
+        nameEl.innerHTML = "Bhornumnard<br>Wanasrisun";
+      } else {
+        nameEl.textContent = p.fullName;
+      }
+    }
     document.getElementById("hero-title").textContent = t(p, "title");
     const phoneEl = document.getElementById("hero-phone");
     phoneEl.textContent = p.phoneDisplay || p.phone;
@@ -410,6 +418,17 @@
     pageView = next;
     document.body.dataset.view = pageView;
     syncPageNav();
+    const navToggle = document.getElementById("nav-toggle");
+    nav.classList.remove("is-open");
+    if (navToggle) navToggle.setAttribute("aria-expanded", "false");
+    if (data) {
+      renderHeroCode();
+      const nameEl = document.getElementById("hero-name");
+      if (nameEl && data.profile) {
+        if (pageView === "home") nameEl.innerHTML = "Bhornumnard<br>Wanasrisun";
+        else nameEl.textContent = data.profile.fullName;
+      }
+    }
     const blogBtn = document.getElementById("tab-blog");
     const projectBtn = document.getElementById("tab-project");
     if (blogBtn) blogBtn.style.display = blog.length ? "" : "none";
@@ -427,6 +446,13 @@
       else document.title = `${p.fullName} — ${roleName} Resume`;
     }
     if (opts && opts.updateQr) initQr();
+    const hash = (window.location.hash || "").replace(/^#/, "").toLowerCase();
+    if (pageView === "home" && (hash === "writing" || hash === "work")) {
+      requestAnimationFrame(() => {
+        const el = document.getElementById(hash);
+        if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+      });
+    }
   }
 
   function setPageView(view) {
@@ -446,22 +472,60 @@
     window.location.hash = nextHash;
   }
 
+  function goHomeScroll(sectionId) {
+    const current = (window.location.hash || "").replace(/^#/, "");
+    if (pageView === "home" && current === sectionId) {
+      const el = document.getElementById(sectionId);
+      if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+      return;
+    }
+    window.location.hash = sectionId;
+  }
+
+  function renderHomeWritingCard(item) {
+    const title = t(item, "title");
+    const excerpt = item.summary_en || t(item, "summary");
+    const venue = t(item, "venue") || "Medium";
+    return `
+      <a class="home-card" href="${item.url}" target="_blank" rel="noopener noreferrer">
+        <div class="home-card-kicker">${venue}</div>
+        <div class="home-card-title">${title}</div>
+        ${excerpt ? `<div class="home-card-excerpt">${excerpt}</div>` : ""}
+      </a>`;
+  }
+
+  function renderHomeProjectCard(item) {
+    const title = t(item, "title");
+    const summary = t(item, "summary");
+    const cta = t(item, "urlLabel") || item.urlLabel || "View";
+    const tags = (item.tags || [])
+      .map((tag) => `<span class="tag-pill">${tag}</span>`)
+      .join("");
+    return `
+      <div class="home-card home-card--project">
+        <div class="home-card-title">${title}</div>
+        ${summary ? `<div class="home-card-excerpt">${summary}</div>` : ""}
+        ${tags ? `<div class="tag-row">${tags}</div>` : ""}
+        <a class="home-card-link" href="${item.url}" target="_blank" rel="noopener noreferrer">${cta} →</a>
+      </div>`;
+  }
+
   function renderHome() {
     const section = document.getElementById("section-home");
     if (!section || !data) return;
     const p = data.profile;
     const pitchEl = document.getElementById("hero-pitch");
     if (pitchEl) pitchEl.textContent = t(p, "pitch");
-    const homeMeta = document.getElementById("hero-home-meta");
-    if (homeMeta) {
-      homeMeta.textContent = [t(p, "location"), t(p, "availability")].filter(Boolean).join(" · ");
+    const homeMetaText = document.getElementById("hero-home-meta-text");
+    if (homeMetaText) {
+      homeMetaText.textContent = [t(p, "location"), t(p, "availability")].filter(Boolean).join(" · ");
     }
     const cta = document.getElementById("hero-cta");
     if (cta) {
       cta.innerHTML =
         `<button type="button" class="btn" data-view="resume">${label("viewResume")}</button>` +
-        `<button type="button" class="btn btn-secondary" data-view="blog">${label("blog")}</button>` +
-        `<button type="button" class="btn btn-secondary" data-view="project">${label("projects")}</button>`;
+        `<button type="button" class="btn btn-secondary" data-home-scroll="writing">${label("blog")}</button>` +
+        `<button type="button" class="btn btn-secondary" data-home-scroll="work">${label("projects")}</button>`;
     }
     const writingHead = document.getElementById("label-latest-writing");
     if (writingHead) writingHead.textContent = label("latestWriting");
@@ -469,34 +533,16 @@
     if (workHead) workHead.textContent = label("latestWork");
     const moreBlog = document.getElementById("btn-more-blog");
     if (moreBlog) moreBlog.textContent = label("blog") + " ›";
-    const moreProject = document.getElementById("btn-more-project");
-    if (moreProject) moreProject.textContent = label("projects") + " ›";
     const writingGrid = document.getElementById("home-writing-grid");
     if (writingGrid) {
-      writingGrid.innerHTML = (data.writing || []).map(renderShowcaseCard).join("");
+      writingGrid.innerHTML = (data.writing || []).map(renderHomeWritingCard).join("");
     }
     const projectGrid = document.getElementById("home-project-grid");
     if (projectGrid) {
-      projectGrid.innerHTML = (data.projects || []).map(renderShowcaseCard).join("");
+      projectGrid.innerHTML = (data.projects || []).map(renderHomeProjectCard).join("");
     }
-    const note = document.getElementById("home-cta-note");
-    if (note) note.textContent = label("homeCta");
-    const contact = document.getElementById("home-contact");
-    if (contact) {
-      const links = [];
-      if (p.email) links.push(`<a href="mailto:${p.email}">${p.email}</a>`);
-      if (p.linkedinUrl) {
-        links.push(
-          `<a href="${p.linkedinUrl}" target="_blank" rel="noopener noreferrer">LinkedIn</a>`
-        );
-      }
-      if (p.githubUrl) {
-        links.push(
-          `<a href="${p.githubUrl}" target="_blank" rel="noopener noreferrer">GitHub</a>`
-        );
-      }
-      contact.innerHTML = links.join(" · ");
-    }
+    const footer = document.getElementById("home-footer");
+    if (footer) footer.textContent = `© ${new Date().getFullYear()} ${p.fullName}`;
   }
 
   function renderShowcase() {
@@ -505,25 +551,63 @@
     applyPageView(pageView);
   }
 
+  const METRIC_ICONS = {
+    years:
+      '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>',
+    domain:
+      '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="7" width="18" height="12" rx="1.5"/><path d="M8 7V5.5A1.5 1.5 0 0 1 9.5 4h5A1.5 1.5 0 0 1 16 5.5V7"/></svg>',
+    dau:
+      '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 19V10M11 19V5M18 19v-7"/></svg>',
+    uptime:
+      '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"/><path d="M9 12l2 2 4-4"/></svg>',
+  };
+
   function renderMetrics() {
     const container = document.getElementById("metrics");
     if (!container || !data.metrics) return;
+    const icons = ["years", "domain", "dau", "uptime"];
     container.innerHTML = data.metrics
-      .map(
-        (m) => `
+      .map((m, i) => {
+        const iconKey = m.icon || icons[i];
+        const icon = METRIC_ICONS[iconKey] || "";
+        return `
           <div class="metric-item">
+            ${icon ? `<div class="metric-icon" aria-hidden="true">${icon}</div>` : ""}
             <span class="metric-value">${m.value}</span>
             <span class="metric-label">${t(m, "label")}</span>
-          </div>`
-      )
+          </div>`;
+      })
       .join("");
   }
 
   function renderHeroCode() {
     const c = data.heroCode;
     if (!c) return;
+    const filenameEl = document.getElementById("hero-code-filename");
+    if (filenameEl) filenameEl.textContent = c.filename || "engineer.py";
+    const body = document.getElementById("hero-code-body");
+    if (!body) return;
 
-    document.getElementById("hero-code-filename").textContent = c.filename;
+    const lightCode =
+      document.body.dataset.view === "home" || document.body.dataset.view === "resume";
+    if (lightCode) {
+      const langItems = (c.lang || []).map((s) => `"${s}"`).join(", ");
+      const domain = t(c, "domain");
+      const boolVal = c.remote ? "True" : "False";
+      const lines = [
+        { text: "skills = {", tone: "base" },
+        { text: `    "lang": [${langItems}],`, tone: "stack" },
+        { text: `    "stack": "${c.stack}",`, tone: "stack" },
+        { text: `    "domain": "${domain}",`, tone: "context" },
+        { text: `    "years": ${c.years},`, tone: "context" },
+        { text: `    "remote": ${boolVal},`, tone: "context" },
+        { text: "}", tone: "base" },
+      ];
+      body.innerHTML = lines
+        .map((line) => `<div class="code-line code-line--${line.tone}">${line.text}</div>`)
+        .join("");
+      return;
+    }
 
     const langItems = c.lang
       .map((s) => `<span class="code-str">"${s}"</span>`)
@@ -531,7 +615,7 @@
     const domain = t(c, "domain");
     const boolVal = c.remote ? "True" : "False";
 
-    document.getElementById("hero-code-body").innerHTML = [
+    body.innerHTML = [
       '<span class="line"><span class="ln">1</span><span class="code-var">engineer</span> <span class="code-op">=</span> <span class="code-brace">{</span></span>',
       `<span class="line"><span class="ln">2</span>    <span class="code-key">"lang"</span><span class="code-op">:</span> <span class="code-brace">[</span>${langItems}<span class="code-brace">]</span><span class="code-op">,</span></span>`,
       `<span class="line"><span class="ln">3</span>    <span class="code-key">"stack"</span><span class="code-op">:</span> <span class="code-str">"${c.stack}"</span><span class="code-op">,</span></span>`,
@@ -618,10 +702,20 @@
   }
 
   async function copyLink() {
-    const url = shareUrl();
+    const url = pageView === "home" ? window.location.href : shareUrl();
+    const btn = document.getElementById("btn-copy");
     try {
       await navigator.clipboard.writeText(url);
-      showToast(label("copied"));
+      if (btn) {
+        const prev = btn.textContent;
+        btn.textContent = label("copied");
+        clearTimeout(window._copyLabelTimer);
+        window._copyLabelTimer = setTimeout(() => {
+          btn.textContent = label("copyLink");
+        }, 1600);
+      } else {
+        showToast(label("copied"));
+      }
     } catch {
       showToast(url);
     }
@@ -675,10 +769,31 @@
       });
     });
     document.querySelectorAll(".page-nav-btn").forEach((btn) => {
-      btn.addEventListener("click", () => setPageView(btn.dataset.view));
+      btn.addEventListener("click", () => {
+        const scrollId = btn.dataset.homeScroll;
+        if (scrollId) {
+          goHomeScroll(scrollId);
+          return;
+        }
+        setPageView(btn.dataset.view);
+      });
     });
+    const navToggle = document.getElementById("nav-toggle");
+    if (navToggle) {
+      navToggle.addEventListener("click", () => {
+        const nav = document.querySelector(".page-nav");
+        const open = nav && nav.classList.toggle("is-open");
+        navToggle.setAttribute("aria-expanded", String(!!open));
+      });
+    }
     document.addEventListener("click", (e) => {
-      const trigger = e.target.closest("#hero-cta [data-view], .home-preview-more[data-view], #header-logo[data-view]");
+      const scrollBtn = e.target.closest("[data-home-scroll]");
+      if (scrollBtn && !scrollBtn.classList.contains("page-nav-btn")) {
+        e.preventDefault();
+        goHomeScroll(scrollBtn.dataset.homeScroll);
+        return;
+      }
+      const trigger = e.target.closest("#hero-cta [data-view]");
       if (!trigger) return;
       e.preventDefault();
       setPageView(trigger.dataset.view);

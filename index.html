@@ -9,19 +9,18 @@
     <meta property="og:url" content="https://bhornumnard.github.io" />
     <meta property="og:type" content="website" />
     <title>Bhornumnard Wanasrisun</title>
-    <link rel="stylesheet" href="style.css?v=20260814f" />
+    <link rel="stylesheet" href="style.css?v=20260814k" />
   </head>
   <body data-view="home">
+    <div class="site-wrap">
     <header class="site-header" id="site-header">
-      <div class="header-left">
-        <button type="button" class="header-logo" id="header-logo" data-view="home">Bhornumnard Wanasrisun</button>
-      </div>
       <nav class="page-nav" role="navigation" aria-label="Page">
         <button type="button" class="page-nav-btn active" data-view="home" id="tab-home" aria-pressed="true">Home</button>
         <button type="button" class="page-nav-btn" data-view="resume" id="tab-resume" aria-pressed="false">Resume</button>
-        <button type="button" class="page-nav-btn" data-view="blog" id="tab-blog" aria-pressed="false">Blog</button>
-        <button type="button" class="page-nav-btn" data-view="project" id="tab-project" aria-pressed="false">Project</button>
+        <button type="button" class="page-nav-btn" data-view="blog" data-home-scroll="writing" id="tab-blog" aria-pressed="false">Blog</button>
+        <button type="button" class="page-nav-btn" data-view="project" data-home-scroll="work" id="tab-project" aria-pressed="false">Project</button>
       </nav>
+      <button type="button" class="nav-toggle" id="nav-toggle" aria-label="Menu" aria-expanded="false">Menu</button>
       <div class="header-actions">
         <div class="role-toggle" role="group" aria-label="Resume track">
           <button type="button" class="role-btn active" data-role="backend" aria-pressed="true">Backend</button>
@@ -50,20 +49,24 @@
       <section class="hero">
         <div class="hero-grid">
           <div class="hero-text">
-            <h1 class="hero-name" id="hero-name">Bhornumnard Wanasrisun</h1>
+            <h1 class="hero-name headline" id="hero-name">Bhornumnard<br />Wanasrisun</h1>
             <p class="hero-title" id="hero-title">Software Engineer (Backend) — Python / PostgreSQL / AWS</p>
             <p class="hero-pitch" id="hero-pitch"></p>
             <p class="hero-meta hero-meta--resume" id="hero-meta-resume">
               <a class="hero-link" id="hero-phone" href="tel:+66845550485">+66 (0)84-555-0485</a>
               <span class="hero-meta-gap" id="hero-location">Lamphun, Thailand · linkedin.com/in/bhornumnard-wanasrisun · github.com/Bhornumnard · Open to remote · UTC+7</span>
             </p>
-            <p class="hero-meta hero-meta--home" id="hero-home-meta"></p>
+            <p class="hero-meta hero-meta--home" id="hero-home-meta">
+              <span class="loc-dot" aria-hidden="true"></span>
+              <span id="hero-home-meta-text"></span>
+            </p>
             <div class="hero-cta" id="hero-cta"></div>
             <div class="hero-qr" id="qr-container" aria-label="QR Code">
               <canvas id="qr-canvas"></canvas>
             </div>
           </div>
           <div class="hero-code" aria-hidden="true">
+            <div class="code-glow"></div>
             <div class="code-window">
               <div class="code-titlebar">
                 <div class="code-dots">
@@ -82,24 +85,21 @@
       <section class="metrics" id="metrics" aria-label="Key metrics"></section>
 
       <section class="home-board" id="section-home">
-        <div class="home-preview">
+        <div class="home-preview" id="writing">
           <div class="home-preview-head">
-            <h2 class="section-title" id="label-latest-writing">Latest writing</h2>
-            <button type="button" class="home-preview-more" data-view="blog" id="btn-more-blog">Blog ›</button>
+            <h2 class="home-h2" id="label-latest-writing">Latest Writing</h2>
+            <a class="home-preview-more" id="btn-more-blog" href="https://medium.com/@bhornumnard.w" target="_blank" rel="noopener noreferrer">Blog ›</a>
           </div>
-          <div class="showcase-grid" id="home-writing-grid"></div>
+          <div class="home-cards" id="home-writing-grid"></div>
         </div>
-        <div class="home-preview">
+        <div class="home-preview" id="work">
           <div class="home-preview-head">
-            <h2 class="section-title" id="label-latest-work">Latest work</h2>
-            <button type="button" class="home-preview-more" data-view="project" id="btn-more-project">Project ›</button>
+            <h2 class="home-h2" id="label-latest-work">Latest Work</h2>
+            <span class="home-preview-kicker" id="work-kicker">GitHub / GitLab</span>
           </div>
-          <div class="showcase-grid" id="home-project-grid"></div>
+          <div class="home-cards" id="home-project-grid"></div>
         </div>
-        <div class="home-footer">
-          <p class="home-cta-note" id="home-cta-note"></p>
-          <p class="home-contact" id="home-contact"></p>
-        </div>
+        <footer class="home-legal" id="home-footer">© 2026 Bhornumnard Wanasrisun</footer>
       </section>
 
       <div class="resume-body">
@@ -159,10 +159,11 @@
         <div class="showcase-grid" id="showcase-grid"></div>
       </section>
     </main>
+    </div>
 
     <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
     <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
-    <script src="app.js?v=20260814f"></script>
+    <script src="app.js?v=20260814i"></script>
   </body>
 </html>
