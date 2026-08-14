@@ -70,8 +70,8 @@
     "githubLabel": "github.com/Bhornumnard",
     "portfolioUrl": "https://bhornumnard.github.io#backend",
     "portfolioLabel": "bhornumnard.github.io",
-    "availability_en": "Open to remote · UTC+7",
-    "availability_th": "เปิดรับ remote · UTC+7",
+    "availability_en": "Available immediately · Open to permanent or contract · UTC+7",
+    "availability_th": "พร้อมเริ่มทันที · เปิดรับทั้งงานประจำและสัญญาจ้าง · UTC+7",
     "pitch_en": "Backend software engineer with 5.5 years shipping Python (Django/FastAPI) services in fintech production — owned data-integration services (court records, business registry crawlers) and OCR/LLM extraction pipelines feeding eKYC decision flows. Now formalizing a data engineering track through R2DE 3.0 (Airflow, BigQuery, dbt, GCP) to bridge backend delivery with analytical pipeline design.",
     "pitch_th": "วิศวกรซอฟต์แวร์ Backend ประสบการณ์ 5.5 ปี ส่ง Python (Django/FastAPI) services บน fintech production — เป็นเจ้าของ data-integration services (ข้อมูลศาล, crawler ทะเบียนธุรกิจ) และ OCR/LLM extraction pipelines ที่ป้อนเข้า eKYC decision flows ตอนนี้ formalize สาย data engineering ผ่าน R2DE 3.0 (Airflow, BigQuery, dbt, GCP) เพื่อเชื่อม backend delivery กับ analytical pipeline design"
   },

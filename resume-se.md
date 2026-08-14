@@ -2,7 +2,7 @@
 
 **Software Engineer (Backend) — Python / Django / FastAPI**
 
-+66 (0)84-555-0485 · Lamphun, Thailand · linkedin.com/in/bhornumnard-wanasrisun · github.com/Bhornumnard · Open to remote · UTC+7
++66 (0)84-555-0485 · Lamphun, Thailand · linkedin.com/in/bhornumnard-wanasrisun · github.com/Bhornumnard · Available immediately · Open to permanent or contract · UTC+7
 
 ---
 
