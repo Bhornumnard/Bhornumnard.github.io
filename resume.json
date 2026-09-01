@@ -31,8 +31,8 @@
     "viewResume_th": "ดู Resume",
     "latestWriting_en": "Latest Writing",
     "latestWriting_th": "บทความล่าสุด",
-    "latestWork_en": "Latest Work",
-    "latestWork_th": "ผลงานล่าสุด",
+    "latestWork_en": "Personal Projects",
+    "latestWork_th": "โปรเจกต์ส่วนตัว",
     "homeCta_en": "Open to remote Backend / Data Eng roles",
     "homeCta_th": "เปิดรับงาน remote สาย Backend / Data Eng",
     "present_en": "Present",
@@ -293,6 +293,18 @@
     }
   ],
   "projects": [
+    {
+      "title_en": "Enterprise RAG + SQL Agent",
+      "title_th": "Enterprise RAG + SQL Agent",
+      "venue_en": "GitHub",
+      "venue_th": "GitHub",
+      "summary_en": "LangChain agent routing between RAG (PostgreSQL/pgvector) and SQL (MySQL via MCP) over a synthetic enterprise dataset — Streamlit UI.",
+      "summary_th": "LangChain agent ที่ route คำถามระหว่าง RAG (PostgreSQL/pgvector) และ SQL (MySQL ผ่าน MCP) บน synthetic enterprise dataset — พร้อม Streamlit UI",
+      "url": "https://github.com/Bhornumnard/enterprise-rag-sql-agent",
+      "urlLabel_en": "View on GitHub",
+      "urlLabel_th": "ดูบน GitHub",
+      "tags": ["LangChain", "RAG", "PostgreSQL", "pgvector", "MySQL", "MCP", "Streamlit"]
+    },
     {
       "title_en": "Data Pipeline CI/CD — GitHub Actions",
       "title_th": "Data Pipeline CI/CD — GitHub Actions",

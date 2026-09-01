@@ -128,7 +128,8 @@
   }
 
   function renderLabels() {
-    document.getElementById("label-contacts").textContent = label("contacts");
+    const labelContacts = document.getElementById("label-contacts");
+    if (labelContacts) labelContacts.textContent = label("contacts");
     const labelLanguages = document.getElementById("label-languages");
     if (labelLanguages) labelLanguages.textContent = label("languages");
     document.getElementById("label-skills").textContent = label("skills");
@@ -149,6 +150,10 @@
     if (tabProject) tabProject.textContent = label("projects");
     const labelCertifications = document.getElementById("label-certifications");
     if (labelCertifications) labelCertifications.textContent = label("certifications");
+    const labelSelectedProjects = document.getElementById("label-selected-projects");
+    if (labelSelectedProjects) {
+      labelSelectedProjects.textContent = label("selectedProjects");
+    }
     document.getElementById("btn-download").textContent = label("downloadPdf");
     document.getElementById("btn-copy").textContent = label("copyLink");
   }
@@ -210,6 +215,7 @@
       return item.value;
     });
     const ul = document.getElementById("contact-list");
+    if (!ul) return;
     ul.innerHTML = items
       .map((item) => {
         const rowLabel = label(item.labelKey);
@@ -321,6 +327,37 @@
     const container = document.getElementById("writing-container");
     if (!section || !container) return;
     const list = data.writing || [];
+    if (!list.length) {
+      section.style.display = "none";
+      container.innerHTML = "";
+      return;
+    }
+    section.style.removeProperty("display");
+    container.innerHTML = list
+      .map((item) => {
+        const title = t(item, "title");
+        const venue = t(item, "venue");
+        const summary = t(item, "summary");
+        const urlLabel = t(item, "urlLabel") || item.urlLabel;
+        const link =
+          item.url && urlLabel
+            ? `<a href="${item.url}" target="_blank" rel="noopener noreferrer">${urlLabel}</a>`
+            : "";
+        const noteParts = [summary, link].filter(Boolean);
+        return `
+          <article class="edu-item writing-item">
+            <h3 class="edu-degree">${title}${venue ? `, ${venue}` : ""}</h3>
+            ${noteParts.length ? `<p class="edu-note">${noteParts.join(" ")}</p>` : ""}
+          </article>`;
+      })
+      .join("");
+  }
+
+  function renderSelectedProjects() {
+    const section = document.getElementById("section-selected-projects");
+    const container = document.getElementById("selected-projects-container");
+    if (!section || !container) return;
+    const list = data.projects || [];
     if (!list.length) {
       section.style.display = "none";
       container.innerHTML = "";
@@ -660,6 +697,7 @@
     renderExperience();
     renderEducation();
     renderCertifications();
+    renderSelectedProjects();
     renderWriting();
     renderHome();
     renderShowcase();
@@ -694,7 +732,8 @@
 
   function downloadPdf() {
     const originalTitle = document.title;
-    document.title = data.settings.pdfFilename.replace(".pdf", "");
+    const filename = data && data.settings && data.settings.pdfFilename;
+    if (filename) document.title = filename.replace(/\.pdf$/i, "");
     window.print();
     setTimeout(() => {
       document.title = originalTitle;
