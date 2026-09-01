@@ -262,12 +262,12 @@
       "title_th": "Enterprise RAG + SQL Agent",
       "venue_en": "GitHub",
       "venue_th": "GitHub",
-      "summary_en": "LangChain agent routing between RAG (PostgreSQL/pgvector) and SQL (MySQL via MCP) over a synthetic enterprise dataset — Streamlit UI.",
-      "summary_th": "LangChain agent ที่ route คำถามระหว่าง RAG (PostgreSQL/pgvector) และ SQL (MySQL ผ่าน MCP) บน synthetic enterprise dataset — พร้อม Streamlit UI",
+      "summary_en": "AI agent that answers business questions from both documents (RAG) and numeric data (SQL) in one system — built with LangGraph, pgvector, and MySQL. Analyzed and cleaned 24,000+ rows across 4 tables; fixed false-positive duplicate detection (1,628 rows flagged → 0 true duplicates) using correct composite-key validation. Wrote 18 automated tests (unit + integration) that surfaced 4 bugs manual testing missed, including an SQL parameter-binding order bug caught only by integration tests.",
+      "summary_th": "AI agent ที่ตอบคำถามธุรกิจได้ทั้งจากเอกสาร (RAG) และข้อมูลเชิงตัวเลข (SQL) ในระบบเดียว — สร้างด้วย LangGraph, pgvector, MySQL. วิเคราะห์และทำความสะอาดข้อมูลจริงกว่า 24,000 แถวจาก 4 ตาราง พบและแก้ปัญหาข้อมูลซ้ำที่ตรวจสอบผิดพลาด (false-positive duplicate 1,628 แถว → 0 แถวจริง) ด้วยการตรวจสอบ composite key ที่ถูกต้อง. เขียน automated test 18 เคส (unit + integration) พบและแก้บั๊ก 4 จุดที่ manual testing มองไม่เห็น รวมถึงบั๊ก SQL parameter binding order ที่ integration test เท่านั้นที่จับได้.",
       "url": "https://github.com/Bhornumnard/enterprise-rag-sql-agent",
       "urlLabel_en": "View on GitHub",
       "urlLabel_th": "ดูบน GitHub",
-      "tags": ["LangChain", "RAG", "PostgreSQL", "pgvector", "MySQL", "MCP", "Streamlit"]
+      "tags": ["Python", "LangGraph", "pgvector", "MySQL", "MCP", "Streamlit", "Docker"]
     },
     {
       "title_en": "Data Pipeline CI/CD — GitHub Actions",
